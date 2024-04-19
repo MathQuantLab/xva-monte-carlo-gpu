@@ -16,3 +16,7 @@ obj/main.o: src/main.cpp
 
 doc:
 	doxygen Doxyfile
+
+clean:
+	rm -f obj/*.o bin/xva
+	rm -rf Documentation/*

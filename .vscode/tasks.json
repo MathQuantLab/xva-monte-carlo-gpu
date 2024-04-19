@@ -84,6 +84,21 @@
             "dependsOn": [
                 "Install dev dependencies"
             ],
+        },
+        {
+            "label": "Build project",
+            "type": "shell",
+            "command": "make"
+        },
+        {
+            "label": "Run tests",
+            "type": "shell",
+            "command": "make test"
+        },
+        {
+            "label": "Make doc",
+            "type": "shell",
+            "command": "make doc"
         }
     ]
 }
