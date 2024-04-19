@@ -1,7 +1,9 @@
 aiohttp
+azure-cosmos
+matplotlib
 numpy
 pandas
-matplotlib
+pyodbc
 scipy
 sympy
 torch
