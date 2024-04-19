@@ -1,0 +1,7 @@
+aiohttp
+numpy
+pandas
+matplotlib
+scipy
+sympy
+torch
