@@ -44,6 +44,10 @@ int main(int argc, char *argv[])
 
     for (int i = 1; i < argc; i++)
     {
+        if (argv[i][0] != '-')
+        {
+            continue;
+        }
         if (!strcmp(argv[i], "-h") || !strcmp(argv[i], "--help"))
         {
             info(argv[0]);
