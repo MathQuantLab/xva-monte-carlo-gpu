@@ -1,4 +1,4 @@
-name: C/C++ CI
+name: C/C++/CUDA CI
 
 on:
   push:
@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: configure
-      run: ./configure.sh
-    - name: make
+    - name: Configure
+      run: ./.github/configure.sh
+    - name: Make
       run: make
