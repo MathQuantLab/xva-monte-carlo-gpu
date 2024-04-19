@@ -13,3 +13,6 @@ bin/xva: obj/main.o
 
 obj/main.o: src/main.cpp
 	$(CC) $(CFLAGS) -o $@ -c $<
+
+doc:
+	doxygen Doxyfile
