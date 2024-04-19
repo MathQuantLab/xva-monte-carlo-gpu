@@ -9,7 +9,7 @@ endif
 all: bin/xva
 
 bin/xva: obj/main.o
-	$(CC) $(CFLAGS) -o xva $^
+	$(CC) $(CFLAGS) -o $@ $^
 
 obj/main.o: src/main.cpp
 	$(CC) $(CFLAGS) -o $@ -c $<
