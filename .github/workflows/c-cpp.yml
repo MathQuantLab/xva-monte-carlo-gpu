@@ -16,4 +16,4 @@ jobs:
     - name: Configure
       run: ./.github/config/configure.sh
     - name: Make
-      run: make
+      run: make linux
