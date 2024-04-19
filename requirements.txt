@@ -1,5 +1,6 @@
 aiohttp
 azure-cosmos
+azure-identity
 matplotlib
 numpy
 pandas
