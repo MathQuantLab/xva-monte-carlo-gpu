@@ -59,9 +59,27 @@ void parse_arguments(int argc, char *argv[], bool& gpu)
         {
             gpu = false;
         }
+        else if (std::string(argv[i]).find("--gpu") != std::string::npos)
+        {
+            int device_id;
+            if (i + 1 < argc)
+            {
+                if (sscanf(argv[i + 1], "%d", &device_id) == 0)
+                {
+                    throw Exception("Invalid device id");
+                }
+                i++;
+            }
+            else
+            {
+                cerr << "Missing device id" << endl;
+                exit(1);
+            }
+            CUDA::Utils::select_gpu(device_id);
+        }
         else
         {
-            cout << "Unknown option: " << argv[i] << endl;
+            cerr << "Unknown option: " << argv[i] << endl;
             exit(1);
         }
     }
@@ -82,20 +100,19 @@ int main(int argc, char *argv[])
         return 0;
     }
 
-    bool gpu = CUDA::Utils::is_gpu_available();
-    parse_arguments(argc, argv, gpu);
-
-    if (gpu)
-    {
-        cout << "GPU is enabled" << endl;
-    }
-    else
-    {
-        cout << "GPU is disabled" << endl;
-    }
-
     try
     {
+        bool gpu = CUDA::Utils::is_gpu_available();
+        parse_arguments(argc, argv, gpu);
+
+        if (gpu)
+        {
+            cout << "GPU is enabled" << endl;
+        }
+        else
+        {
+            cout << "GPU is disabled" << endl;
+        }
         cout << "Hello, World!" << endl;
     }
     catch (const std::exception &e)

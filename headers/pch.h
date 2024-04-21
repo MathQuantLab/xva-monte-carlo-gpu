@@ -31,6 +31,13 @@ public:
      * @param message Exception message
      */
     Exception(const std::string& message) : m_message(message) {}
+
+    /**
+     * @brief Destroy the Exception object
+     * 
+     */
+    virtual ~Exception()  = default;
+
     /**
      * @brief Get the exception message
      * 

@@ -31,5 +31,13 @@ namespace CUDA {
          * @return false GPU is not available
          */
         bool is_gpu_available() noexcept;
+
+        /**
+         * @brief Select a GPU
+         * 
+         * @param device_id GPU device id
+         * @throws Exception If the id is invalid
+         */
+        void select_gpu(int device_id);
     }
 }

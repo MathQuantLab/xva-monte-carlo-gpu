@@ -17,3 +17,16 @@ bool CUDA::Utils::is_gpu_available() noexcept
     cudaGetDeviceCount(&device_count);
     return device_count > 0;
 }
+
+void CUDA::Utils::select_gpu(int device_id)
+{
+    int device_count;
+    cudaGetDeviceCount(&device_count);
+
+    if (device_id < 0 || device_id >= device_count)
+    {
+        throw Exception("Invalid device id");
+    }
+
+    cudaSetDevice(device_id);
+}
