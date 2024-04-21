@@ -4,29 +4,30 @@
  * @brief Holds CUDA utilities
  * @version 1.0
  * @date 2024-04-19
- * 
+ *
  * @copyright Copyright (c) 2024
- * 
+ *
  */
 
 #pragma once
 
 #include "../headers/pch.h"
 
-
 /**
  * @brief All CUDA functions
- * 
+ *
  */
-namespace CUDA {
+namespace CUDA
+{
     /**
      * @brief CUDA utils functions
-     * 
+     *
      */
-    namespace Utils {
+    namespace Utils
+    {
         /**
          * @brief Check if a GPU is available
-         * 
+         *
          * @return true GPU is available
          * @return false GPU is not available
          */
@@ -34,7 +35,7 @@ namespace CUDA {
 
         /**
          * @brief Select a GPU
-         * 
+         *
          * @param device_id GPU device id
          * @throws Exception If the id is invalid
          */

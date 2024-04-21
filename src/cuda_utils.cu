@@ -4,9 +4,9 @@
  * @brief Implments {@link cuda_utils.h}
  * @version 1.0
  * @date 2024-04-19
- * 
+ *
  * @copyright Copyright (c) 2024
- * 
+ *
  */
 
 #include "../headers/cuda_utils.h"

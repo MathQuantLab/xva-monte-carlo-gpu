@@ -4,9 +4,9 @@
  * @brief Main file
  * @version 1.0
  * @date 2024-04-19
- * 
+ *
  * @copyright Copyright (c) 2024
- * 
+ *
  */
 
 #include <iostream>
@@ -29,15 +29,14 @@ void info(const char *name)
     cout << "  -v, --version   Display application version" << endl;
 }
 
-
 /**
  * @brief Parse command line arguments
  *
  * @param argc Number of arguments
  * @param argv Arguments
  * @param gpu GPU flag
-*/
-void parse_arguments(int argc, char *argv[], bool& gpu)
+ */
+void parse_arguments(int argc, char *argv[], bool &gpu)
 {
     for (int i = 1; i < argc; i++)
     {
@@ -85,7 +84,6 @@ void parse_arguments(int argc, char *argv[], bool& gpu)
     }
 }
 
-
 /**
  * @brief Main function
  *
@@ -95,9 +93,8 @@ void parse_arguments(int argc, char *argv[], bool& gpu)
  */
 int main(int argc, char *argv[])
 {
-    atexit([]() -> void {
-        cudaDeviceReset();
-    });
+    atexit([]() -> void
+           { cudaDeviceReset(); });
 
     if (argc < 2)
     {
