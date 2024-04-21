@@ -34,4 +34,4 @@ doc:
 	doxygen Doxyfile
 
 clean:
-	$(DEL) obj/*.o* bin/xva bin/xva.exe
+	$(DEL) obj/*.o* bin/xva.*
