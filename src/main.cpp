@@ -10,7 +10,6 @@
  */
 
 #include <iostream>
-#include <cstring>
 
 #include "../headers/cuda_utils.h"
 #include "../headers/utils.h"
