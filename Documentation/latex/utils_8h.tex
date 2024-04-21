@@ -6,7 +6,9 @@ Provides utility functions.
 
 
 {\ttfamily \#include \char`\"{}../headers/pch.\+h\char`\"{}}\newline
-Include dependency graph for utils.\+h\+:\nopagebreak
+{\ttfamily \#include $<$set$>$}\newline
+Include dependency graph for utils.\+h\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -31,7 +33,11 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 void \mbox{\hyperlink{namespace_utils_ace6934aad7553d4fa9891e34afe23254}{Utils\+::info}} (const char $\ast$name)
 \begin{DoxyCompactList}\small\item\em Application information. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespace_utils_ab46e847b10ac7963bd320d59d30260e5}{Utils\+::parse\+\_\+arguments}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]}, bool \&gpu)
-\begin{DoxyCompactList}\small\item\em Parse command line arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Parse command line arguments. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespace_utils_a963a6072169d90e0e52b17f1bb2e6136}{Utils\+::parse\+\_\+type}} (const std\+::string \&str, std\+::set$<$ \mbox{\hyperlink{pch_8h_a53054d12c7fd5c029fd5baf8caa1d9a1}{XVA}} $>$ \&xvas)
+\begin{DoxyCompactList}\small\item\em Parse XVA type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespace_utils_a56c6508c58c2bf4bc5a4953000f0cc7d}{Utils\+::split\+\_\+string}} (const std\+::string \&str, const std\+::string \&delim, std\+::vector$<$ std\+::string $>$ \&tokens)
+\begin{DoxyCompactList}\small\item\em Split a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}

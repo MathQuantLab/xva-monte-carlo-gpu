@@ -11,7 +11,11 @@ Provides utility functions.
 void \mbox{\hyperlink{namespace_utils_ace6934aad7553d4fa9891e34afe23254}{info}} (const char $\ast$name)
 \begin{DoxyCompactList}\small\item\em Application information. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespace_utils_ab46e847b10ac7963bd320d59d30260e5}{parse\+\_\+arguments}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]}, bool \&gpu)
-\begin{DoxyCompactList}\small\item\em Parse command line arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Parse command line arguments. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespace_utils_a963a6072169d90e0e52b17f1bb2e6136}{parse\+\_\+type}} (const std\+::string \&str, std\+::set$<$ \mbox{\hyperlink{pch_8h_a53054d12c7fd5c029fd5baf8caa1d9a1}{XVA}} $>$ \&xvas)
+\begin{DoxyCompactList}\small\item\em Parse XVA type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespace_utils_a56c6508c58c2bf4bc5a4953000f0cc7d}{split\+\_\+string}} (const std\+::string \&str, const std\+::string \&delim, std\+::vector$<$ std\+::string $>$ \&tokens)
+\begin{DoxyCompactList}\small\item\em Split a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -71,5 +75,65 @@ Here is the caller graph for this function\+:\nopagebreak
 \begin{center}
 \leavevmode
 \includegraphics[width=287pt]{namespace_utils_ab46e847b10ac7963bd320d59d30260e5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespace_utils_a963a6072169d90e0e52b17f1bb2e6136}\label{namespace_utils_a963a6072169d90e0e52b17f1bb2e6136}} 
+\index{Utils@{Utils}!parse\_type@{parse\_type}}
+\index{parse\_type@{parse\_type}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{parse\_type()}{parse\_type()}}
+{\footnotesize\ttfamily void Utils\+::parse\+\_\+type (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str,  }\item[{std\+::set$<$ \mbox{\hyperlink{pch_8h_a53054d12c7fd5c029fd5baf8caa1d9a1}{XVA}} $>$ \&}]{xvas }\end{DoxyParamCaption})}
+
+
+
+Parse XVA type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & XVA type \\
+\hline
+{\em xvas} & XVA types \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{namespace_utils_a963a6072169d90e0e52b17f1bb2e6136_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{namespace_utils_a963a6072169d90e0e52b17f1bb2e6136_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespace_utils_a56c6508c58c2bf4bc5a4953000f0cc7d}\label{namespace_utils_a56c6508c58c2bf4bc5a4953000f0cc7d}} 
+\index{Utils@{Utils}!split\_string@{split\_string}}
+\index{split\_string@{split\_string}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{split\_string()}{split\_string()}}
+{\footnotesize\ttfamily void Utils\+::split\+\_\+string (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str,  }\item[{const std\+::string \&}]{delim,  }\item[{std\+::vector$<$ std\+::string $>$ \&}]{tokens }\end{DoxyParamCaption})}
+
+
+
+Split a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & String to split \\
+\hline
+{\em delim} & Delimiter \\
+\hline
+{\em tokens} & Tokens \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_utils_a56c6508c58c2bf4bc5a4953000f0cc7d_icgraph}
 \end{center}
 \end{figure}
