@@ -39,6 +39,9 @@ int main(int argc, char *argv[])
         bool gpu = CUDA::Utils::is_gpu_available();
         Utils::parse_arguments(argc, argv, gpu);
 
+        std::set<XVA> xvas;
+        Utils::parse_type(argv[argc - 1], xvas);
+
         if (gpu)
         {
             cout << "GPU is enabled" << endl;

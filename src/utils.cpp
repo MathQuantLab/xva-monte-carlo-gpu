@@ -4,9 +4,9 @@
  * @brief Implements {@link utils.h}
  * @version 0.1
  * @date 2024-04-21
- * 
+ *
  * @copyright Copyright (c) 2024
- * 
+ *
  */
 
 #include <iostream>
@@ -69,6 +69,52 @@ void Utils::parse_arguments(int argc, char *argv[], bool &gpu)
         {
             cerr << "Unknown option: " << argv[i] << endl;
             exit(1);
+        }
+    }
+}
+
+void Utils::split_string(const std::string &str, const std::string &delim, std::vector<std::string> &tokens)
+{
+    size_t start = 0;
+    size_t end = str.find(delim);
+    while (end != std::string::npos)
+    {
+        tokens.push_back(str.substr(start, end - start));
+        start = end + delim.length();
+        end = str.find(delim, start);
+    }
+    tokens.push_back(str.substr(start, end));
+}
+
+void Utils::parse_type(const std::string &str, std::set<XVA> &xvas)
+{
+    std::vector<std::string> tokens;
+    split_string(str, ",", tokens);
+    for (const auto &token : tokens)
+    {
+        if (token == "CVA")
+        {
+            xvas.insert(XVA::CVA);
+        }
+        else if (token == "DVA")
+        {
+            xvas.insert(XVA::DVA);
+        }
+        else if (token == "FVA")
+        {
+            xvas.insert(XVA::FVA);
+        }
+        else if (token == "MVA")
+        {
+            xvas.insert(XVA::MVA);
+        }
+        else if (token == "KVA")
+        {
+            xvas.insert(XVA::KVA);
+        }
+        else
+        {
+            throw Exception("Unknown XVA type: " + token);
         }
     }
 }

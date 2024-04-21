@@ -13,6 +13,8 @@
 
 #include "../headers/pch.h"
 
+#include <set>
+
 /**
  * @brief Provides utility functions
  * 
@@ -34,4 +36,21 @@ namespace Utils
      * @param gpu GPU flag
      */
     void parse_arguments(int argc, char *argv[], bool &gpu);
+
+    /**
+     * @brief Parse XVA type
+     *
+     * @param type XVA type
+     * @param xvas XVA types
+     */
+    void parse_type(const std::string& str, std::set<XVA> &xvas);
+
+    /**
+     * @brief Split a string
+     *
+     * @param str String to split
+     * @param delim Delimiter
+     * @param tokens Tokens
+     */
+    void split_string(const std::string &str, const std::string &delim, std::vector<std::string> &tokens);
 }
