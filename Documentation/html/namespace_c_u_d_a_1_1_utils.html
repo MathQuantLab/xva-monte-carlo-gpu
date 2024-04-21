@@ -82,6 +82,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a4d2175570accb1f866c819ad3d984537"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_u_d_a_1_1_utils.html#a4d2175570accb1f866c819ad3d984537">is_gpu_available</a> () noexcept</td></tr>
 <tr class="memdesc:a4d2175570accb1f866c819ad3d984537"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a GPU is available.  <a href="namespace_c_u_d_a_1_1_utils.html#a4d2175570accb1f866c819ad3d984537">More...</a><br /></td></tr>
 <tr class="separator:a4d2175570accb1f866c819ad3d984537"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a368032f0338fadbd527f5de59fc3bbc4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_u_d_a_1_1_utils.html#a368032f0338fadbd527f5de59fc3bbc4">select_gpu</a> (int device_id)</td></tr>
+<tr class="memdesc:a368032f0338fadbd527f5de59fc3bbc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Select a GPU.  <a href="namespace_c_u_d_a_1_1_utils.html#a368032f0338fadbd527f5de59fc3bbc4">More...</a><br /></td></tr>
+<tr class="separator:a368032f0338fadbd527f5de59fc3bbc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="namespace_c_u_d_a.html" title="All CUDA functions.">CUDA</a> utils functions. </p>
@@ -120,6 +123,48 @@ Here is the caller graph for this function:</div>
 <map name="anamespace_c_u_d_a_1_1_utils_a4d2175570accb1f866c819ad3d984537_icgraph" id="anamespace_c_u_d_a_1_1_utils_a4d2175570accb1f866c819ad3d984537_icgraph">
 <area shape="rect" title="Check if a GPU is available." alt="" coords="108,5,256,47"/>
 <area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function." alt="" coords="5,13,60,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a368032f0338fadbd527f5de59fc3bbc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a368032f0338fadbd527f5de59fc3bbc4">&#9670;&nbsp;</a></span>select_gpu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CUDA::Utils::select_gpu </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>device_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Select a GPU. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">device_id</td><td>GPU device id </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"><a class="el" href="class_exception.html" title="Exception class.">Exception</a></td><td>If the id is invalid </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespace_c_u_d_a_1_1_utils_a368032f0338fadbd527f5de59fc3bbc4_icgraph.png" border="0" usemap="#anamespace_c_u_d_a_1_1_utils_a368032f0338fadbd527f5de59fc3bbc4_icgraph" alt=""/></div>
+<map name="anamespace_c_u_d_a_1_1_utils_a368032f0338fadbd527f5de59fc3bbc4_icgraph" id="anamespace_c_u_d_a_1_1_utils_a368032f0338fadbd527f5de59fc3bbc4_icgraph">
+<area shape="rect" title="Select a GPU." alt="" coords="291,5,467,32"/>
+<area shape="rect" href="main_8cpp.html#a1799f6eb97eb55e37b9d909550001b61" title="Parse command line arguments." alt="" coords="108,5,243,32"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function." alt="" coords="5,5,60,32"/>
 </map>
 </div>
 

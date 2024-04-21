@@ -1,6 +1,7 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,36,60,63"/>
-<area shape="rect" id="node2" href="$main_8cpp.html#a40721f4c45df5720145db897c012070c" title="Application information." alt="" coords="304,36,351,63"/>
-<area shape="rect" id="node3" href="$namespace_c_u_d_a_1_1_utils.html#a4d2175570accb1f866c819ad3d984537" title="Check if a GPU is available." alt="" coords="108,29,256,70"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#a1799f6eb97eb55e37b9d909550001b61" title="Parse command line arguments." alt="" coords="115,95,249,121"/>
+<area shape="rect" id="node1" title="Main function." alt="" coords="5,36,60,62"/>
+<area shape="rect" id="node2" href="$main_8cpp.html#a40721f4c45df5720145db897c012070c" title="Application information." alt="" coords="369,10,415,37"/>
+<area shape="rect" id="node3" href="$namespace_c_u_d_a_1_1_utils.html#a4d2175570accb1f866c819ad3d984537" title="Check if a GPU is available." alt="" coords="108,28,256,70"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a1799f6eb97eb55e37b9d909550001b61" title="Parse command line arguments." alt="" coords="115,94,249,121"/>
+<area shape="rect" id="node5" href="$namespace_c_u_d_a_1_1_utils.html#a368032f0338fadbd527f5de59fc3bbc4" title="Select a GPU." alt="" coords="304,94,480,121"/>
 </map>

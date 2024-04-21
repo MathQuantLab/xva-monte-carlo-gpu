@@ -9,7 +9,9 @@
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{namespace_c_u_d_a_1_1_utils_a4d2175570accb1f866c819ad3d984537}{is\+\_\+gpu\+\_\+available}} () noexcept
-\begin{DoxyCompactList}\small\item\em Check if a GPU is available. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Check if a GPU is available. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespace_c_u_d_a_1_1_utils_a368032f0338fadbd527f5de59fc3bbc4}{select\+\_\+gpu}} (int device\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Select a GPU. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -36,5 +38,33 @@ Here is the caller graph for this function\+:\nopagebreak
 \begin{center}
 \leavevmode
 \includegraphics[width=268pt]{namespace_c_u_d_a_1_1_utils_a4d2175570accb1f866c819ad3d984537_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespace_c_u_d_a_1_1_utils_a368032f0338fadbd527f5de59fc3bbc4}\label{namespace_c_u_d_a_1_1_utils_a368032f0338fadbd527f5de59fc3bbc4}} 
+\index{CUDA::Utils@{CUDA::Utils}!select\_gpu@{select\_gpu}}
+\index{select\_gpu@{select\_gpu}!CUDA::Utils@{CUDA::Utils}}
+\doxysubsubsection{\texorpdfstring{select\_gpu()}{select\_gpu()}}
+{\footnotesize\ttfamily void CUDA\+::\+Utils\+::select\+\_\+gpu (\begin{DoxyParamCaption}\item[{int}]{device\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Select a GPU. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device\+\_\+id} & GPU device id \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_exception}{Exception}}} & If the id is invalid \\
+\hline
+\end{DoxyExceptions}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_c_u_d_a_1_1_utils_a368032f0338fadbd527f5de59fc3bbc4_icgraph}
 \end{center}
 \end{figure}
