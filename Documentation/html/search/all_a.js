@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7eexception_18',['~Exception',['../class_exception.html#a5c134c74b84c0a7a4c106ac60cabe10c',1,'Exception']]]
+  ['select_5fgpu_20',['select_gpu',['../namespace_c_u_d_a_1_1_utils.html#a368032f0338fadbd527f5de59fc3bbc4',1,'CUDA::Utils']]]
 ];

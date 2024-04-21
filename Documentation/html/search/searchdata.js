@@ -1,11 +1,13 @@
 var indexSectionsWithContent =
 {
-  0: "ceilmprswx~",
+  0: "cdefiklmprsuwx~",
   1: "e",
-  2: "c",
-  3: "clmpr",
+  2: "cu",
+  3: "clmpru",
   4: "eimpsw~",
-  5: "lx"
+  5: "x",
+  6: "cdfkm",
+  7: "lx"
 };
 
 var indexSectionNames =
@@ -15,7 +17,9 @@ var indexSectionNames =
   2: "namespaces",
   3: "files",
   4: "functions",
-  5: "pages"
+  5: "enums",
+  6: "enumvalues",
+  7: "pages"
 };
 
 var indexSectionLabels =
@@ -25,6 +29,8 @@ var indexSectionLabels =
   2: "Namespaces",
   3: "Files",
   4: "Functions",
-  5: "Pages"
+  5: "Enumerations",
+  6: "Enumerator",
+  7: "Pages"
 };
 

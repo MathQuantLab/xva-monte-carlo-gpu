@@ -8,7 +8,9 @@ Main file.
 {\ttfamily \#include $<$iostream$>$}\newline
 {\ttfamily \#include $<$cstring$>$}\newline
 {\ttfamily \#include \char`\"{}../headers/cuda\+\_\+utils.\+h\char`\"{}}\newline
-Include dependency graph for main.\+cpp\+:\nopagebreak
+{\ttfamily \#include \char`\"{}../headers/utils.\+h\char`\"{}}\newline
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -18,10 +20,6 @@ Include dependency graph for main.\+cpp\+:\nopagebreak
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{main_8cpp_a40721f4c45df5720145db897c012070c}{info}} (const char $\ast$name)
-\begin{DoxyCompactList}\small\item\em Application information. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{main_8cpp_a1799f6eb97eb55e37b9d909550001b61}{parse\+\_\+arguments}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]}, bool \&gpu)
-\begin{DoxyCompactList}\small\item\em Parse command line arguments. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
 \begin{DoxyCompactList}\small\item\em Main function. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -44,28 +42,6 @@ Copyright (c) 2024
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{main_8cpp_a40721f4c45df5720145db897c012070c}\label{main_8cpp_a40721f4c45df5720145db897c012070c}} 
-\index{main.cpp@{main.cpp}!info@{info}}
-\index{info@{info}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{info()}{info()}}
-{\footnotesize\ttfamily void info (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})}
-
-
-
-Application information. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em name} & Application name \\
-\hline
-\end{DoxyParams}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=329pt]{main_8cpp_a40721f4c45df5720145db897c012070c_icgraph}
-\end{center}
-\end{figure}
 \mbox{\Hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
 \index{main.cpp@{main.cpp}!main@{main}}
 \index{main@{main}!main.cpp@{main.cpp}}
@@ -86,43 +62,11 @@ Main function.
 \begin{DoxyReturn}{Returns}
 int Exit code 
 \end{DoxyReturn}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
-\end{center}
-\end{figure}
-\mbox{\Hypertarget{main_8cpp_a1799f6eb97eb55e37b9d909550001b61}\label{main_8cpp_a1799f6eb97eb55e37b9d909550001b61}} 
-\index{main.cpp@{main.cpp}!parse\_arguments@{parse\_arguments}}
-\index{parse\_arguments@{parse\_arguments}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{parse\_arguments()}{parse\_arguments()}}
-{\footnotesize\ttfamily void parse\+\_\+arguments (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]},  }\item[{bool \&}]{gpu }\end{DoxyParamCaption})}
-
-
-
-Parse command line arguments. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em argc} & Number of arguments \\
-\hline
-{\em argv} & Arguments \\
-\hline
-{\em gpu} & GPU flag \\
-\hline
-\end{DoxyParams}
-Here is the call graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=349pt]{main_8cpp_a1799f6eb97eb55e37b9d909550001b61_cgraph}
-\end{center}
-\end{figure}
-Here is the caller graph for this function\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=258pt]{main_8cpp_a1799f6eb97eb55e37b9d909550001b61_icgraph}
 \end{center}
 \end{figure}

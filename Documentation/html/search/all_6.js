@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['readme_2emd_14',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]]
+  ['license_11',['LICENSE',['../md__l_i_c_e_n_s_e.html',1,'']]],
+  ['license_2emd_12',['LICENSE.md',['../_l_i_c_e_n_s_e_8md.html',1,'']]]
 ];

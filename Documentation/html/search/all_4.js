@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['main_9',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]],
-  ['main_2ecpp_10',['main.cpp',['../main_8cpp.html',1,'']]]
+  ['info_8',['info',['../namespace_utils.html#ace6934aad7553d4fa9891e34afe23254',1,'Utils']]],
+  ['is_5fgpu_5favailable_9',['is_gpu_available',['../namespace_c_u_d_a_1_1_utils.html#a4d2175570accb1f866c819ad3d984537',1,'CUDA::Utils']]]
 ];

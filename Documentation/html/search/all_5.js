@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['parse_5farguments_11',['parse_arguments',['../main_8cpp.html#a1799f6eb97eb55e37b9d909550001b61',1,'main.cpp']]],
-  ['pch_2ecpp_12',['pch.cpp',['../pch_8cpp.html',1,'']]],
-  ['pch_2eh_13',['pch.h',['../pch_8h.html',1,'']]]
+  ['kva_10',['KVA',['../pch_8h.html#a53054d12c7fd5c029fd5baf8caa1d9a1ada73e17e9a41dcc275179dd518571207',1,'pch.h']]]
 ];

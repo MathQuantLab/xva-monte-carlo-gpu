@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['info_5',['info',['../main_8cpp.html#a40721f4c45df5720145db897c012070c',1,'main.cpp']]],
-  ['is_5fgpu_5favailable_6',['is_gpu_available',['../namespace_c_u_d_a_1_1_utils.html#a4d2175570accb1f866c819ad3d984537',1,'CUDA::Utils']]]
+  ['exception_6',['Exception',['../class_exception.html',1,'Exception'],['../class_exception.html#a472b7904dadf1047ba48c23741888456',1,'Exception::Exception()']]]
 ];

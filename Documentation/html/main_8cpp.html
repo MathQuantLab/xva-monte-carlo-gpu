@@ -79,32 +79,28 @@ $(function() {
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;cstring&gt;</code><br />
 <code>#include &quot;<a class="el" href="cuda__utils_8h_source.html">../headers/cuda_utils.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="utils_8h_source.html">../headers/utils.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for main.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#asrc_2main_8cpp" alt=""/></div>
 <map name="asrc_2main_8cpp" id="asrc_2main_8cpp">
-<area shape="rect" title="Main file." alt="" coords="90,5,195,32"/>
+<area shape="rect" title="Main file." alt="" coords="161,5,266,32"/>
 <area shape="rect" title=" " alt="" coords="5,80,85,107"/>
 <area shape="rect" title=" " alt="" coords="109,80,176,107"/>
 <area shape="rect" href="cuda__utils_8h.html" title="Holds CUDA utilities." alt="" coords="200,80,368,107"/>
-<area shape="rect" href="pch_8h.html" title="Precompiled header." alt="" coords="221,155,347,181"/>
-<area shape="rect" title=" " alt="" coords="18,229,83,256"/>
-<area shape="rect" title=" " alt="" coords="108,229,231,256"/>
-<area shape="rect" title=" " alt="" coords="255,229,313,256"/>
-<area shape="rect" title=" " alt="" coords="338,229,425,256"/>
-<area shape="rect" title=" " alt="" coords="449,229,535,256"/>
+<area shape="rect" href="utils_8h.html" title="Provides utility functions." alt="" coords="392,80,523,107"/>
+<area shape="rect" href="pch_8h.html" title="Precompiled header." alt="" coords="308,155,433,181"/>
+<area shape="rect" title=" " alt="" coords="105,229,170,256"/>
+<area shape="rect" title=" " alt="" coords="195,229,317,256"/>
+<area shape="rect" title=" " alt="" coords="341,229,400,256"/>
+<area shape="rect" title=" " alt="" coords="425,229,511,256"/>
+<area shape="rect" title=" " alt="" coords="535,229,622,256"/>
 </map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a40721f4c45df5720145db897c012070c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a40721f4c45df5720145db897c012070c">info</a> (const char *name)</td></tr>
-<tr class="memdesc:a40721f4c45df5720145db897c012070c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Application information.  <a href="main_8cpp.html#a40721f4c45df5720145db897c012070c">More...</a><br /></td></tr>
-<tr class="separator:a40721f4c45df5720145db897c012070c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1799f6eb97eb55e37b9d909550001b61"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a1799f6eb97eb55e37b9d909550001b61">parse_arguments</a> (int argc, char *argv[], bool &amp;gpu)</td></tr>
-<tr class="memdesc:a1799f6eb97eb55e37b9d909550001b61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse command line arguments.  <a href="main_8cpp.html#a1799f6eb97eb55e37b9d909550001b61">More...</a><br /></td></tr>
-<tr class="separator:a1799f6eb97eb55e37b9d909550001b61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
 <tr class="memdesc:a0ddf1224851353fc92bfbff6f499fa97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main function.  <a href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">More...</a><br /></td></tr>
 <tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -116,42 +112,6 @@ Functions</h2></td></tr>
 <dl class="section date"><dt>Date</dt><dd>2024-04-19</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2024 </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a40721f4c45df5720145db897c012070c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40721f4c45df5720145db897c012070c">&#9670;&nbsp;</a></span>info()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void info </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>name</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Application information. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">name</td><td>Application name </td></tr>
-  </table>
-  </dd>
-</dl>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="main_8cpp_a40721f4c45df5720145db897c012070c_icgraph.png" border="0" usemap="#amain_8cpp_a40721f4c45df5720145db897c012070c_icgraph" alt=""/></div>
-<map name="amain_8cpp_a40721f4c45df5720145db897c012070c_icgraph" id="amain_8cpp_a40721f4c45df5720145db897c012070c_icgraph">
-<area shape="rect" title="Application information." alt="" coords="291,5,337,32"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function." alt="" coords="5,5,60,32"/>
-<area shape="rect" href="main_8cpp.html#a1799f6eb97eb55e37b9d909550001b61" title="Parse command line arguments." alt="" coords="108,31,243,57"/>
-</map>
-</div>
-
-</div>
-</div>
 <a id="a0ddf1224851353fc92bfbff6f499fa97"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0ddf1224851353fc92bfbff6f499fa97">&#9670;&nbsp;</a></span>main()</h2>
 
@@ -192,74 +152,11 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.png" border="0" usemap="#amain_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph" alt=""/></div>
 <map name="amain_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph" id="amain_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph">
-<area shape="rect" title="Main function." alt="" coords="5,36,60,62"/>
-<area shape="rect" href="main_8cpp.html#a40721f4c45df5720145db897c012070c" title="Application information." alt="" coords="369,10,415,37"/>
-<area shape="rect" href="namespace_c_u_d_a_1_1_utils.html#a4d2175570accb1f866c819ad3d984537" title="Check if a GPU is available." alt="" coords="108,28,256,70"/>
-<area shape="rect" href="main_8cpp.html#a1799f6eb97eb55e37b9d909550001b61" title="Parse command line arguments." alt="" coords="115,94,249,121"/>
-<area shape="rect" href="namespace_c_u_d_a_1_1_utils.html#a368032f0338fadbd527f5de59fc3bbc4" title="Select a GPU." alt="" coords="304,94,480,121"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a1799f6eb97eb55e37b9d909550001b61"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1799f6eb97eb55e37b9d909550001b61">&#9670;&nbsp;</a></span>parse_arguments()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void parse_arguments </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>argc</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>argv</em>[], </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool &amp;&#160;</td>
-          <td class="paramname"><em>gpu</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Parse command line arguments. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">argc</td><td>Number of arguments </td></tr>
-    <tr><td class="paramname">argv</td><td>Arguments </td></tr>
-    <tr><td class="paramname">gpu</td><td>GPU flag </td></tr>
-  </table>
-  </dd>
-</dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="main_8cpp_a1799f6eb97eb55e37b9d909550001b61_cgraph.png" border="0" usemap="#amain_8cpp_a1799f6eb97eb55e37b9d909550001b61_cgraph" alt=""/></div>
-<map name="amain_8cpp_a1799f6eb97eb55e37b9d909550001b61_cgraph" id="amain_8cpp_a1799f6eb97eb55e37b9d909550001b61_cgraph">
-<area shape="rect" title="Parse command line arguments." alt="" coords="5,31,140,57"/>
-<area shape="rect" href="main_8cpp.html#a40721f4c45df5720145db897c012070c" title="Application information." alt="" coords="253,5,299,32"/>
-<area shape="rect" href="namespace_c_u_d_a_1_1_utils.html#a368032f0338fadbd527f5de59fc3bbc4" title="Select a GPU." alt="" coords="188,56,364,83"/>
-</map>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="main_8cpp_a1799f6eb97eb55e37b9d909550001b61_icgraph.png" border="0" usemap="#amain_8cpp_a1799f6eb97eb55e37b9d909550001b61_icgraph" alt=""/></div>
-<map name="amain_8cpp_a1799f6eb97eb55e37b9d909550001b61_icgraph" id="amain_8cpp_a1799f6eb97eb55e37b9d909550001b61_icgraph">
-<area shape="rect" title="Parse command line arguments." alt="" coords="108,5,243,32"/>
-<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function." alt="" coords="5,5,60,32"/>
+<area shape="rect" title="Main function." alt="" coords="5,37,60,63"/>
+<area shape="rect" href="namespace_utils.html#ace6934aad7553d4fa9891e34afe23254" title="Application information." alt="" coords="375,11,460,38"/>
+<area shape="rect" href="namespace_c_u_d_a_1_1_utils.html#a4d2175570accb1f866c819ad3d984537" title="Check if a GPU is available." alt="" coords="121,29,269,71"/>
+<area shape="rect" href="namespace_utils.html#ab46e847b10ac7963bd320d59d30260e5" title="Parse command line arguments." alt="" coords="108,95,281,122"/>
+<area shape="rect" href="namespace_c_u_d_a_1_1_utils.html#a368032f0338fadbd527f5de59fc3bbc4" title="Select a GPU." alt="" coords="329,95,505,122"/>
 </map>
 </div>
 
