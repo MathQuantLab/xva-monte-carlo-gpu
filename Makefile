@@ -3,7 +3,7 @@ CC=nvcc
 ifeq ($(RELEASE), TRUE)
 	CFLAGS=-O3 -std=c++17
 else
-	CFLAGS=-g -G -std=c++17
+	CFLAGS=-g -G -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra
 endif
 
 ifeq ($(OS), Windows_NT)
