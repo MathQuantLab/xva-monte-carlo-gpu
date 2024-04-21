@@ -56,9 +56,29 @@ private:
  */
 enum XVA
 {
+    /**
+     * @brief Credit Valuation Adjustment
+     * 
+     */
     CVA,
+    /**
+     * @brief Debit Valuation Adjustment
+     * 
+     */
     DVA,
+    /**
+     * @brief Funding Valuation Adjustment
+     * 
+     */
     FVA,
+    /**
+     * @brief Margin Valuation Adjustment
+     * 
+     */
     MVA,
+    /**
+     * @brief Capital Valuation Adjustment
+     * 
+     */
     KVA
 };
