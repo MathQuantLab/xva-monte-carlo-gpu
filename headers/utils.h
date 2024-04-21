@@ -14,17 +14,24 @@
 #include "../headers/pch.h"
 
 /**
- * @brief Application information
- *
- * @param name Application name
+ * @brief Provides utility functions
+ * 
  */
-void info(const char *name);
+namespace Utils
+{
+    /**
+     * @brief Application information
+     *
+     * @param name Application name
+     */
+    void info(const char *name);
 
-/**
- * @brief Parse command line arguments
- *
- * @param argc Number of arguments
- * @param argv Arguments
- * @param gpu GPU flag
- */
-void parse_arguments(int argc, char *argv[], bool &gpu);
+    /**
+     * @brief Parse command line arguments
+     *
+     * @param argc Number of arguments
+     * @param argv Arguments
+     * @param gpu GPU flag
+     */
+    void parse_arguments(int argc, char *argv[], bool &gpu);
+}

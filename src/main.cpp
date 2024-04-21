@@ -31,14 +31,14 @@ int main(int argc, char *argv[])
 
     if (argc < 2)
     {
-        info(argv[0]);
+        Utils::info(argv[0]);
         return 0;
     }
 
     try
     {
         bool gpu = CUDA::Utils::is_gpu_available();
-        parse_arguments(argc, argv, gpu);
+        Utils::parse_arguments(argc, argv, gpu);
 
         if (gpu)
         {

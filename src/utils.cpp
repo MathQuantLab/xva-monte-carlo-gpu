@@ -17,7 +17,7 @@
 
 using namespace std;
 
-void info(const char *name)
+void Utils::info(const char *name)
 {
     cout << "Usage: " << name << " [options] <m0> <m1> <type>" << endl;
     cout << "Options:" << endl;
@@ -25,7 +25,7 @@ void info(const char *name)
     cout << "  -v, --version   Display application version" << endl;
 }
 
-void parse_arguments(int argc, char *argv[], bool &gpu)
+void Utils::parse_arguments(int argc, char *argv[], bool &gpu)
 {
     for (int i = 1; i < argc; i++)
     {
