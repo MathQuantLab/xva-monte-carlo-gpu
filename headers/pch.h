@@ -48,3 +48,16 @@ public:
 private:
     std::string m_message;
 };
+
+/**
+ * @brief XVA types
+ * 
+ */
+enum XVA
+{
+    CVA,
+    DVA,
+    FVA,
+    MVA,
+    KVA
+};
