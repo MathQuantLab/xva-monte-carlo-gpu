@@ -36,7 +36,7 @@ public:
      * @brief Destroy the Exception object
      * 
      */
-    virtual ~Exception()  = default;
+    virtual ~Exception() = default;
 
     /**
      * @brief Get the exception message
