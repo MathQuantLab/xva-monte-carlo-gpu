@@ -23,7 +23,7 @@ using namespace std;
  */
 void info(const char *name)
 {
-    cout << "Usage: " << name << " [options] <m1> <m2>" << endl;
+    cout << "Usage: " << name << " [options] <m0> <m1>" << endl;
     cout << "Options:" << endl;
     cout << "  -h, --help      Display this information" << endl;
     cout << "  -v, --version   Display application version" << endl;
@@ -95,6 +95,10 @@ void parse_arguments(int argc, char *argv[], bool& gpu)
  */
 int main(int argc, char *argv[])
 {
+    atexit([]() -> void {
+        cudaDeviceReset();
+    });
+
     if (argc < 2)
     {
         info(argv[0]);
