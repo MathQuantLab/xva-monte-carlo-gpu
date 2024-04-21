@@ -14,4 +14,11 @@
 #include <cuda_runtime.h>
 #include <cuda.h>
 
-bool is_gpu_available();
+
+/**
+ * @brief Check if a GPU is available
+ * 
+ * @return true GPU is available
+ * @return false GPU is not available
+ */
+bool is_gpu_available() noexcept;

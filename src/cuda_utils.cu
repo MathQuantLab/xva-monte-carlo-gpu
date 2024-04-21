@@ -11,7 +11,7 @@
 
 #include "../headers/cuda_utils.h"
 
-bool is_gpu_available()
+bool is_gpu_available() noexcept
 {
     int device_count;
     cudaGetDeviceCount(&device_count);
