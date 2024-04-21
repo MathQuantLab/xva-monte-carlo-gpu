@@ -9,7 +9,7 @@ endif
 ifeq ($(OS), Windows_NT)
 	DEL=del /Q
 else
-	DEL=rm -f
+	DEL=rm -f -v
 endif
 
 all: linux windows doc
@@ -35,4 +35,3 @@ doc:
 
 clean:
 	$(DEL) obj/*.o* bin/xva bin/xva.exe
-	$(DEL) -r -v Documentation/*
