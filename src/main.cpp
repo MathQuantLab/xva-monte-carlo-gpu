@@ -72,7 +72,7 @@ void parse_arguments(int argc, char *argv[], bool& gpu)
  *
  * @param argc Number of arguments
  * @param argv Arguments
- * @return int
+ * @return int Exit code
  */
 int main(int argc, char *argv[])
 {
@@ -106,7 +106,7 @@ int main(int argc, char *argv[])
     catch (...)
     {
         std::cerr << "Unknown exception" << endl;
-        return 1;
+        return -1;
     }
 
     return 0;
