@@ -18,16 +18,26 @@ linux: bin/xva.out
 
 windows: bin/xva.exe
 
-bin/xva.out: obj/main.o
+# Linux
+
+bin/xva.out: obj/main.o obj/cuda_utils.o
 	$(CC) $(CFLAGS) -o $@ $^
 
-obj/main.o: src/main.cpp
+obj/main.o: src/main.cpp headers/cuda_utils.h
 	$(CC) $(CFLAGS) -o $@ -c $<
 
-bin/xva.exe: obj/main.obj
+obj/cuda_utils.o: src/cuda_utils.cu headers/cuda_utils.h
+	$(CC) $(CFLAGS) -o $@ -c $<
+
+# Windows
+
+bin/xva.exe: obj/main.obj obj/cuda_utils.obj
 	$(CC) $(CFLAGS) -o $@ $^
 
-obj/main.obj: src/main.cpp
+obj/main.obj: src/main.cpp headers/cuda_utils.h
+	$(CC) $(CFLAGS) -o $@ -c $<
+
+obj/cuda_utils.obj: src/cuda_utils.cu headers/cuda_utils.h
 	$(CC) $(CFLAGS) -o $@ -c $<
 
 doc:
