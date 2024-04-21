@@ -14,11 +14,11 @@ endif
 
 all: linux windows doc
 
-linux: bin/xva
+linux: bin/xva.out
 
 windows: bin/xva.exe
 
-bin/xva: obj/main.o
+bin/xva.out: obj/main.o
 	$(CC) $(CFLAGS) -o $@ $^
 
 obj/main.o: src/main.cpp
