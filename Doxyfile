@@ -6,7 +6,7 @@
 DOXYFILE_ENCODING      = UTF-8
 PROJECT_NAME           = "XVA Monte-Carlo Simulator for GPU"
 PROJECT_NUMBER         = 1.0
-PROJECT_BRIEF          = "Uses GPU to provide Monte-Carlo simulation on GPU"
+PROJECT_BRIEF          = "Provide Monte-Carlo simulation for XVA on GPU"
 PROJECT_LOGO           =
 OUTPUT_DIRECTORY       = Documentation
 CREATE_SUBDIRS         = NO
