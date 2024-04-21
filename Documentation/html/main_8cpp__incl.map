@@ -3,6 +3,10 @@
 <area shape="rect" id="node2" title=" " alt="" coords="5,80,85,107"/>
 <area shape="rect" id="node3" title=" " alt="" coords="109,80,176,107"/>
 <area shape="rect" id="node4" href="$cuda__utils_8h.html" title="Holds CUDA utilities." alt="" coords="200,80,368,107"/>
-<area shape="rect" id="node5" title=" " alt="" coords="163,155,285,181"/>
-<area shape="rect" id="node6" title=" " alt="" coords="310,155,375,181"/>
+<area shape="rect" id="node5" href="$pch_8h.html" title="Precompiled header." alt="" coords="221,155,347,181"/>
+<area shape="rect" id="node6" title=" " alt="" coords="18,229,83,256"/>
+<area shape="rect" id="node7" title=" " alt="" coords="108,229,231,256"/>
+<area shape="rect" id="node8" title=" " alt="" coords="255,229,313,256"/>
+<area shape="rect" id="node9" title=" " alt="" coords="338,229,425,256"/>
+<area shape="rect" id="node10" title=" " alt="" coords="449,229,535,256"/>
 </map>

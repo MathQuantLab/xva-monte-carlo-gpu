@@ -14,4 +14,29 @@
 #include <cuda.h>
 #include <cuda_runtime.h>
 
-#include <filesystem>
+#include <string>
+#include <stdexcept>
+#include <exception>
+
+/**
+ * @brief Exception class
+ * 
+ */
+class Exception : public std::exception
+{
+public:
+    /**
+     * @brief Construct a new Exception object
+     * 
+     * @param message Exception message
+     */
+    Exception(const std::string& message) : m_message(message) {}
+    /**
+     * @brief Get the exception message
+     * 
+     * @return const char* Exception message
+     */
+    virtual const char* what() const noexcept override { return m_message.c_str(); }
+private:
+    std::string m_message;
+};

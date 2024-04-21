@@ -1,24 +1,30 @@
 var indexSectionsWithContent =
 {
-  0: "cilmprx",
-  1: "clmr",
-  2: "imp",
-  3: "lx"
+  0: "ceilmprwx",
+  1: "e",
+  2: "c",
+  3: "clmpr",
+  4: "eimpw",
+  5: "lx"
 };
 
 var indexSectionNames =
 {
   0: "all",
-  1: "files",
-  2: "functions",
-  3: "pages"
+  1: "classes",
+  2: "namespaces",
+  3: "files",
+  4: "functions",
+  5: "pages"
 };
 
 var indexSectionLabels =
 {
   0: "All",
-  1: "Files",
-  2: "Functions",
-  3: "Pages"
+  1: "Classes",
+  2: "Namespaces",
+  3: "Files",
+  4: "Functions",
+  5: "Pages"
 };
 
