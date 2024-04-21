@@ -17,6 +17,7 @@
 #include <string>
 #include <stdexcept>
 #include <exception>
+#include <vector>
 
 /**
  * @brief Exception class
