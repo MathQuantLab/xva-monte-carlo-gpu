@@ -78,14 +78,18 @@ $(function() {
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;cstring&gt;</code><br />
+<code>#include &quot;<a class="el" href="cuda__utils_8h_source.html">../headers/cuda_utils.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for main.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#asrc_2main_8cpp" alt=""/></div>
 <map name="asrc_2main_8cpp" id="asrc_2main_8cpp">
-<area shape="rect" title="Main file." alt="" coords="41,5,146,32"/>
+<area shape="rect" title="Main file." alt="" coords="90,5,195,32"/>
 <area shape="rect" title=" " alt="" coords="5,80,85,107"/>
 <area shape="rect" title=" " alt="" coords="109,80,176,107"/>
+<area shape="rect" href="cuda__utils_8h.html" title="Holds CUDA utilities." alt="" coords="200,80,368,107"/>
+<area shape="rect" title=" " alt="" coords="163,155,285,181"/>
+<area shape="rect" title=" " alt="" coords="310,155,375,181"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -94,6 +98,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a40721f4c45df5720145db897c012070c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a40721f4c45df5720145db897c012070c">info</a> (const char *name)</td></tr>
 <tr class="memdesc:a40721f4c45df5720145db897c012070c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Application information.  <a href="main_8cpp.html#a40721f4c45df5720145db897c012070c">More...</a><br /></td></tr>
 <tr class="separator:a40721f4c45df5720145db897c012070c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1799f6eb97eb55e37b9d909550001b61"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a1799f6eb97eb55e37b9d909550001b61">parse_arguments</a> (int argc, char *argv[], bool &amp;gpu)</td></tr>
+<tr class="memdesc:a1799f6eb97eb55e37b9d909550001b61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse command line arguments.  <a href="main_8cpp.html#a1799f6eb97eb55e37b9d909550001b61">More...</a><br /></td></tr>
+<tr class="separator:a1799f6eb97eb55e37b9d909550001b61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
 <tr class="memdesc:a0ddf1224851353fc92bfbff6f499fa97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main function.  <a href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">More...</a><br /></td></tr>
 <tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,8 +140,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8cpp_a40721f4c45df5720145db897c012070c_icgraph.png" border="0" usemap="#amain_8cpp_a40721f4c45df5720145db897c012070c_icgraph" alt=""/></div>
 <map name="amain_8cpp_a40721f4c45df5720145db897c012070c_icgraph" id="amain_8cpp_a40721f4c45df5720145db897c012070c_icgraph">
-<area shape="rect" title="Application information." alt="" coords="108,5,155,32"/>
+<area shape="rect" title="Application information." alt="" coords="291,5,337,32"/>
 <area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function." alt="" coords="5,5,60,32"/>
+<area shape="rect" href="main_8cpp.html#a1799f6eb97eb55e37b9d909550001b61" title="Parse command line arguments." alt="" coords="108,31,243,57"/>
 </map>
 </div>
 
@@ -180,8 +188,72 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.png" border="0" usemap="#amain_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph" alt=""/></div>
 <map name="amain_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph" id="amain_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph">
-<area shape="rect" title="Main function." alt="" coords="5,5,60,32"/>
-<area shape="rect" href="main_8cpp.html#a40721f4c45df5720145db897c012070c" title="Application information." alt="" coords="108,5,155,32"/>
+<area shape="rect" title="Main function." alt="" coords="5,25,60,52"/>
+<area shape="rect" href="main_8cpp.html#a40721f4c45df5720145db897c012070c" title="Application information." alt="" coords="291,25,337,52"/>
+<area shape="rect" href="cuda__utils_8h.html#ac3172c311c588e95a83276e2841906af" title=" " alt="" coords="110,25,241,52"/>
+<area shape="rect" href="main_8cpp.html#a1799f6eb97eb55e37b9d909550001b61" title="Parse command line arguments." alt="" coords="108,76,243,102"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1799f6eb97eb55e37b9d909550001b61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1799f6eb97eb55e37b9d909550001b61">&#9670;&nbsp;</a></span>parse_arguments()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void parse_arguments </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>argv</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>gpu</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Parse command line arguments. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">argc</td><td>Number of arguments </td></tr>
+    <tr><td class="paramname">argv</td><td>Arguments </td></tr>
+    <tr><td class="paramname">gpu</td><td>GPU flag </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_a1799f6eb97eb55e37b9d909550001b61_cgraph.png" border="0" usemap="#amain_8cpp_a1799f6eb97eb55e37b9d909550001b61_cgraph" alt=""/></div>
+<map name="amain_8cpp_a1799f6eb97eb55e37b9d909550001b61_cgraph" id="amain_8cpp_a1799f6eb97eb55e37b9d909550001b61_cgraph">
+<area shape="rect" title="Parse command line arguments." alt="" coords="5,5,140,32"/>
+<area shape="rect" href="main_8cpp.html#a40721f4c45df5720145db897c012070c" title="Application information." alt="" coords="188,5,235,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp_a1799f6eb97eb55e37b9d909550001b61_icgraph.png" border="0" usemap="#amain_8cpp_a1799f6eb97eb55e37b9d909550001b61_icgraph" alt=""/></div>
+<map name="amain_8cpp_a1799f6eb97eb55e37b9d909550001b61_icgraph" id="amain_8cpp_a1799f6eb97eb55e37b9d909550001b61_icgraph">
+<area shape="rect" title="Parse command line arguments." alt="" coords="108,5,243,32"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function." alt="" coords="5,5,60,32"/>
 </map>
 </div>
 

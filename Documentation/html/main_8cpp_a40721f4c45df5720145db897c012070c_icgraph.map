@@ -1,4 +1,5 @@
 <map id="info" name="info">
-<area shape="rect" id="node1" title="Application information." alt="" coords="108,5,155,32"/>
+<area shape="rect" id="node1" title="Application information." alt="" coords="291,5,337,32"/>
 <area shape="rect" id="node2" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function." alt="" coords="5,5,60,32"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a1799f6eb97eb55e37b9d909550001b61" title="Parse command line arguments." alt="" coords="108,31,243,57"/>
 </map>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['main_3',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]],
-  ['main_2ecpp_4',['main.cpp',['../main_8cpp.html',1,'']]]
+  ['license_4',['LICENSE',['../md__l_i_c_e_n_s_e.html',1,'']]],
+  ['license_2emd_5',['LICENSE.md',['../_l_i_c_e_n_s_e_8md.html',1,'']]]
 ];
