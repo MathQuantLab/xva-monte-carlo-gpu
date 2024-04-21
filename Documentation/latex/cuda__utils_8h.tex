@@ -7,16 +7,14 @@ Holds CUDA utilities.
 
 {\ttfamily \#include $<$cuda\+\_\+runtime.\+h$>$}\newline
 {\ttfamily \#include $<$cuda.\+h$>$}\newline
-Include dependency graph for cuda\+\_\+utils.\+h\+:
-\nopagebreak
+Include dependency graph for cuda\+\_\+utils.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=240pt]{cuda__utils_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -26,8 +24,8 @@ This graph shows which files directly or indirectly include this file\+:
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-bool \mbox{\hyperlink{cuda__utils_8h_ac3172c311c588e95a83276e2841906af}{is\+\_\+gpu\+\_\+available}} ()
-\end{DoxyCompactItemize}
+bool \mbox{\hyperlink{cuda__utils_8h_af8c38737713c2a0edf070c9348cb87b0}{is\+\_\+gpu\+\_\+available}} () noexcept
+\begin{DoxyCompactList}\small\item\em Check if a GPU is available. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -48,17 +46,25 @@ Copyright (c) 2024
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{cuda__utils_8h_ac3172c311c588e95a83276e2841906af}\label{cuda__utils_8h_ac3172c311c588e95a83276e2841906af}} 
+\mbox{\Hypertarget{cuda__utils_8h_af8c38737713c2a0edf070c9348cb87b0}\label{cuda__utils_8h_af8c38737713c2a0edf070c9348cb87b0}} 
 \index{cuda\_utils.h@{cuda\_utils.h}!is\_gpu\_available@{is\_gpu\_available}}
 \index{is\_gpu\_available@{is\_gpu\_available}!cuda\_utils.h@{cuda\_utils.h}}
 \doxysubsubsection{\texorpdfstring{is\_gpu\_available()}{is\_gpu\_available()}}
-{\footnotesize\ttfamily bool is\+\_\+gpu\+\_\+available (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool is\+\_\+gpu\+\_\+available (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+Check if a GPU is available. 
+
+\begin{DoxyReturn}{Returns}
+true GPU is available 
+
+false GPU is not available 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=255pt]{cuda__utils_8h_ac3172c311c588e95a83276e2841906af_icgraph}
+\includegraphics[width=255pt]{cuda__utils_8h_af8c38737713c2a0edf070c9348cb87b0_icgraph}
 \end{center}
 \end{figure}
