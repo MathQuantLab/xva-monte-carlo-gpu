@@ -50,7 +50,8 @@ int main(int argc, char *argv[])
         {
             cout << "GPU is disabled" << endl;
         }
-        cout << "Hello, World!" << endl;
+
+        cout << xvas.size() << " XVA requested" << endl;
     }
     catch (const std::exception &e)
     {
