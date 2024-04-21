@@ -82,7 +82,7 @@ int main(int argc, char *argv[])
         return 0;
     }
 
-    bool gpu = is_gpu_available();
+    bool gpu = CUDA::Utils::is_gpu_available();
     parse_arguments(argc, argv, gpu);
 
     if (gpu)

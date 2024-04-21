@@ -11,14 +11,25 @@
 
 #pragma once
 
-#include <cuda_runtime.h>
-#include <cuda.h>
+#include "../headers/pch.h"
 
 
 /**
- * @brief Check if a GPU is available
+ * @brief All CUDA functions
  * 
- * @return true GPU is available
- * @return false GPU is not available
  */
-bool is_gpu_available() noexcept;
+namespace CUDA {
+    /**
+     * @brief CUDA utils functions
+     * 
+     */
+    namespace Utils {
+        /**
+         * @brief Check if a GPU is available
+         * 
+         * @return true GPU is available
+         * @return false GPU is not available
+         */
+        bool is_gpu_available() noexcept;
+    }
+}
