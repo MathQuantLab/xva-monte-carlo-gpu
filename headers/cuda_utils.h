@@ -37,11 +37,15 @@ namespace CUDA
          * @brief Select a GPU
          *
          * @param device_id GPU device id
-         * @throws Exception If the id is invalid
+         * @throws CUDAException If the id is invalid or if the device cannot be selected
          */
         void select_gpu(int device_id);
     };
 
+    /**
+     * @brief CUDA exception
+     * 
+     */
     class CUDAException : public Exception
     {
     public:
@@ -66,6 +70,11 @@ namespace CUDA
          */
         cudaError_t get_error() const noexcept { return m_error; }
 
+        /**
+         * @brief Get the exception message
+         * 
+         * @return const char* Exception message
+         */
         virtual const char *what() const noexcept override;
     private:
         cudaError_t m_error;
