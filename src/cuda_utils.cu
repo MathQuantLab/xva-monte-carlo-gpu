@@ -28,5 +28,10 @@ void CUDA::Utils::select_gpu(int device_id)
         throw Exception("Invalid device id");
     }
 
-    cudaSetDevice(device_id);
+    cudaError_t error = cudaSetDevice(device_id);
+
+    if (error != cudaSuccess)
+    {
+        throw CUDA::CUDAException("Failed to select device", error);
+    }
 }
