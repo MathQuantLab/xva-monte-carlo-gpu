@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['parse_5farguments_58',['parse_arguments',['../namespace_utils.html#ab46e847b10ac7963bd320d59d30260e5',1,'Utils']]],
-  ['parse_5ftype_59',['parse_type',['../namespace_utils.html#a963a6072169d90e0e52b17f1bb2e6136',1,'Utils']]]
+  ['info_62',['info',['../namespace_utils.html#ace6934aad7553d4fa9891e34afe23254',1,'Utils']]],
+  ['is_5fgpu_5favailable_63',['is_gpu_available',['../namespace_c_u_d_a_1_1_utils.html#a4d2175570accb1f866c819ad3d984537',1,'CUDA::Utils']]]
 ];

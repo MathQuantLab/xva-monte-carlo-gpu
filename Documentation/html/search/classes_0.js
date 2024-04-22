@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['exception_37',['Exception',['../class_exception.html',1,'']]]
+  ['cudaexception_41',['CUDAException',['../class_c_u_d_a_1_1_c_u_d_a_exception.html',1,'CUDA']]]
 ];

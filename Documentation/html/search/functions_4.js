@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['select_5fgpu_60',['select_gpu',['../namespace_c_u_d_a_1_1_utils.html#a368032f0338fadbd527f5de59fc3bbc4',1,'CUDA::Utils']]],
-  ['split_5fstring_61',['split_string',['../namespace_utils.html#a56c6508c58c2bf4bc5a4953000f0cc7d',1,'Utils']]]
+  ['main_64',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]]
 ];

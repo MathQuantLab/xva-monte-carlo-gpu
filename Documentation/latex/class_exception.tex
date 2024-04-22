@@ -11,11 +11,12 @@
 
 
 
-Inheritance diagram for Exception\+:\nopagebreak
+Inheritance diagram for Exception\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=166pt]{class_exception__inherit__graph}
+\includegraphics[width=208pt]{class_exception__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -36,6 +37,11 @@ virtual \mbox{\hyperlink{class_exception_a5c134c74b84c0a7a4c106ac60cabe10c}{$\si
 \begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{class_exception}{Exception}} object. \end{DoxyCompactList}\item 
 virtual const char $\ast$ \mbox{\hyperlink{class_exception_aff1ffa577d01f0044ae61baa2c63cb9e}{what}} () const noexcept override
 \begin{DoxyCompactList}\small\item\em Get the exception message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_exception_a3283a359dcd394128a22371285edc55d}{m\+\_\+message}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -83,6 +89,19 @@ Get the exception message.
 \begin{DoxyReturn}{Returns}
 const char$\ast$ \mbox{\hyperlink{class_exception}{Exception}} message 
 \end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_c_u_d_a_1_1_c_u_d_a_exception_a33cba537cb439017a0c2db0a3f12c6db}{CUDA\+::\+CUDAException}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_exception_a3283a359dcd394128a22371285edc55d}\label{class_exception_a3283a359dcd394128a22371285edc55d}} 
+\index{Exception@{Exception}!m\_message@{m\_message}}
+\index{m\_message@{m\_message}!Exception@{Exception}}
+\doxysubsubsection{\texorpdfstring{m\_message}{m\_message}}
+{\footnotesize\ttfamily std\+::string Exception\+::m\+\_\+message\hspace{0.3cm}{\ttfamily [protected]}}
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
