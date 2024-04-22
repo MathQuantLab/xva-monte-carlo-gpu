@@ -82,3 +82,15 @@ enum XVA
      */
     KVA
 };
+
+/**
+ * @brief Vector type for double
+ * 
+ */
+typedef std::vector<double> Vector;
+
+/**
+ * @brief Matrix type for double
+ * 
+ */
+typedef std::vector<Vector> Matrix;

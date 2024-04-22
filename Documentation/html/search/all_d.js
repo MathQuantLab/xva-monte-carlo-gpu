@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['xva_32',['XVA',['../pch_8h.html#a53054d12c7fd5c029fd5baf8caa1d9a1',1,'pch.h']]],
-  ['xva_20computation_20using_20nested_20monte_20carlo_20and_20gpu_20optimization_33',['XVA Computation using Nested Monte Carlo and GPU Optimization',['../md__r_e_a_d_m_e.html',1,'']]]
+  ['what_33',['what',['../class_exception.html#aff1ffa577d01f0044ae61baa2c63cb9e',1,'Exception']]]
 ];
