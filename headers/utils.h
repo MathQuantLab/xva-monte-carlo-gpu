@@ -35,7 +35,19 @@ namespace Utils
      * @param argv Arguments
      * @param gpu GPU flag
      */
-    void parse_arguments(int argc, char *argv[], bool &gpu);
+    int parse_options(int argc, char *argv[], bool &gpu);
+
+    /**
+     * @brief Parse mandatory arguments
+     * 
+     * @param argc Number of arguments
+     * @param argv Arguments
+     * @param m0 Number of external trajectories
+     * @param m1 Number of internal trajectories
+     * @param N Number of points
+     * @param T Horizon
+     */
+    void parse_mandatory_arguments(int argc, char *argv[], size_t &m0, size_t &m1, size_t &N, double &T);
 
     /**
      * @brief Parse XVA type

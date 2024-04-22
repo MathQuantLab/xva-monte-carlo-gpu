@@ -35,7 +35,11 @@ int main(int argc, char *argv[])
     try
     {
         bool gpu = CUDA::Utils::is_gpu_available();
-        Utils::parse_arguments(argc, argv, gpu);
+        size_t m0(0), m1(0), N(0);
+        double T(0);
+
+        int first_mandatory_argument = Utils::parse_options(argc, argv, gpu);
+        Utils::parse_mandatory_arguments(first_mandatory_argument, argv, m0, m1, N, T);
 
         std::map<XVA, double> xvas;
         Utils::parse_type(argv[argc - 1], xvas);
