@@ -1,7 +1,3 @@
-Excellent! Including a tutorial notebook is a fantastic way to demonstrate the usage of your project interactively. I'll update the README to include information about how to use the `Tutorial.ipynb` notebook effectively.
-
----
-
 # XVA Computation using Nested Monte Carlo and GPU Optimization
 
 ## Project Overview
