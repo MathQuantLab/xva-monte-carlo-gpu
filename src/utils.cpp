@@ -47,7 +47,7 @@ void Utils::parse_arguments(int argc, char *argv[], bool &gpu)
         {
             gpu = false;
         }
-        else if (std::string(argv[i]).find("--gpu") != std::string::npos)
+        else if (gpu && std::string(argv[i]).find("--gpu") != std::string::npos)
         {
             int device_id;
             if (i + 1 < argc)
