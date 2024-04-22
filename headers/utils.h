@@ -46,8 +46,9 @@ namespace Utils
      * @param m1 Number of internal trajectories
      * @param N Number of points
      * @param T Horizon
+     * @param data_file_name Data file name
      */
-    void parse_mandatory_arguments(int argc, char *argv[], size_t &m0, size_t &m1, size_t &N, double &T);
+    void parse_mandatory_arguments(int argc, char *argv[], size_t &m0, size_t &m1, size_t &N, double &T, std::string& data_file_name);
 
     /**
      * @brief Parse XVA type

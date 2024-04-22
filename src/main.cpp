@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include <thread>
+#include <filesystem>
 
 #include "../headers/cuda_utils.h"
 #include "../headers/utils.h"
@@ -32,6 +33,13 @@ int main(int argc, char *argv[])
         return 0;
     }
 
+    if (argc < 6)
+    {
+        cerr << "Missing arguments" << endl;
+        Utils::info(argv[0]);
+        return 1;
+    }
+
     try
     {
         bool gpu = CUDA::Utils::is_gpu_available();
@@ -39,7 +47,34 @@ int main(int argc, char *argv[])
         double T(0);
 
         int first_mandatory_argument = Utils::parse_options(argc, argv, gpu);
-        Utils::parse_mandatory_arguments(first_mandatory_argument, argv, m0, m1, N, T);
+
+        if (first_mandatory_argument + 6 != argc)
+        {
+            cerr << "Missing arguments" << endl;
+            Utils::info(argv[0]);
+            return 1;
+        }
+
+        std:string data_file_name;
+        Utils::parse_mandatory_arguments(first_mandatory_argument, argv, m0, m1, N, T, data_file_name);
+
+        cout << "External trajectories number: " << m0 << endl;
+        cout << "Internal trajectories number: " << m1 << endl;
+        cout << "Points number: " << N << endl;
+        cout << "Horizon: " << T << endl;
+        
+        if (data_file_name.find("Data") == std::string::npos)
+        {
+            data_file_name = "Data/" + data_file_name;
+        }
+
+        std::filesystem::path data_file(data_file_name);
+        if (!std::filesystem::exists(data_file))
+        {
+            throw std::runtime_error("Data file not found");
+        }
+
+        cout << "Data file: " << data_file_name << endl;
 
         std::map<XVA, double> xvas;
         Utils::parse_type(argv[argc - 1], xvas);

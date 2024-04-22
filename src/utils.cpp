@@ -19,7 +19,7 @@ using namespace std;
 
 void Utils::info(const char *name)
 {
-    cout << "Usage: " << name << " [options] <m0> <m1> <type> <data-file> <T> <deltaT>" << endl;
+    cout << "Usage: " << name << " [options] <m0> <m1> <data-file> <N> <T> <type>" << endl;
     cout << "Options:" << endl;
     cout << "  -h, --help      Display this information" << endl;
     cout << "  -v, --version   Display application version" << endl;
@@ -28,19 +28,19 @@ void Utils::info(const char *name)
     cout << "Arguments:" << endl;
     cout << "  m0              External trajectories number" << endl;
     cout << "  m1              Internal trajectories number" << endl;
-    cout << "  type            XVA type (CVA, DVA, FVA, MVA, KVA), using form XVA=rate,XVA=rate..." << endl;
     cout << "  data-file       Path to the data file" << endl;
+    cout << "  N               Points number" << endl;
     cout << "  T               Horizon" << endl;
-    cout << "  deltaT          Time step" << endl;
+    cout << "  type            XVA type (CVA, DVA, FVA, MVA, KVA), using form XVA=rate,XVA=rate..." << endl;
 }
 
-void Utils::parse_arguments(int argc, char *argv[], bool &gpu)
+int Utils::parse_options(int argc, char *argv[], bool &gpu)
 {
     for (int i = 1; i < argc; i++)
     {
         if (argv[i][0] != '-')
         {
-            break;
+            return i;
         }
         if (!strcmp(argv[i], "-h") || !strcmp(argv[i], "--help"))
         {
@@ -80,6 +80,7 @@ void Utils::parse_arguments(int argc, char *argv[], bool &gpu)
             exit(1);
         }
     }
+    return argc;
 }
 
 void Utils::split_string(const std::string &str, const std::string &delim, std::vector<std::string> &tokens)
@@ -156,4 +157,25 @@ void Utils::parse_type(const std::string &str, std::map<XVA, double> &xvas)
             throw Exception("Unknown XVA type: " + token);
         }
     }
+}
+
+void Utils::parse_mandatory_arguments(int argc, char *argv[], size_t &m0, size_t &m1, size_t &N, double &T, std::string& data_file_name)
+{
+    if (sscanf(argv[argc], "%lu", &m0) == 0)
+    {
+        throw Exception("Invalid number of of external trajectories");
+    }
+    if (sscanf(argv[argc + 1], "%lu", &m1) == 0)
+    {
+        throw Exception("Invalid number of of internal trajectories");
+    }
+    if (sscanf(argv[argc + 3], "%lu", &N) == 0)
+    {
+        throw Exception("Invalid number of points");
+    }
+    if (sscanf(argv[argc + 4], "%lf", &T) == 0)
+    {
+        throw Exception("Invalid horizon");
+    }
+    data_file_name = argv[argc + 2];
 }
