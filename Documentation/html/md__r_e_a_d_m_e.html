@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>XVA Monte-Carlo Simulator for GPU: XVA Principles, Nested Monte Carlo Strategies, and GPU Optimizations</title>
+<title>XVA Monte-Carlo Simulator for GPU: XVA Computation using Nested Monte Carlo and GPU Optimization</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -64,10 +64,61 @@ $(function() {
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">XVA Principles, Nested Monte Carlo Strategies, and GPU Optimizations </div>  </div>
+<div class="title">XVA Computation using Nested Monte Carlo and GPU Optimization </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"></div></div><!-- contents -->
+<div class="textblock"><h1><a class="anchor" id="autotoc_md1"></a>
+Project Overview</h1>
+<p>This project implements the principles and strategies discussed in the article "XVA Principles, Nested Monte Carlo Strategies, and GPU Optimizations" for efficient X-valuation adjustments (XVA) computation. It utilizes nested Monte Carlo (NMC) methods optimized for graphics processing units (GPUs) to enhance the performance and accuracy of financial models dealing with Credit Valuation Adjustment (CVA), Funding Valuation Adjustment (FVA), and other related metrics.</p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Background</h1>
+<p>Since the 2008 financial crisis, the need for accurate pricing and risk measurement tools that account for counterparty risks in derivative transactions has become crucial. This project builds on the groundwork laid by the article, which proposes an optimized approach to compute these adjustments using a nested Monte Carlo strategy on GPUs. This approach not only improves computational efficiency but also enhances the accuracy of simulations under complex market conditions.</p>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Features</h1>
+<ul>
+<li><b>Nested Monte Carlo Simulations</b>: Implements the nested simulation approach to handle multiple layers of dependence in XVA calculations, reducing computational complexity and variance in estimations.</li>
+<li><b>GPU Optimization</b>: Utilizes GPU capabilities to parallelize computations, significantly speeding up the execution of Monte Carlo simulations.</li>
+<li><b>Modular Design</b>: The codebase is structured to be modular, allowing easy adaptation and extension to various types of financial instruments and risk factors.</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md4"></a>
+Getting Started</h1>
+<h2><a class="anchor" id="autotoc_md5"></a>
+Prerequisites</h2>
+<ul>
+<li>A CUDA-compatible GPU.</li>
+<li>Python 3.8 or highe.</li>
+<li><a class="el" href="namespace_c_u_d_a.html" title="All CUDA functions.">CUDA</a> Toolkit (version recommended by your GPU manufacturer).</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md6"></a>
+Installation</h2>
+<ol type="1">
+<li>Clone this repository: <div class="fragment"><div class="line">git clone https://github.com/yourusername/xva-nmc-gpu.git</div>
+</div><!-- fragment --></li>
+<li>Install required Python libraries: <div class="fragment"><div class="line">pip install -r requirements.txt</div>
+</div><!-- fragment --></li>
+</ol>
+<h2><a class="anchor" id="autotoc_md7"></a>
+Running the Tutorial</h2>
+<p>To explore how the XVA computations are performed using our implementation, you can run the Jupyter Notebook included: </p><div class="fragment"><div class="line">jupyter notebook Tutorial.ipynb</div>
+</div><!-- fragment --><p> This tutorial will guide you through the setup, execution, and interpretation of results step-by-step.</p>
+<h1><a class="anchor" id="autotoc_md8"></a>
+Documentation</h1>
+<p>For more detailed information on the implementation and the methodology, refer to the <code>docs/</code> directory.</p>
+<h1><a class="anchor" id="autotoc_md9"></a>
+Testing</h1>
+<p>Test the application to ensure reliability: </p><div class="fragment"><div class="line">make test</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md10"></a>
+Contributing</h1>
+<p>Contributions to this project are welcome. See <code><a class="el" href="_c_o_n_t_r_i_b_u_t_i_n_g_8md.html">CONTRIBUTING.md</a></code> for ways to get involved.</p>
+<h1><a class="anchor" id="autotoc_md11"></a>
+License</h1>
+<p>This project is released under the GNU GENERAL PUBLIC LICENSE. See the <code><a class="el" href="_l_i_c_e_n_s_e_8md.html">LICENSE.md</a></code> file for more details.</p>
+<h1><a class="anchor" id="autotoc_md12"></a>
+Acknowledgments</h1>
+<ul>
+<li>Original authors of the article for providing the theoretical framework and mathematical models used in this project. </li>
+</ul>
+</div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

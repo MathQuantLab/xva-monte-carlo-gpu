@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['cuda_5fsimulation_2ecu_38',['cuda_simulation.cu',['../cuda__simulation_8cu.html',1,'']]],
-  ['cuda_5fsimulation_2eh_39',['cuda_simulation.h',['../cuda__simulation_8h.html',1,'']]],
-  ['cuda_5futils_2ecu_40',['cuda_utils.cu',['../cuda__utils_8cu.html',1,'']]],
-  ['cuda_5futils_2eh_41',['cuda_utils.h',['../cuda__utils_8h.html',1,'']]]
+  ['contributing_2emd_40',['CONTRIBUTING.md',['../_c_o_n_t_r_i_b_u_t_i_n_g_8md.html',1,'']]],
+  ['cuda_5fsimulation_2ecu_41',['cuda_simulation.cu',['../cuda__simulation_8cu.html',1,'']]],
+  ['cuda_5fsimulation_2eh_42',['cuda_simulation.h',['../cuda__simulation_8h.html',1,'']]],
+  ['cuda_5futils_2ecu_43',['cuda_utils.cu',['../cuda__utils_8cu.html',1,'']]],
+  ['cuda_5futils_2eh_44',['cuda_utils.h',['../cuda__utils_8h.html',1,'']]]
 ];

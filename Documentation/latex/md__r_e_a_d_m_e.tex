@@ -1,0 +1,50 @@
+\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{Project Overview}\label{md__r_e_a_d_m_e_autotoc_md1}
+This project implements the principles and strategies discussed in the article \char`\"{}\+XVA Principles, Nested Monte Carlo Strategies, and GPU Optimizations\char`\"{} for efficient X-\/valuation adjustments (XVA) computation. It utilizes nested Monte Carlo (NMC) methods optimized for graphics processing units (GPUs) to enhance the performance and accuracy of financial models dealing with Credit Valuation Adjustment (CVA), Funding Valuation Adjustment (FVA), and other related metrics.\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysection{Background}\label{md__r_e_a_d_m_e_autotoc_md2}
+Since the 2008 financial crisis, the need for accurate pricing and risk measurement tools that account for counterparty risks in derivative transactions has become crucial. This project builds on the groundwork laid by the article, which proposes an optimized approach to compute these adjustments using a nested Monte Carlo strategy on GPUs. This approach not only improves computational efficiency but also enhances the accuracy of simulations under complex market conditions.\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{Features}\label{md__r_e_a_d_m_e_autotoc_md3}
+
+\begin{DoxyItemize}
+\item {\bfseries{Nested Monte Carlo Simulations}}\+: Implements the nested simulation approach to handle multiple layers of dependence in XVA calculations, reducing computational complexity and variance in estimations.
+\item {\bfseries{GPU Optimization}}\+: Utilizes GPU capabilities to parallelize computations, significantly speeding up the execution of Monte Carlo simulations.
+\item {\bfseries{Modular Design}}\+: The codebase is structured to be modular, allowing easy adaptation and extension to various types of financial instruments and risk factors.
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysection{Getting Started}\label{md__r_e_a_d_m_e_autotoc_md4}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysubsection{Prerequisites}\label{md__r_e_a_d_m_e_autotoc_md5}
+
+\begin{DoxyItemize}
+\item A CUDA-\/compatible GPU.
+\item Python 3.\+8 or highe.
+\item \mbox{\hyperlink{namespace_c_u_d_a}{CUDA}} Toolkit (version recommended by your GPU manufacturer).
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysubsection{Installation}\label{md__r_e_a_d_m_e_autotoc_md6}
+
+\begin{DoxyEnumerate}
+\item Clone this repository\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git clone https://github.com/yourusername/xva-\/nmc-\/gpu.git}
+
+\end{DoxyCode}
+
+\item Install required Python libraries\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{pip install -\/r requirements.txt}
+
+\end{DoxyCode}
+
+\end{DoxyEnumerate}\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysubsection{Running the Tutorial}\label{md__r_e_a_d_m_e_autotoc_md7}
+To explore how the XVA computations are performed using our implementation, you can run the Jupyter Notebook included\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{jupyter notebook Tutorial.ipynb}
+
+\end{DoxyCode}
+ This tutorial will guide you through the setup, execution, and interpretation of results step-\/by-\/step.\hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysection{Documentation}\label{md__r_e_a_d_m_e_autotoc_md8}
+For more detailed information on the implementation and the methodology, refer to the {\ttfamily docs/} directory.\hypertarget{md__r_e_a_d_m_e_autotoc_md9}{}\doxysection{Testing}\label{md__r_e_a_d_m_e_autotoc_md9}
+Test the application to ensure reliability\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make test}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md10}{}\doxysection{Contributing}\label{md__r_e_a_d_m_e_autotoc_md10}
+Contributions to this project are welcome. See {\ttfamily \mbox{\hyperlink{_c_o_n_t_r_i_b_u_t_i_n_g_8md}{CONTRIBUTING.\+md}}} for ways to get involved.\hypertarget{md__r_e_a_d_m_e_autotoc_md11}{}\doxysection{License}\label{md__r_e_a_d_m_e_autotoc_md11}
+This project is released under the GNU GENERAL PUBLIC LICENSE. See the {\ttfamily \mbox{\hyperlink{_l_i_c_e_n_s_e_8md}{LICENSE.\+md}}} file for more details.\hypertarget{md__r_e_a_d_m_e_autotoc_md12}{}\doxysection{Acknowledgments}\label{md__r_e_a_d_m_e_autotoc_md12}
+
+\begin{DoxyItemize}
+\item Original authors of the article for providing the theoretical framework and mathematical models used in this project. 
+\end{DoxyItemize}
