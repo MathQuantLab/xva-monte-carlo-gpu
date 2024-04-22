@@ -19,10 +19,19 @@ using namespace std;
 
 void Utils::info(const char *name)
 {
-    cout << "Usage: " << name << " [options] <m0> <m1> <type>" << endl;
+    cout << "Usage: " << name << " [options] <m0> <m1> <type> <data-file> <T> <deltaT>" << endl;
     cout << "Options:" << endl;
     cout << "  -h, --help      Display this information" << endl;
     cout << "  -v, --version   Display application version" << endl;
+    cout << "  --cpu           Use CPU instead of GPU" << endl;
+    cout << "  --gpu <id>      Use GPU with device id" << endl;
+    cout << "Arguments:" << endl;
+    cout << "  m0              External trajectories number" << endl;
+    cout << "  m1              Internal trajectories number" << endl;
+    cout << "  type            XVA type (CVA, DVA, FVA, MVA, KVA), using form XVA=rate,XVA=rate..." << endl;
+    cout << "  data-file       Path to the data file" << endl;
+    cout << "  T               Horizon" << endl;
+    cout << "  deltaT          Time step" << endl;
 }
 
 void Utils::parse_arguments(int argc, char *argv[], bool &gpu)
@@ -31,7 +40,7 @@ void Utils::parse_arguments(int argc, char *argv[], bool &gpu)
     {
         if (argv[i][0] != '-')
         {
-            continue;
+            break;
         }
         if (!strcmp(argv[i], "-h") || !strcmp(argv[i], "--help"))
         {
@@ -86,31 +95,61 @@ void Utils::split_string(const std::string &str, const std::string &delim, std::
     tokens.push_back(str.substr(start, end));
 }
 
-void Utils::parse_type(const std::string &str, std::set<XVA> &xvas)
+void Utils::parse_type(const std::string &str, std::map<XVA, double> &xvas)
 {
     std::vector<std::string> tokens;
     split_string(str, ",", tokens);
     for (const auto &token : tokens)
     {
-        if (token == "CVA")
+        std::vector<std::string> xva_values;
+        if (token.find("=") == std::string::npos)
         {
-            xvas.insert(XVA::CVA);
+            throw Exception("Invalid XVA type: " + token);
         }
-        else if (token == "DVA")
+        if (token.find("CVA") != std::string::npos)
         {
-            xvas.insert(XVA::DVA);
+            split_string(token, "=", xva_values);
+            xvas[XVA::CVA] = 0.0;
+            if (sscanf(xva_values[1].c_str(), "%lf", &xvas[XVA::CVA]) == 0)
+            {
+                throw Exception("Invalid CVA rate");
+            }
         }
-        else if (token == "FVA")
+        else if (token.find("DVA") != std::string::npos)
         {
-            xvas.insert(XVA::FVA);
+            split_string(token, "=", xva_values);
+            xvas[XVA::DVA] = 0.0;
+            if (sscanf(xva_values[1].c_str(), "%lf", &xvas[XVA::DVA]) == 0)
+            {
+                throw Exception("Invalid DVA rate");
+            }
         }
-        else if (token == "MVA")
+        else if (token.find("FVA") != std::string::npos)
         {
-            xvas.insert(XVA::MVA);
+            split_string(token, "=", xva_values);
+            xvas[XVA::FVA] = 0.0;
+            if (sscanf(xva_values[1].c_str(), "%lf", &xvas[XVA::FVA]) == 0)
+            {
+                throw Exception("Invalid FVA rate");
+            }
         }
-        else if (token == "KVA")
+        else if (token.find("MVA") != std::string::npos)
         {
-            xvas.insert(XVA::KVA);
+            split_string(token, "=", xva_values);
+            xvas[XVA::MVA] = 0.0;
+            if (sscanf(xva_values[1].c_str(), "%lf", &xvas[XVA::MVA]) == 0)
+            {
+                throw Exception("Invalid MVA rate");
+            }
+        }
+        else if (token.find("KVA") != std::string::npos)
+        {
+            split_string(token, "=", xva_values);
+            xvas[XVA::KVA] = 0.0;
+            if (sscanf(xva_values[1].c_str(), "%lf", &xvas[XVA::KVA]) == 0)
+            {
+                throw Exception("Invalid KVA rate");
+            }
         }
         else
         {

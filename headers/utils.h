@@ -13,7 +13,7 @@
 
 #include "../headers/pch.h"
 
-#include <set>
+#include <map>
 
 /**
  * @brief Provides utility functions
@@ -43,7 +43,7 @@ namespace Utils
      * @param type XVA type
      * @param xvas XVA types
      */
-    void parse_type(const std::string& str, std::set<XVA> &xvas);
+    void parse_type(const std::string& str, std::map<XVA, double> &xvas);
 
     /**
      * @brief Split a string

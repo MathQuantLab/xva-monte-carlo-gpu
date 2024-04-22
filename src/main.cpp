@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
         bool gpu = CUDA::Utils::is_gpu_available();
         Utils::parse_arguments(argc, argv, gpu);
 
-        std::set<XVA> xvas;
+        std::map<XVA, double> xvas;
         Utils::parse_type(argv[argc - 1], xvas);
 
         cout << xvas.size() << " XVA requested" << endl;
