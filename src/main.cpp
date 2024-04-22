@@ -79,6 +79,14 @@ int main(int argc, char *argv[])
         std::map<XVA, double> xvas;
         Utils::parse_type(argv[argc - 1], xvas);
 
+        #ifdef DEBUG
+        cout << "XVA requested:" << endl;
+        for (const auto &xva : xvas)
+        {
+            cout << xva.first << " with value " << xva.second << endl;
+        }
+        #endif
+
         cout << xvas.size() << " XVA requested" << endl;
 
         if (!gpu)
