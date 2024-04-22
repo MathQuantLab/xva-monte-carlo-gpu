@@ -1,8 +1,9 @@
 <map id="headers/pch.h" name="headers/pch.h">
-<area shape="rect" id="node1" title="Precompiled header." alt="" coords="169,5,283,32"/>
-<area shape="rect" id="node2" href="$cuda__utils_8h.html" title="Holds CUDA utilities." alt="" coords="148,80,304,107"/>
-<area shape="rect" id="node5" href="$utils_8h.html" title="Provides utility functions." alt="" coords="5,80,124,107"/>
-<area shape="rect" id="node6" href="$pch_8cpp.html" title="Precompiled header." alt="" coords="328,80,423,107"/>
-<area shape="rect" id="node3" href="$main_8cpp.html" title="Main file." alt="" coords="29,155,135,181"/>
-<area shape="rect" id="node4" href="$utils_8cpp.html" title="Implements utils.h." alt="" coords="167,155,267,181"/>
+<area shape="rect" id="node1" title="Precompiled header." alt="" coords="329,5,442,32"/>
+<area shape="rect" id="node2" href="$cuda__simulation_8h.html" title="Holds functions to run simulation on GPU." alt="" coords="5,80,203,107"/>
+<area shape="rect" id="node3" href="$cuda__utils_8h.html" title="Holds CUDA utilities." alt="" coords="227,80,383,107"/>
+<area shape="rect" id="node6" href="$utils_8h.html" title="Provides utility functions." alt="" coords="407,80,526,107"/>
+<area shape="rect" id="node7" href="$pch_8cpp.html" title="Precompiled header." alt="" coords="550,80,645,107"/>
+<area shape="rect" id="node4" href="$main_8cpp.html" title="Main file." alt="" coords="270,155,375,181"/>
+<area shape="rect" id="node5" href="$utils_8cpp.html" title="Implements utils.h." alt="" coords="407,155,507,181"/>
 </map>
