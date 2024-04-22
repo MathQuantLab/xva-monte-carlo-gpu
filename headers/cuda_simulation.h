@@ -2,7 +2,7 @@
  * @file cuda_simulation.h
  * @author Thomas Roiseux (thomas.roiseux@mathquantlab.com)
  * @brief Holds functions to run simulation on GPU
- * @version 0.1
+ * @version 1.0
  * @date 2024-04-22
  * 
  * @copyright Copyright (c) 2024
