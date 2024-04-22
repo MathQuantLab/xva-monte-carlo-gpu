@@ -62,7 +62,7 @@ int main(int argc, char *argv[])
         cout << "Internal trajectories number: " << m1 << endl;
         cout << "Points number: " << N << endl;
         cout << "Horizon: " << T << endl;
-        
+
         if (data_file_name.find("Data") == std::string::npos)
         {
             data_file_name = "Data/" + data_file_name;

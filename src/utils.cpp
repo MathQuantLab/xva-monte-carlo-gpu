@@ -159,7 +159,7 @@ void Utils::parse_type(const std::string &str, std::map<XVA, double> &xvas)
     }
 }
 
-void Utils::parse_mandatory_arguments(int argc, char *argv[], size_t &m0, size_t &m1, size_t &N, double &T, std::string& data_file_name)
+void Utils::parse_mandatory_arguments(int argc, char *argv[], size_t &m0, size_t &m1, size_t &N, double &T, std::string &data_file_name)
 {
     if (sscanf(argv[argc], "%lu", &m0) == 0)
     {
