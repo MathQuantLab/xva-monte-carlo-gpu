@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['parse_5farguments_65',['parse_arguments',['../namespace_utils.html#ab46e847b10ac7963bd320d59d30260e5',1,'Utils']]],
-  ['parse_5ftype_66',['parse_type',['../namespace_utils.html#a963a6072169d90e0e52b17f1bb2e6136',1,'Utils']]]
+  ['parse_5fmandatory_5farguments_66',['parse_mandatory_arguments',['../namespace_utils.html#a14f7a24724d1d7350c5b9c3ae362ebd4',1,'Utils']]],
+  ['parse_5foptions_67',['parse_options',['../namespace_utils.html#a57085921573df272b730d8dc0e33b703',1,'Utils']]],
+  ['parse_5ftype_68',['parse_type',['../namespace_utils.html#a9b26c6a3f0f0d3f094d034815e687c15',1,'Utils']]]
 ];

@@ -78,6 +78,7 @@ $(function() {
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;thread&gt;</code><br />
+<code>#include &lt;filesystem&gt;</code><br />
 <code>#include &quot;<a class="el" href="cuda__utils_8h_source.html">../headers/cuda_utils.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="utils_8h_source.html">../headers/utils.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -85,19 +86,20 @@ Include dependency graph for main.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#asrc_2main_8cpp" alt=""/></div>
 <map name="asrc_2main_8cpp" id="asrc_2main_8cpp">
-<area shape="rect" title="Main file." alt="" coords="163,5,268,32"/>
-<area shape="rect" title=" " alt="" coords="10,80,90,107"/>
-<area shape="rect" title=" " alt="" coords="114,80,178,107"/>
-<area shape="rect" href="cuda__utils_8h.html" title="Holds CUDA utilities." alt="" coords="202,80,370,107"/>
-<area shape="rect" href="utils_8h.html" title="Provides utility functions." alt="" coords="394,80,525,107"/>
-<area shape="rect" href="pch_8h.html" title="Precompiled header." alt="" coords="257,155,382,181"/>
-<area shape="rect" title=" " alt="" coords="5,229,71,256"/>
-<area shape="rect" title=" " alt="" coords="95,229,218,256"/>
-<area shape="rect" title=" " alt="" coords="242,229,301,256"/>
-<area shape="rect" title=" " alt="" coords="325,229,412,256"/>
-<area shape="rect" title=" " alt="" coords="436,229,523,256"/>
-<area shape="rect" title=" " alt="" coords="547,229,609,256"/>
-<area shape="rect" title=" " alt="" coords="438,155,481,181"/>
+<area shape="rect" title="Main file." alt="" coords="190,5,295,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,85,107"/>
+<area shape="rect" title=" " alt="" coords="109,80,173,107"/>
+<area shape="rect" title=" " alt="" coords="197,80,288,107"/>
+<area shape="rect" href="cuda__utils_8h.html" title="Holds CUDA utilities." alt="" coords="312,80,480,107"/>
+<area shape="rect" href="utils_8h.html" title="Provides utility functions." alt="" coords="504,80,635,107"/>
+<area shape="rect" href="pch_8h.html" title="Precompiled header." alt="" coords="364,155,489,181"/>
+<area shape="rect" title=" " alt="" coords="113,229,178,256"/>
+<area shape="rect" title=" " alt="" coords="203,229,325,256"/>
+<area shape="rect" title=" " alt="" coords="349,229,408,256"/>
+<area shape="rect" title=" " alt="" coords="433,229,519,256"/>
+<area shape="rect" title=" " alt="" coords="543,229,630,256"/>
+<area shape="rect" title=" " alt="" coords="654,229,717,256"/>
+<area shape="rect" title=" " alt="" coords="544,155,595,181"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -154,15 +156,16 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.png" border="0" usemap="#amain_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph" alt=""/></div>
 <map name="amain_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph" id="amain_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph">
-<area shape="rect" title="Main function." alt="" coords="5,159,60,186"/>
-<area shape="rect" href="class_c_u_d_a_1_1_c_u_d_a_exception.html#ac8a05e1bbac53efec484d1a107cc6eb4" title="Get the CUDA error." alt="" coords="109,5,280,47"/>
-<area shape="rect" href="namespace_utils.html#ace6934aad7553d4fa9891e34afe23254" title="Application information." alt="" coords="375,105,460,131"/>
+<area shape="rect" title="Main function." alt="" coords="5,195,60,222"/>
+<area shape="rect" href="class_c_u_d_a_1_1_c_u_d_a_exception.html#ac8a05e1bbac53efec484d1a107cc6eb4" title="Get the CUDA error." alt="" coords="110,5,281,47"/>
+<area shape="rect" href="namespace_utils.html#ace6934aad7553d4fa9891e34afe23254" title="Application information." alt="" coords="376,138,461,165"/>
 <area shape="rect" href="namespace_c_u_d_a_1_1_utils.html#a4d2175570accb1f866c819ad3d984537" title="Check if a GPU is available." alt="" coords="121,123,269,164"/>
-<area shape="rect" href="namespace_utils.html#ab46e847b10ac7963bd320d59d30260e5" title="Parse command line arguments." alt="" coords="108,189,281,215"/>
-<area shape="rect" href="namespace_utils.html#a963a6072169d90e0e52b17f1bb2e6136" title="Parse XVA type." alt="" coords="129,239,261,266"/>
-<area shape="rect" href="class_c_u_d_a_1_1_c_u_d_a_exception.html#a33cba537cb439017a0c2db0a3f12c6db" title="Get the exception message." alt="" coords="109,291,280,332"/>
-<area shape="rect" href="namespace_c_u_d_a_1_1_utils.html#a368032f0338fadbd527f5de59fc3bbc4" title="Select a GPU." alt="" coords="329,189,505,215"/>
-<area shape="rect" href="namespace_utils.html#a56c6508c58c2bf4bc5a4953000f0cc7d" title="Split a string." alt="" coords="351,239,483,266"/>
+<area shape="rect" href="namespace_utils.html#a14f7a24724d1d7350c5b9c3ae362ebd4" title="Parse mandatory arguments." alt="" coords="108,188,283,229"/>
+<area shape="rect" href="namespace_utils.html#a57085921573df272b730d8dc0e33b703" title="Parse command line arguments." alt="" coords="120,254,271,281"/>
+<area shape="rect" href="namespace_utils.html#a9b26c6a3f0f0d3f094d034815e687c15" title="Parse XVA type." alt="" coords="129,305,261,331"/>
+<area shape="rect" href="class_c_u_d_a_1_1_c_u_d_a_exception.html#a33cba537cb439017a0c2db0a3f12c6db" title="Get the exception message." alt="" coords="110,356,281,397"/>
+<area shape="rect" href="namespace_c_u_d_a_1_1_utils.html#a368032f0338fadbd527f5de59fc3bbc4" title="Select a GPU." alt="" coords="331,254,507,281"/>
+<area shape="rect" href="namespace_utils.html#a56c6508c58c2bf4bc5a4953000f0cc7d" title="Split a string." alt="" coords="353,305,485,331"/>
 </map>
 </div>
 

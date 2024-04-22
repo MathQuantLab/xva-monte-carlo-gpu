@@ -1,5 +1,5 @@
 <map id="CUDA::Utils::select_gpu" name="CUDA::Utils::select_gpu">
-<area shape="rect" id="node1" title="Select a GPU." alt="" coords="329,5,505,32"/>
-<area shape="rect" id="node2" href="$namespace_utils.html#ab46e847b10ac7963bd320d59d30260e5" title="Parse command line arguments." alt="" coords="108,5,281,32"/>
+<area shape="rect" id="node1" title="Select a GPU." alt="" coords="307,5,483,32"/>
+<area shape="rect" id="node2" href="$namespace_utils.html#a57085921573df272b730d8dc0e33b703" title="Parse command line arguments." alt="" coords="108,5,259,32"/>
 <area shape="rect" id="node3" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function." alt="" coords="5,5,60,32"/>
 </map>

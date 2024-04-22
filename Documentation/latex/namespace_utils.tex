@@ -10,9 +10,11 @@ Provides utility functions.
 \item 
 void \mbox{\hyperlink{namespace_utils_ace6934aad7553d4fa9891e34afe23254}{info}} (const char $\ast$name)
 \begin{DoxyCompactList}\small\item\em Application information. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{namespace_utils_ab46e847b10ac7963bd320d59d30260e5}{parse\+\_\+arguments}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]}, bool \&gpu)
+int \mbox{\hyperlink{namespace_utils_a57085921573df272b730d8dc0e33b703}{parse\+\_\+options}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]}, bool \&gpu)
 \begin{DoxyCompactList}\small\item\em Parse command line arguments. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{namespace_utils_a963a6072169d90e0e52b17f1bb2e6136}{parse\+\_\+type}} (const std\+::string \&str, std\+::set$<$ \mbox{\hyperlink{pch_8h_a53054d12c7fd5c029fd5baf8caa1d9a1}{XVA}} $>$ \&xvas)
+void \mbox{\hyperlink{namespace_utils_a14f7a24724d1d7350c5b9c3ae362ebd4}{parse\+\_\+mandatory\+\_\+arguments}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]}, size\+\_\+t \&m0, size\+\_\+t \&m1, size\+\_\+t \&N, double \&T, std\+::string \&data\+\_\+file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Parse mandatory arguments. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespace_utils_a9b26c6a3f0f0d3f094d034815e687c15}{parse\+\_\+type}} (const std\+::string \&str, std\+::map$<$ \mbox{\hyperlink{pch_8h_a53054d12c7fd5c029fd5baf8caa1d9a1}{XVA}}, double $>$ \&xvas)
 \begin{DoxyCompactList}\small\item\em Parse XVA type. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespace_utils_a56c6508c58c2bf4bc5a4953000f0cc7d}{split\+\_\+string}} (const std\+::string \&str, const std\+::string \&delim, std\+::vector$<$ std\+::string $>$ \&tokens)
 \begin{DoxyCompactList}\small\item\em Split a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -37,18 +39,54 @@ Application information.
 {\em name} & Application name \\
 \hline
 \end{DoxyParams}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{namespace_utils_ace6934aad7553d4fa9891e34afe23254_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{namespace_utils_ab46e847b10ac7963bd320d59d30260e5}\label{namespace_utils_ab46e847b10ac7963bd320d59d30260e5}} 
-\index{Utils@{Utils}!parse\_arguments@{parse\_arguments}}
-\index{parse\_arguments@{parse\_arguments}!Utils@{Utils}}
-\doxysubsubsection{\texorpdfstring{parse\_arguments()}{parse\_arguments()}}
-{\footnotesize\ttfamily void Utils\+::parse\+\_\+arguments (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]},  }\item[{bool \&}]{gpu }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{namespace_utils_a14f7a24724d1d7350c5b9c3ae362ebd4}\label{namespace_utils_a14f7a24724d1d7350c5b9c3ae362ebd4}} 
+\index{Utils@{Utils}!parse\_mandatory\_arguments@{parse\_mandatory\_arguments}}
+\index{parse\_mandatory\_arguments@{parse\_mandatory\_arguments}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{parse\_mandatory\_arguments()}{parse\_mandatory\_arguments()}}
+{\footnotesize\ttfamily void Utils\+::parse\+\_\+mandatory\+\_\+arguments (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]},  }\item[{size\+\_\+t \&}]{m0,  }\item[{size\+\_\+t \&}]{m1,  }\item[{size\+\_\+t \&}]{N,  }\item[{double \&}]{T,  }\item[{std\+::string \&}]{data\+\_\+file\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Parse mandatory arguments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & Number of arguments \\
+\hline
+{\em argv} & Arguments \\
+\hline
+{\em m0} & Number of external trajectories \\
+\hline
+{\em m1} & Number of internal trajectories \\
+\hline
+{\em N} & Number of points \\
+\hline
+{\em T} & Horizon \\
+\hline
+{\em data\+\_\+file\+\_\+name} & Data file name \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{namespace_utils_a14f7a24724d1d7350c5b9c3ae362ebd4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespace_utils_a57085921573df272b730d8dc0e33b703}\label{namespace_utils_a57085921573df272b730d8dc0e33b703}} 
+\index{Utils@{Utils}!parse\_options@{parse\_options}}
+\index{parse\_options@{parse\_options}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{parse\_options()}{parse\_options()}}
+{\footnotesize\ttfamily int Utils\+::parse\+\_\+options (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]},  }\item[{bool \&}]{gpu }\end{DoxyParamCaption})}
 
 
 
@@ -63,25 +101,27 @@ Parse command line arguments.
 {\em gpu} & GPU flag \\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{namespace_utils_ab46e847b10ac7963bd320d59d30260e5_cgraph}
+\includegraphics[width=350pt]{namespace_utils_a57085921573df272b730d8dc0e33b703_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=287pt]{namespace_utils_ab46e847b10ac7963bd320d59d30260e5_icgraph}
+\includegraphics[width=270pt]{namespace_utils_a57085921573df272b730d8dc0e33b703_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{namespace_utils_a963a6072169d90e0e52b17f1bb2e6136}\label{namespace_utils_a963a6072169d90e0e52b17f1bb2e6136}} 
+\mbox{\Hypertarget{namespace_utils_a9b26c6a3f0f0d3f094d034815e687c15}\label{namespace_utils_a9b26c6a3f0f0d3f094d034815e687c15}} 
 \index{Utils@{Utils}!parse\_type@{parse\_type}}
 \index{parse\_type@{parse\_type}!Utils@{Utils}}
 \doxysubsubsection{\texorpdfstring{parse\_type()}{parse\_type()}}
-{\footnotesize\ttfamily void Utils\+::parse\+\_\+type (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str,  }\item[{std\+::set$<$ \mbox{\hyperlink{pch_8h_a53054d12c7fd5c029fd5baf8caa1d9a1}{XVA}} $>$ \&}]{xvas }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Utils\+::parse\+\_\+type (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str,  }\item[{std\+::map$<$ \mbox{\hyperlink{pch_8h_a53054d12c7fd5c029fd5baf8caa1d9a1}{XVA}}, double $>$ \&}]{xvas }\end{DoxyParamCaption})}
 
 
 
@@ -94,18 +134,20 @@ Parse XVA type.
 {\em xvas} & XVA types \\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=314pt]{namespace_utils_a963a6072169d90e0e52b17f1bb2e6136_cgraph}
+\includegraphics[width=314pt]{namespace_utils_a9b26c6a3f0f0d3f094d034815e687c15_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=256pt]{namespace_utils_a963a6072169d90e0e52b17f1bb2e6136_icgraph}
+\includegraphics[width=256pt]{namespace_utils_a9b26c6a3f0f0d3f094d034815e687c15_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{namespace_utils_a56c6508c58c2bf4bc5a4953000f0cc7d}\label{namespace_utils_a56c6508c58c2bf4bc5a4953000f0cc7d}} 
@@ -127,7 +169,8 @@ Split a string.
 {\em tokens} & Tokens \\
 \hline
 \end{DoxyParams}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
