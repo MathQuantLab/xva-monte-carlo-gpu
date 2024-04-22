@@ -20,7 +20,7 @@ windows: bin/xva.exe
 
 # Linux
 
-bin/xva.out: obj/main.o obj/cuda_utils.o obj/pch.o obj/utils.o
+bin/xva.out: obj/main.o obj/cuda_utils.o obj/pch.o obj/utils.o obj/cuda_simulation.obj
 	@echo "Building Linux binary..."
 	$(CC) $(CFLAGS) -o $@ $^
 
@@ -40,9 +40,13 @@ obj/utils.o: src/utils.cpp headers/cuda_utils.h headers/pch.h headers/utils.h
 	@echo "Compiling utils.cpp..."
 	$(CC) $(CFLAGS) -o $@ -c $<
 
+obj/cuda_simulation.o: src/cuda_simulation.cu headers/cuda_simulation.h headers/pch.h
+	@echo "Compiling cuda_simulation.cu..."
+	$(CC) $(CFLAGS) -o $@ -c $<
+
 # Windows
 
-bin/xva.exe: obj/main.obj obj/cuda_utils.obj obj/pch.obj obj/utils.obj
+bin/xva.exe: obj/main.obj obj/cuda_utils.obj obj/pch.obj obj/utils.obj obj/cuda_simulation.obj
 	@echo "Building Windows binary..."
 	$(CC) $(CFLAGS) -o $@ $^
 
@@ -60,6 +64,10 @@ obj/pch.obj: src/pch.cpp headers/pch.h
 
 obj/utils.obj: src/utils.cpp headers/cuda_utils.h headers/pch.h headers/utils.h
 	@echo "Compiling utils.cpp..."
+	$(CC) $(CFLAGS) -o $@ -c $<
+
+obj/cuda_simulation.obj: src/cuda_simulation.cu headers/cuda_simulation.h headers/pch.h
+	@echo "Compiling cuda_simulation.cu..."
 	$(CC) $(CFLAGS) -o $@ -c $<
 
 doc:
