@@ -70,6 +70,12 @@ int main(int argc, char *argv[])
             cout << "Running on GPU" << endl;
         }
     }
+    catch (const CUDA::CUDAException& e)
+    {
+        std::cerr << "Error with CUDA" << endl;
+        std::cerr << e.what() << " (" << e.get_error() << ")" << endl;
+        return e.get_error();
+    }
     catch (const std::exception &e)
     {
         std::cerr << e.what() << endl;

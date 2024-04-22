@@ -35,3 +35,9 @@ void CUDA::Utils::select_gpu(int device_id)
         throw CUDA::CUDAException("Failed to select device", error);
     }
 }
+
+const char *CUDA::CUDAException::what() const noexcept
+{
+    std::string error_string = cudaGetErrorString(m_error);
+    return (m_message + "\n" + error_string).c_str();
+}
