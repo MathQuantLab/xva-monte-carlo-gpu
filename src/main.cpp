@@ -26,9 +26,6 @@ using namespace std;
  */
 int main(int argc, char *argv[])
 {
-    atexit([]() -> void
-           { cudaDeviceReset(); });
-
     if (argc < 2)
     {
         Utils::info(argv[0]);
@@ -48,16 +45,14 @@ int main(int argc, char *argv[])
         if (!gpu)
         {
             cout << "Running on CPU with maximum " << std::thread::hardware_concurrency() << " threads simultaneously." << endl;
-            std::thread* threads = new std::thread[xvas.size()];
+            std::thread *threads = new std::thread[xvas.size()];
 
             for (size_t i = 0; i < xvas.size(); i++)
             {
-                threads[i] = std::thread([]() -> void //TODO change function
-                {
-                    cout << "Running on CPU with id " << std::this_thread::get_id() << endl;
-                });    
+                threads[i] = std::thread([]() -> void // TODO change function
+                                         { cout << "Running on CPU with id " << std::this_thread::get_id() << endl; });
             }
-            
+
             for (size_t i = 0; i < xvas.size(); i++)
             {
                 threads[i].join();
@@ -68,9 +63,11 @@ int main(int argc, char *argv[])
         else
         {
             cout << "Running on GPU" << endl;
+            atexit([]() -> void
+                   { cudaDeviceReset(); });
         }
     }
-    catch (const CUDA::CUDAException& e)
+    catch (const CUDA::CUDAException &e)
     {
         std::cerr << "Error with CUDA" << endl;
         std::cerr << e.what() << " (" << e.get_error() << ")" << endl;
