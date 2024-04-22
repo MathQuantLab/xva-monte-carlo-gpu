@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
             return 1;
         }
 
-        std:string data_file_name;
+        string data_file_name;
         Utils::parse_mandatory_arguments(first_mandatory_argument, argv, m0, m1, N, T, data_file_name);
 
         cout << "External trajectories number: " << m0 << endl;
