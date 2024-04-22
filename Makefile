@@ -1,9 +1,9 @@
 CC=nvcc
 
 ifeq ($(RELEASE), TRUE)
-	CFLAGS=-O3 -std=c++17
+	CFLAGS=-O3 -std=c++17 -I./Include -L./Lib
 else
-	CFLAGS=-g -G -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra
+	CFLAGS=-g -G -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -I./Include -L./Lib
 endif
 
 ifeq ($(OS), Windows_NT)
