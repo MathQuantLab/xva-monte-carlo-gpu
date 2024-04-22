@@ -40,5 +40,34 @@ namespace CUDA
          * @throws Exception If the id is invalid
          */
         void select_gpu(int device_id);
-    }
+    };
+
+    class CUDAException : public Exception
+    {
+    public:
+        /**
+         * @brief Construct a new CUDAException object
+         *
+         * @param message Exception message
+         * @param error CUDA error
+         */
+        CUDAException(const std::string &message, cudaError_t error) : Exception(message), m_error(error) {}
+
+        /**
+         * @brief Destroy the CUDAException object
+         *
+         */
+        virtual ~CUDAException() = default;
+
+        /**
+         * @brief Get the CUDA error
+         *
+         * @return cudaError_t CUDA error
+         */
+        cudaError_t get_error() const noexcept { return m_error; }
+
+        virtual const char *what() const noexcept override;
+    private:
+        cudaError_t m_error;
+    };
 }
