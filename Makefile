@@ -1,9 +1,9 @@
 CC=nvcc
 
 ifeq ($(RELEASE), TRUE)
-	CFLAGS=-O3 -std=c++17 -I./Include -L./Lib
+	CFLAGS=-O3 -std=c++17 -I./Include
 else
-	CFLAGS=-g -G -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -I./Include -L./Lib -DDEBUG
+	CFLAGS=-g -G -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -I./Include -DDEBUG
 endif
 
 ifeq ($(OS), Windows_NT)
@@ -22,7 +22,7 @@ windows: bin/xva.exe
 
 bin/xva.out: obj/main.o obj/cuda_utils.o obj/pch.o obj/utils.o obj/cuda_simulation.obj
 	@echo "Building Linux binary..."
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ $^ -L./Lib
 
 obj/main.o: src/main.cpp headers/cuda_utils.h
 	@echo "Compiling main.cpp..."
