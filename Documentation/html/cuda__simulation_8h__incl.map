@@ -1,10 +1,11 @@
 <map id="headers/cuda_simulation.h" name="headers/cuda_simulation.h">
-<area shape="rect" id="node1" title="Holds functions to run simulation on GPU." alt="" coords="221,5,418,32"/>
-<area shape="rect" id="node2" href="$pch_8h.html" title="Precompiled header." alt="" coords="257,80,382,107"/>
+<area shape="rect" id="node1" title="Holds functions to run simulation on GPU." alt="" coords="270,5,467,32"/>
+<area shape="rect" id="node2" href="$pch_8h.html" title="Precompiled header." alt="" coords="306,80,431,107"/>
 <area shape="rect" id="node3" title=" " alt="" coords="5,155,71,181"/>
 <area shape="rect" id="node4" title=" " alt="" coords="95,155,218,181"/>
 <area shape="rect" id="node5" title=" " alt="" coords="242,155,301,181"/>
 <area shape="rect" id="node6" title=" " alt="" coords="325,155,412,181"/>
 <area shape="rect" id="node7" title=" " alt="" coords="436,155,523,181"/>
 <area shape="rect" id="node8" title=" " alt="" coords="547,155,609,181"/>
+<area shape="rect" id="node9" title=" " alt="" coords="634,155,725,181"/>
 </map>

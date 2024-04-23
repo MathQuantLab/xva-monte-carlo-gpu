@@ -1,0 +1,374 @@
+\hypertarget{class_utils_1_1_c_s_v_series}{}\doxysection{Utils\+::CSVSeries$<$ T, U $>$ Class Template Reference}
+\label{class_utils_1_1_c_s_v_series}\index{Utils::CSVSeries$<$ T, U $>$@{Utils::CSVSeries$<$ T, U $>$}}
+
+
+A class to represent a CSV series.  
+
+
+
+
+{\ttfamily \#include $<$utils.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_utils_1_1_c_s_v_series_ab881e6a5e75ed15cd35ee103bad73d22}{CSVSeries}} ()=default
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_utils_1_1_c_s_v_series}{CSVSeries}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_utils_1_1_c_s_v_series_a5ffb545f0e43ba853ef9184a59c1b883}{CSVSeries}} (const std\+::vector$<$ T $>$ \mbox{\hyperlink{class_utils_1_1_c_s_v_series_aebd3589f0dd8bf1eb1221f84fe167ef3}{data}})
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_utils_1_1_c_s_v_series}{CSVSeries}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_utils_1_1_c_s_v_series_a2dddaca2beee6d7050b86968c05e7072}{CSVSeries}} (const std\+::string \&\mbox{\hyperlink{class_utils_1_1_c_s_v_series_a452a85ccf0051f8fbbb2a87317e2e3c7}{name}}, const std\+::vector$<$ T $>$ \&\mbox{\hyperlink{class_utils_1_1_c_s_v_series_aebd3589f0dd8bf1eb1221f84fe167ef3}{data}})
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_utils_1_1_c_s_v_series}{CSVSeries}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_utils_1_1_c_s_v_series_a1d3250f391ff763a453c13259d6f8d92}{CSVSeries}} (const std\+::string \&\mbox{\hyperlink{class_utils_1_1_c_s_v_series_a452a85ccf0051f8fbbb2a87317e2e3c7}{name}}, const std\+::vector$<$ U $>$ \&\mbox{\hyperlink{class_utils_1_1_c_s_v_series_a50ee17096a436236dadcba9790a0da42}{index}}, const std\+::vector$<$ T $>$ \&\mbox{\hyperlink{class_utils_1_1_c_s_v_series_aebd3589f0dd8bf1eb1221f84fe167ef3}{data}})
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_utils_1_1_c_s_v_series}{CSVSeries}} object. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_utils_1_1_c_s_v_series_abf03b97f22d4521e0e43f6e84459889f}{size}} () const
+\begin{DoxyCompactList}\small\item\em Size of the series. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_utils_1_1_c_s_v_series_a452a85ccf0051f8fbbb2a87317e2e3c7}{name}} () const
+\begin{DoxyCompactList}\small\item\em Get the data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_utils_1_1_c_s_v_series_a064ba33e9484074a7031d7341cfc3c2c}{name}} (const std\+::string \&new\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Set the name. \end{DoxyCompactList}\item 
+const std\+::vector$<$ T $>$ \& \mbox{\hyperlink{class_utils_1_1_c_s_v_series_aebd3589f0dd8bf1eb1221f84fe167ef3}{data}} () const
+\begin{DoxyCompactList}\small\item\em Get the data. \end{DoxyCompactList}\item 
+const std\+::vector$<$ U $>$ \& \mbox{\hyperlink{class_utils_1_1_c_s_v_series_a50ee17096a436236dadcba9790a0da42}{index}} () const
+\begin{DoxyCompactList}\small\item\em Get the index. \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{class_utils_1_1_c_s_v_series_a802c5d9da263a33ae660185840bd2d6c}{operator\mbox{[}$\,$\mbox{]}}} (U i) const
+\begin{DoxyCompactList}\small\item\em Get the data at a given index. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{class_utils_1_1_c_s_v_series_ab792c9a9b23557a71bb5e50f65d30dc6}{operator\mbox{[}$\,$\mbox{]}}} (U i)
+\begin{DoxyCompactList}\small\item\em Get the data at a given index. \end{DoxyCompactList}\item 
+const T \& \mbox{\hyperlink{class_utils_1_1_c_s_v_series_a3b3854cd6952ecf3b97d05d53e25d2b2}{at}} (size\+\_\+t i) const
+\begin{DoxyCompactList}\small\item\em Get the data at a given index. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{class_utils_1_1_c_s_v_series_a91ec7d69b78f164510cedb3a03edbbe3}{at}} (size\+\_\+t i)
+\begin{DoxyCompactList}\small\item\em Get the data at a given index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_utils_1_1_c_s_v_series_a5fff3c63940c37e6adc41e8d834f3e01}{push\+\_\+back}} (const T \&value)
+\begin{DoxyCompactList}\small\item\em Add a value at the end of the series. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_utils_1_1_c_s_v_series_a034e53d650fde449228d3ca4756f3a8c}{push\+\_\+back}} (const U \&idx, const T \&value)
+\begin{DoxyCompactList}\small\item\em Add a value at the end of the series. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_utils_1_1_c_s_v_series_a9b95b49537b45eeda7bc5595e31533f9}{sort\+\_\+index}} ()
+\begin{DoxyCompactList}\small\item\em Sort the Series by index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_utils_1_1_c_s_v_series_a29e31fdf81b138a7006c973f563e9322}{sort\+\_\+values}} ()
+\begin{DoxyCompactList}\small\item\em Sort the Series by values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T, typename U = size\+\_\+t$>$\newline
+class Utils\+::\+CSVSeries$<$ T, U $>$}
+
+A class to represent a CSV series. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Data type. Must be a numeric type to be compatible with GPU \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_utils_1_1_c_s_v_series_ab881e6a5e75ed15cd35ee103bad73d22}\label{class_utils_1_1_c_s_v_series_ab881e6a5e75ed15cd35ee103bad73d22}} 
+\index{Utils::CSVSeries$<$ T, U $>$@{Utils::CSVSeries$<$ T, U $>$}!CSVSeries@{CSVSeries}}
+\index{CSVSeries@{CSVSeries}!Utils::CSVSeries$<$ T, U $>$@{Utils::CSVSeries$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{CSVSeries()}{CSVSeries()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$class T , typename U  = size\+\_\+t$>$ \\
+\mbox{\hyperlink{class_utils_1_1_c_s_v_series}{Utils\+::\+CSVSeries}}$<$ T, U $>$\+::\mbox{\hyperlink{class_utils_1_1_c_s_v_series}{CSVSeries}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Construct a new \mbox{\hyperlink{class_utils_1_1_c_s_v_series}{CSVSeries}} object. 
+
+\mbox{\Hypertarget{class_utils_1_1_c_s_v_series_a5ffb545f0e43ba853ef9184a59c1b883}\label{class_utils_1_1_c_s_v_series_a5ffb545f0e43ba853ef9184a59c1b883}} 
+\index{Utils::CSVSeries$<$ T, U $>$@{Utils::CSVSeries$<$ T, U $>$}!CSVSeries@{CSVSeries}}
+\index{CSVSeries@{CSVSeries}!Utils::CSVSeries$<$ T, U $>$@{Utils::CSVSeries$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{CSVSeries()}{CSVSeries()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+\mbox{\hyperlink{class_utils_1_1_c_s_v_series}{Utils\+::\+CSVSeries}}$<$ T, U $>$\+::\mbox{\hyperlink{class_utils_1_1_c_s_v_series}{CSVSeries}} (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ T $>$}]{data }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_utils_1_1_c_s_v_series}{CSVSeries}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Series data \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_utils_1_1_c_s_v_series_a2dddaca2beee6d7050b86968c05e7072}\label{class_utils_1_1_c_s_v_series_a2dddaca2beee6d7050b86968c05e7072}} 
+\index{Utils::CSVSeries$<$ T, U $>$@{Utils::CSVSeries$<$ T, U $>$}!CSVSeries@{CSVSeries}}
+\index{CSVSeries@{CSVSeries}!Utils::CSVSeries$<$ T, U $>$@{Utils::CSVSeries$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{CSVSeries()}{CSVSeries()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+\mbox{\hyperlink{class_utils_1_1_c_s_v_series}{Utils\+::\+CSVSeries}}$<$ T, U $>$\+::\mbox{\hyperlink{class_utils_1_1_c_s_v_series}{CSVSeries}} (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::vector$<$ T $>$ \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_utils_1_1_c_s_v_series}{CSVSeries}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Series name \\
+\hline
+{\em data} & Series data \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_utils_1_1_c_s_v_series_a1d3250f391ff763a453c13259d6f8d92}\label{class_utils_1_1_c_s_v_series_a1d3250f391ff763a453c13259d6f8d92}} 
+\index{Utils::CSVSeries$<$ T, U $>$@{Utils::CSVSeries$<$ T, U $>$}!CSVSeries@{CSVSeries}}
+\index{CSVSeries@{CSVSeries}!Utils::CSVSeries$<$ T, U $>$@{Utils::CSVSeries$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{CSVSeries()}{CSVSeries()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+\mbox{\hyperlink{class_utils_1_1_c_s_v_series}{Utils\+::\+CSVSeries}}$<$ T, U $>$\+::\mbox{\hyperlink{class_utils_1_1_c_s_v_series}{CSVSeries}} (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::vector$<$ U $>$ \&}]{index,  }\item[{const std\+::vector$<$ T $>$ \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_utils_1_1_c_s_v_series}{CSVSeries}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Series name \\
+\hline
+{\em index} & Series index \\
+\hline
+{\em data} & Series data\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{class_exception}{Exception}}} & if the size of the index and data vectors do not match \\
+\hline
+{\em \mbox{\hyperlink{class_exception}{Exception}}} & if there are some duplicates in the index vector \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_utils_1_1_c_s_v_series_a91ec7d69b78f164510cedb3a03edbbe3}\label{class_utils_1_1_c_s_v_series_a91ec7d69b78f164510cedb3a03edbbe3}} 
+\index{Utils::CSVSeries$<$ T, U $>$@{Utils::CSVSeries$<$ T, U $>$}!at@{at}}
+\index{at@{at}!Utils::CSVSeries$<$ T, U $>$@{Utils::CSVSeries$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T , typename U  = size\+\_\+t$>$ \\
+T\& \mbox{\hyperlink{class_utils_1_1_c_s_v_series}{Utils\+::\+CSVSeries}}$<$ T, U $>$\+::at (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the data at a given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Index as an integer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\& Value that can be modified 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_utils_1_1_c_s_v_series_a3b3854cd6952ecf3b97d05d53e25d2b2}\label{class_utils_1_1_c_s_v_series_a3b3854cd6952ecf3b97d05d53e25d2b2}} 
+\index{Utils::CSVSeries$<$ T, U $>$@{Utils::CSVSeries$<$ T, U $>$}!at@{at}}
+\index{at@{at}!Utils::CSVSeries$<$ T, U $>$@{Utils::CSVSeries$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T , typename U  = size\+\_\+t$>$ \\
+const T\& \mbox{\hyperlink{class_utils_1_1_c_s_v_series}{Utils\+::\+CSVSeries}}$<$ T, U $>$\+::at (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the data at a given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Index as an integer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T Value 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & if index is out of range \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_utils_1_1_c_s_v_series_aebd3589f0dd8bf1eb1221f84fe167ef3}\label{class_utils_1_1_c_s_v_series_aebd3589f0dd8bf1eb1221f84fe167ef3}} 
+\index{Utils::CSVSeries$<$ T, U $>$@{Utils::CSVSeries$<$ T, U $>$}!data@{data}}
+\index{data@{data}!Utils::CSVSeries$<$ T, U $>$@{Utils::CSVSeries$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}}
+{\footnotesize\ttfamily template$<$class T , typename U  = size\+\_\+t$>$ \\
+const std\+::vector$<$T$>$\& \mbox{\hyperlink{class_utils_1_1_c_s_v_series}{Utils\+::\+CSVSeries}}$<$ T, U $>$\+::data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the data. 
+
+\begin{DoxyReturn}{Returns}
+const std\+::vector$<$\+T$>$\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_utils_1_1_c_s_v_series_a50ee17096a436236dadcba9790a0da42}\label{class_utils_1_1_c_s_v_series_a50ee17096a436236dadcba9790a0da42}} 
+\index{Utils::CSVSeries$<$ T, U $>$@{Utils::CSVSeries$<$ T, U $>$}!index@{index}}
+\index{index@{index}!Utils::CSVSeries$<$ T, U $>$@{Utils::CSVSeries$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily template$<$class T , typename U  = size\+\_\+t$>$ \\
+const std\+::vector$<$U$>$\& \mbox{\hyperlink{class_utils_1_1_c_s_v_series}{Utils\+::\+CSVSeries}}$<$ T, U $>$\+::index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the index. 
+
+\begin{DoxyReturn}{Returns}
+const std\+::vector$<$\+U$>$\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_utils_1_1_c_s_v_series_a452a85ccf0051f8fbbb2a87317e2e3c7}\label{class_utils_1_1_c_s_v_series_a452a85ccf0051f8fbbb2a87317e2e3c7}} 
+\index{Utils::CSVSeries$<$ T, U $>$@{Utils::CSVSeries$<$ T, U $>$}!name@{name}}
+\index{name@{name}!Utils::CSVSeries$<$ T, U $>$@{Utils::CSVSeries$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T , typename U  = size\+\_\+t$>$ \\
+const std\+::string\& \mbox{\hyperlink{class_utils_1_1_c_s_v_series}{Utils\+::\+CSVSeries}}$<$ T, U $>$\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the data. 
+
+\begin{DoxyReturn}{Returns}
+const std\+::vector$<$\+T$>$\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_utils_1_1_c_s_v_series_a064ba33e9484074a7031d7341cfc3c2c}\label{class_utils_1_1_c_s_v_series_a064ba33e9484074a7031d7341cfc3c2c}} 
+\index{Utils::CSVSeries$<$ T, U $>$@{Utils::CSVSeries$<$ T, U $>$}!name@{name}}
+\index{name@{name}!Utils::CSVSeries$<$ T, U $>$@{Utils::CSVSeries$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T , typename U  = size\+\_\+t$>$ \\
+void \mbox{\hyperlink{class_utils_1_1_c_s_v_series}{Utils\+::\+CSVSeries}}$<$ T, U $>$\+::name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{new\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+name} & New name \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_utils_1_1_c_s_v_series_ab792c9a9b23557a71bb5e50f65d30dc6}\label{class_utils_1_1_c_s_v_series_ab792c9a9b23557a71bb5e50f65d30dc6}} 
+\index{Utils::CSVSeries$<$ T, U $>$@{Utils::CSVSeries$<$ T, U $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Utils::CSVSeries$<$ T, U $>$@{Utils::CSVSeries$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+T \& \mbox{\hyperlink{class_utils_1_1_c_s_v_series}{Utils\+::\+CSVSeries}}$<$ T, U $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{U}]{i }\end{DoxyParamCaption})}
+
+
+
+Get the data at a given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T Value 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & if index is out of range \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_utils_1_1_c_s_v_series_a802c5d9da263a33ae660185840bd2d6c}\label{class_utils_1_1_c_s_v_series_a802c5d9da263a33ae660185840bd2d6c}} 
+\index{Utils::CSVSeries$<$ T, U $>$@{Utils::CSVSeries$<$ T, U $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Utils::CSVSeries$<$ T, U $>$@{Utils::CSVSeries$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+const T \& \mbox{\hyperlink{class_utils_1_1_c_s_v_series}{Utils\+::\+CSVSeries}}$<$ T, U $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{U}]{i }\end{DoxyParamCaption}) const}
+
+
+
+Get the data at a given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T Value 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & if index is out of range \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_utils_1_1_c_s_v_series_a5fff3c63940c37e6adc41e8d834f3e01}\label{class_utils_1_1_c_s_v_series_a5fff3c63940c37e6adc41e8d834f3e01}} 
+\index{Utils::CSVSeries$<$ T, U $>$@{Utils::CSVSeries$<$ T, U $>$}!push\_back@{push\_back}}
+\index{push\_back@{push\_back}!Utils::CSVSeries$<$ T, U $>$@{Utils::CSVSeries$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{push\_back()}{push\_back()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T , typename U  = size\+\_\+t$>$ \\
+void \mbox{\hyperlink{class_utils_1_1_c_s_v_series}{Utils\+::\+CSVSeries}}$<$ T, U $>$\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a value at the end of the series. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Value to add \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if the index already exists \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_utils_1_1_c_s_v_series_a034e53d650fde449228d3ca4756f3a8c}\label{class_utils_1_1_c_s_v_series_a034e53d650fde449228d3ca4756f3a8c}} 
+\index{Utils::CSVSeries$<$ T, U $>$@{Utils::CSVSeries$<$ T, U $>$}!push\_back@{push\_back}}
+\index{push\_back@{push\_back}!Utils::CSVSeries$<$ T, U $>$@{Utils::CSVSeries$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{push\_back()}{push\_back()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T , typename U  = size\+\_\+t$>$ \\
+void \mbox{\hyperlink{class_utils_1_1_c_s_v_series}{Utils\+::\+CSVSeries}}$<$ T, U $>$\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{const U \&}]{idx,  }\item[{const T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a value at the end of the series. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & Index \\
+\hline
+{\em value} & Value to add \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if the index already exists \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_utils_1_1_c_s_v_series_abf03b97f22d4521e0e43f6e84459889f}\label{class_utils_1_1_c_s_v_series_abf03b97f22d4521e0e43f6e84459889f}} 
+\index{Utils::CSVSeries$<$ T, U $>$@{Utils::CSVSeries$<$ T, U $>$}!size@{size}}
+\index{size@{size}!Utils::CSVSeries$<$ T, U $>$@{Utils::CSVSeries$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$class T , typename U  = size\+\_\+t$>$ \\
+size\+\_\+t \mbox{\hyperlink{class_utils_1_1_c_s_v_series}{Utils\+::\+CSVSeries}}$<$ T, U $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Size of the series. 
+
+\begin{DoxyReturn}{Returns}
+size\+\_\+t 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_utils_1_1_c_s_v_series_a9b95b49537b45eeda7bc5595e31533f9}\label{class_utils_1_1_c_s_v_series_a9b95b49537b45eeda7bc5595e31533f9}} 
+\index{Utils::CSVSeries$<$ T, U $>$@{Utils::CSVSeries$<$ T, U $>$}!sort\_index@{sort\_index}}
+\index{sort\_index@{sort\_index}!Utils::CSVSeries$<$ T, U $>$@{Utils::CSVSeries$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{sort\_index()}{sort\_index()}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+void \mbox{\hyperlink{class_utils_1_1_c_s_v_series}{Utils\+::\+CSVSeries}}$<$ T, U $>$\+::sort\+\_\+index}
+
+
+
+Sort the Series by index. 
+
+\mbox{\Hypertarget{class_utils_1_1_c_s_v_series_a29e31fdf81b138a7006c973f563e9322}\label{class_utils_1_1_c_s_v_series_a29e31fdf81b138a7006c973f563e9322}} 
+\index{Utils::CSVSeries$<$ T, U $>$@{Utils::CSVSeries$<$ T, U $>$}!sort\_values@{sort\_values}}
+\index{sort\_values@{sort\_values}!Utils::CSVSeries$<$ T, U $>$@{Utils::CSVSeries$<$ T, U $>$}}
+\doxysubsubsection{\texorpdfstring{sort\_values()}{sort\_values()}}
+{\footnotesize\ttfamily template$<$typename T , typename U $>$ \\
+void \mbox{\hyperlink{class_utils_1_1_c_s_v_series}{Utils\+::\+CSVSeries}}$<$ T, U $>$\+::sort\+\_\+values}
+
+
+
+Sort the Series by values. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\mbox{\hyperlink{utils_8h}{utils.\+h}}\item 
+src/\mbox{\hyperlink{utils_8cpp}{utils.\+cpp}}\end{DoxyCompactItemize}

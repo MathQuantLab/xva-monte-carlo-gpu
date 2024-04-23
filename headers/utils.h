@@ -53,7 +53,7 @@ namespace Utils
     /**
      * @brief Parse XVA type
      *
-     * @param type XVA type
+     * @param str String to parse
      * @param xvas XVA types
      */
     void parse_type(const std::string& str, std::map<XVA, double> &xvas);
@@ -85,7 +85,7 @@ namespace Utils
         /**
          * @brief Construct a new CSVSeries object
          * 
-         * @param name Series name
+         * @param data Series data
          */
         CSVSeries(const std::vector<T> data);
 

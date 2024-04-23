@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['parse_5fmandatory_5farguments_66',['parse_mandatory_arguments',['../namespace_utils.html#a14f7a24724d1d7350c5b9c3ae362ebd4',1,'Utils']]],
-  ['parse_5foptions_67',['parse_options',['../namespace_utils.html#a57085921573df272b730d8dc0e33b703',1,'Utils']]],
-  ['parse_5ftype_68',['parse_type',['../namespace_utils.html#a9b26c6a3f0f0d3f094d034815e687c15',1,'Utils']]]
+  ['index_87',['index',['../class_utils_1_1_c_s_v_series.html#a50ee17096a436236dadcba9790a0da42',1,'Utils::CSVSeries::index()'],['../class_utils_1_1_c_s_v_data_frame.html#a3fab12eff2bd8e45aa3cbc2a2ee34478',1,'Utils::CSVDataFrame::index()']]],
+  ['info_88',['info',['../namespace_utils.html#ace6934aad7553d4fa9891e34afe23254',1,'Utils']]],
+  ['is_5fgpu_5favailable_89',['is_gpu_available',['../namespace_c_u_d_a_1_1_utils.html#a4d2175570accb1f866c819ad3d984537',1,'CUDA::Utils']]]
 ];

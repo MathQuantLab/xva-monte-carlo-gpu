@@ -1,0 +1,225 @@
+\hypertarget{class_utils_1_1_c_s_v_data_frame}{}\doxysection{Utils\+::CSVData\+Frame$<$ T, U, V $>$ Class Template Reference}
+\label{class_utils_1_1_c_s_v_data_frame}\index{Utils::CSVDataFrame$<$ T, U, V $>$@{Utils::CSVDataFrame$<$ T, U, V $>$}}
+
+
+A class to represent a CSV data frame.  
+
+
+
+
+{\ttfamily \#include $<$utils.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame_a5c31f3e5132d20252fef55d57c77a324}{CSVData\+Frame}} ()=delete
+\begin{DoxyCompactList}\small\item\em No default constructor. A file name or path must be provided. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame_a445f9b11033f56986cb4d49ce46b27a8}{CSVData\+Frame}} (const std\+::string \&file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame}{CSVData\+Frame}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame_a5eebf3228dc209ba7c0145547c514fda}{CSVData\+Frame}} (const std\+::filesystem\+::path \&file\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame}{CSVData\+Frame}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame_a52f3ee42293081877d57810b5cd942bd}{$\sim$\+CSVData\+Frame}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame}{CSVData\+Frame}} object. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_utils_1_1_c_s_v_series}{CSVSeries}}$<$ T, U $>$ \& \mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame_a3744e1a3a8fc226e52cf42b1daafbf54}{operator\mbox{[}$\,$\mbox{]}}} (const V \&column) const
+\begin{DoxyCompactList}\small\item\em Get the series at a given column. \end{DoxyCompactList}\item 
+std\+::vector$<$ T $>$ \mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame_afb1034c6e8d5bd25ba86c621ede1f1ca}{operator\mbox{[}$\,$\mbox{]}}} (const U \&\mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame_a3fab12eff2bd8e45aa3cbc2a2ee34478}{index}}) const
+\begin{DoxyCompactList}\small\item\em Get the row at a given index. \end{DoxyCompactList}\item 
+const std\+::vector$<$ V $>$ \& \mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame_a76e25ab5ad0e470ab7e63a6ee6350d20}{columns}} () const
+\begin{DoxyCompactList}\small\item\em Get the column names. \end{DoxyCompactList}\item 
+const std\+::vector$<$ U $>$ \& \mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame_a3fab12eff2bd8e45aa3cbc2a2ee34478}{index}} () const
+\begin{DoxyCompactList}\small\item\em Get the index. \end{DoxyCompactList}\item 
+std\+::vector$<$ T $>$ \mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame_a1bdff6c9c1feb968ba0794f2b356bc69}{at}} (size\+\_\+t idx) const
+\begin{DoxyCompactList}\small\item\em Get the data at a given index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame_a872baacc16b58d0f07a4220500ec356d}{push\+\_\+back}} (const U \&idx, const std\+::vector$<$ T $>$ \&data)
+\begin{DoxyCompactList}\small\item\em Add a new row at the end of the data frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T, typename U = size\+\_\+t, typename V = std\+::string$>$\newline
+class Utils\+::\+CSVData\+Frame$<$ T, U, V $>$}
+
+A class to represent a CSV data frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T} & Data type. Must be a numeric type to be compatible with GPU \\
+\hline
+{\em U} & Index type \\
+\hline
+{\em V} & Column name type \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_utils_1_1_c_s_v_data_frame_a5c31f3e5132d20252fef55d57c77a324}\label{class_utils_1_1_c_s_v_data_frame_a5c31f3e5132d20252fef55d57c77a324}} 
+\index{Utils::CSVDataFrame$<$ T, U, V $>$@{Utils::CSVDataFrame$<$ T, U, V $>$}!CSVDataFrame@{CSVDataFrame}}
+\index{CSVDataFrame@{CSVDataFrame}!Utils::CSVDataFrame$<$ T, U, V $>$@{Utils::CSVDataFrame$<$ T, U, V $>$}}
+\doxysubsubsection{\texorpdfstring{CSVDataFrame()}{CSVDataFrame()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class T , typename U  = size\+\_\+t, typename V  = std\+::string$>$ \\
+\mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame}{Utils\+::\+CSVData\+Frame}}$<$ T, U, V $>$\+::\mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame}{CSVData\+Frame}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+No default constructor. A file name or path must be provided. 
+
+\mbox{\Hypertarget{class_utils_1_1_c_s_v_data_frame_a445f9b11033f56986cb4d49ce46b27a8}\label{class_utils_1_1_c_s_v_data_frame_a445f9b11033f56986cb4d49ce46b27a8}} 
+\index{Utils::CSVDataFrame$<$ T, U, V $>$@{Utils::CSVDataFrame$<$ T, U, V $>$}!CSVDataFrame@{CSVDataFrame}}
+\index{CSVDataFrame@{CSVDataFrame}!Utils::CSVDataFrame$<$ T, U, V $>$@{Utils::CSVDataFrame$<$ T, U, V $>$}}
+\doxysubsubsection{\texorpdfstring{CSVDataFrame()}{CSVDataFrame()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T , typename U , typename V $>$ \\
+\mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame}{Utils\+::\+CSVData\+Frame}}$<$ T, U, V $>$\+::\mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame}{CSVData\+Frame}} (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame}{CSVData\+Frame}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+name} & File name \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_utils_1_1_c_s_v_data_frame_a5eebf3228dc209ba7c0145547c514fda}\label{class_utils_1_1_c_s_v_data_frame_a5eebf3228dc209ba7c0145547c514fda}} 
+\index{Utils::CSVDataFrame$<$ T, U, V $>$@{Utils::CSVDataFrame$<$ T, U, V $>$}!CSVDataFrame@{CSVDataFrame}}
+\index{CSVDataFrame@{CSVDataFrame}!Utils::CSVDataFrame$<$ T, U, V $>$@{Utils::CSVDataFrame$<$ T, U, V $>$}}
+\doxysubsubsection{\texorpdfstring{CSVDataFrame()}{CSVDataFrame()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T , typename U , typename V $>$ \\
+\mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame}{Utils\+::\+CSVData\+Frame}}$<$ T, U, V $>$\+::\mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame}{CSVData\+Frame}} (\begin{DoxyParamCaption}\item[{const std\+::filesystem\+::path \&}]{file\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame}{CSVData\+Frame}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+\_\+path} & File path \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_utils_1_1_c_s_v_data_frame_a52f3ee42293081877d57810b5cd942bd}\label{class_utils_1_1_c_s_v_data_frame_a52f3ee42293081877d57810b5cd942bd}} 
+\index{Utils::CSVDataFrame$<$ T, U, V $>$@{Utils::CSVDataFrame$<$ T, U, V $>$}!````~CSVDataFrame@{$\sim$CSVDataFrame}}
+\index{````~CSVDataFrame@{$\sim$CSVDataFrame}!Utils::CSVDataFrame$<$ T, U, V $>$@{Utils::CSVDataFrame$<$ T, U, V $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$CSVDataFrame()}{~CSVDataFrame()}}
+{\footnotesize\ttfamily template$<$class T , typename U  = size\+\_\+t, typename V  = std\+::string$>$ \\
+\mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame}{Utils\+::\+CSVData\+Frame}}$<$ T, U, V $>$\+::$\sim$\mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame}{CSVData\+Frame}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Destroy the \mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame}{CSVData\+Frame}} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_utils_1_1_c_s_v_data_frame_a1bdff6c9c1feb968ba0794f2b356bc69}\label{class_utils_1_1_c_s_v_data_frame_a1bdff6c9c1feb968ba0794f2b356bc69}} 
+\index{Utils::CSVDataFrame$<$ T, U, V $>$@{Utils::CSVDataFrame$<$ T, U, V $>$}!at@{at}}
+\index{at@{at}!Utils::CSVDataFrame$<$ T, U, V $>$@{Utils::CSVDataFrame$<$ T, U, V $>$}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}}
+{\footnotesize\ttfamily template$<$typename T , typename U , typename V $>$ \\
+std\+::vector$<$ T $>$ \mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame}{Utils\+::\+CSVData\+Frame}}$<$ T, U, V $>$\+::at (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{idx }\end{DoxyParamCaption}) const}
+
+
+
+Get the data at a given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & Index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+T$>$ Data 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_utils_1_1_c_s_v_data_frame_a76e25ab5ad0e470ab7e63a6ee6350d20}\label{class_utils_1_1_c_s_v_data_frame_a76e25ab5ad0e470ab7e63a6ee6350d20}} 
+\index{Utils::CSVDataFrame$<$ T, U, V $>$@{Utils::CSVDataFrame$<$ T, U, V $>$}!columns@{columns}}
+\index{columns@{columns}!Utils::CSVDataFrame$<$ T, U, V $>$@{Utils::CSVDataFrame$<$ T, U, V $>$}}
+\doxysubsubsection{\texorpdfstring{columns()}{columns()}}
+{\footnotesize\ttfamily template$<$class T , typename U  = size\+\_\+t, typename V  = std\+::string$>$ \\
+const std\+::vector$<$V$>$\& \mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame}{Utils\+::\+CSVData\+Frame}}$<$ T, U, V $>$\+::columns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the column names. 
+
+\begin{DoxyReturn}{Returns}
+const std\+::vector$<$\+V$>$\& column names 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_utils_1_1_c_s_v_data_frame_a3fab12eff2bd8e45aa3cbc2a2ee34478}\label{class_utils_1_1_c_s_v_data_frame_a3fab12eff2bd8e45aa3cbc2a2ee34478}} 
+\index{Utils::CSVDataFrame$<$ T, U, V $>$@{Utils::CSVDataFrame$<$ T, U, V $>$}!index@{index}}
+\index{index@{index}!Utils::CSVDataFrame$<$ T, U, V $>$@{Utils::CSVDataFrame$<$ T, U, V $>$}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily template$<$class T , typename U  = size\+\_\+t, typename V  = std\+::string$>$ \\
+const std\+::vector$<$U$>$\& \mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame}{Utils\+::\+CSVData\+Frame}}$<$ T, U, V $>$\+::index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the index. 
+
+\begin{DoxyReturn}{Returns}
+const std\+::vector$<$\+U$>$\& index 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_utils_1_1_c_s_v_data_frame_afb1034c6e8d5bd25ba86c621ede1f1ca}\label{class_utils_1_1_c_s_v_data_frame_afb1034c6e8d5bd25ba86c621ede1f1ca}} 
+\index{Utils::CSVDataFrame$<$ T, U, V $>$@{Utils::CSVDataFrame$<$ T, U, V $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Utils::CSVDataFrame$<$ T, U, V $>$@{Utils::CSVDataFrame$<$ T, U, V $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename U , typename V $>$ \\
+std\+::vector$<$ T $>$ \mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame}{Utils\+::\+CSVData\+Frame}}$<$ T, U, V $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const U \&}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Get the row at a given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+T$>$ Row 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_utils_1_1_c_s_v_data_frame_a3744e1a3a8fc226e52cf42b1daafbf54}\label{class_utils_1_1_c_s_v_data_frame_a3744e1a3a8fc226e52cf42b1daafbf54}} 
+\index{Utils::CSVDataFrame$<$ T, U, V $>$@{Utils::CSVDataFrame$<$ T, U, V $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Utils::CSVDataFrame$<$ T, U, V $>$@{Utils::CSVDataFrame$<$ T, U, V $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename U , typename V $>$ \\
+const \mbox{\hyperlink{class_utils_1_1_c_s_v_series}{Utils\+::\+CSVSeries}}$<$ T, U $>$ \& \mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame}{Utils\+::\+CSVData\+Frame}}$<$ T, U, V $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const V \&}]{column }\end{DoxyParamCaption}) const}
+
+
+
+Get the series at a given column. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em column} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const CSVSeries$<$\+T, U$>$\& Series 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_utils_1_1_c_s_v_data_frame_a872baacc16b58d0f07a4220500ec356d}\label{class_utils_1_1_c_s_v_data_frame_a872baacc16b58d0f07a4220500ec356d}} 
+\index{Utils::CSVDataFrame$<$ T, U, V $>$@{Utils::CSVDataFrame$<$ T, U, V $>$}!push\_back@{push\_back}}
+\index{push\_back@{push\_back}!Utils::CSVDataFrame$<$ T, U, V $>$@{Utils::CSVDataFrame$<$ T, U, V $>$}}
+\doxysubsubsection{\texorpdfstring{push\_back()}{push\_back()}}
+{\footnotesize\ttfamily template$<$typename T , typename U , typename V $>$ \\
+void \mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame}{Utils\+::\+CSVData\+Frame}}$<$ T, U, V $>$\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{const U \&}]{idx,  }\item[{const std\+::vector$<$ T $>$ \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Add a new row at the end of the data frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & Index \\
+\hline
+{\em data} & Data \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if the index already exists \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\mbox{\hyperlink{utils_8h}{utils.\+h}}\item 
+src/\mbox{\hyperlink{utils_8cpp}{utils.\+cpp}}\end{DoxyCompactItemize}

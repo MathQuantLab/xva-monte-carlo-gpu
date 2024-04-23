@@ -7,8 +7,7 @@ Provides utility functions.
 
 {\ttfamily \#include \char`\"{}../headers/pch.\+h\char`\"{}}\newline
 {\ttfamily \#include $<$map$>$}\newline
-Include dependency graph for utils.\+h\+:
-\nopagebreak
+Include dependency graph for utils.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -22,11 +21,29 @@ This graph shows which files directly or indirectly include this file\+:\nopageb
 \includegraphics[width=252pt]{utils_8h__dep__incl}
 \end{center}
 \end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_utils_1_1_c_s_v_series}{Utils\+::\+CSVSeries$<$ T, U $>$}}
+\begin{DoxyCompactList}\small\item\em A class to represent a CSV series. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame}{Utils\+::\+CSVData\+Frame$<$ T, U, V $>$}}
+\begin{DoxyCompactList}\small\item\em A class to represent a CSV data frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
  \mbox{\hyperlink{namespace_utils}{Utils}}
 \begin{DoxyCompactList}\small\item\em Provides utility functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame}{Utils\+::\+CSVData\+Frame}}$<$ double, size\+\_\+t, std\+::string $>$ \mbox{\hyperlink{namespace_utils_a1eaf437a867a6bbe8277746ed580c903}{Utils\+::\+Int\+Data\+Frame}}
+\begin{DoxyCompactList}\small\item\em Alias for a CSV data frame with double data type. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame}{Utils\+::\+CSVData\+Frame}}$<$ double, double, std\+::string $>$ \mbox{\hyperlink{namespace_utils_ac7d7f98c87ffaa8071bd56b334b7ea8f}{Utils\+::\+Double\+Data\+Frame}}
+\begin{DoxyCompactList}\small\item\em Alias for a CSV data frame with double data type and double index. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{class_utils_1_1_c_s_v_series}{Utils\+::\+CSVSeries}}$<$ double, size\+\_\+t $>$ \mbox{\hyperlink{namespace_utils_a2d791dfb54c9525f3224797f9abcf214}{Utils\+::\+Int\+Series}}
+\begin{DoxyCompactList}\small\item\em Alias for a CSV series with double data type. \end{DoxyCompactList}\item 
+typedef \mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame}{Utils\+::\+CSVData\+Frame}}$<$ double, double $>$ \mbox{\hyperlink{namespace_utils_a4ec2e37b65895a6e42b4963a7ec7f5a4}{Utils\+::\+Double\+Series}}
+\begin{DoxyCompactList}\small\item\em Alias for a CSV series with double data type and double index. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 

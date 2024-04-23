@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['get_5ferror_62',['get_error',['../class_c_u_d_a_1_1_c_u_d_a_exception.html#ac8a05e1bbac53efec484d1a107cc6eb4',1,'CUDA::CUDAException']]]
+  ['data_84',['data',['../class_utils_1_1_c_s_v_series.html#aebd3589f0dd8bf1eb1221f84fe167ef3',1,'Utils::CSVSeries']]]
 ];
