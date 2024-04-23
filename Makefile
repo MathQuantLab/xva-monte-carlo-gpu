@@ -22,7 +22,7 @@ bin/xva.out: obj/main.o obj/cuda_utils.o obj/pch.o obj/utils.o obj/cuda_simulati
 	@echo "Building Linux binary..."
 	$(CC) $(CFLAGS) -o $@ $^ -L./Libs -lcsv
 
-obj/main.o: src/main.cpp headers/cuda_utils.h
+obj/main.o: src/main.cpp headers/cuda_utils.h headers/utils.h
 	@echo "Compiling main.cpp..."
 	$(CC) $(CFLAGS) -o $@ -c $<
 

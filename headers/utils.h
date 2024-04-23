@@ -261,9 +261,77 @@ namespace Utils
          * 
          */
         ~CSVDataFrame() = default;
+
+        /**
+         * @brief Get the series at a given column
+         * 
+         * @param column 
+         * @return const CSVSeries<T, U>& Series
+         */
+        const CSVSeries<T, U>& operator[](const V& column) const;
+
+        /**
+         * @brief Get the row at a given index
+         * 
+         * @param index 
+         * @return std::vector<T> Row
+         */
+        std::vector<T> operator[](const U& index) const;
+        
+        /**
+         * @brief Get the column names
+         * 
+         * @return const std::vector<V>& column names
+         */
+        const std::vector<V>& columns() const { return m_columns; };
+
+        /**
+         * @brief Get the index
+         * 
+         * @return const std::vector<U>& index
+         */
+        const std::vector<U>& index() const { return m_index; };
+
+        /**
+         * @brief Get the data at a given index
+         * 
+         * @param idx Index
+         * @return std::vector<T> Data
+         */
+        std::vector<T> at(size_t idx) const;
+        
+        /**
+         * @brief Add a new row at the end of the data frame
+         * 
+         * @param idx Index
+         * @param data Data
+         * @throws std::invalid_argument if the index already exists
+         */
+        void push_back(const U& idx, const std::vector<T>& data);
     private:
         std::vector<V> m_columns;
         std::vector<U> m_index;
         std::vector<CSVSeries<T, U>> m_data;
     };
+
+    /**
+     * @brief Alias for a CSV data frame with double data type
+     * 
+     */
+    typedef Utils::CSVDataFrame<double, size_t, std::string> IntDataFrame;
+    /**
+     * @brief Alias for a CSV data frame with double data type and double index
+     * 
+     */
+    typedef Utils::CSVDataFrame<double, double, std::string> DoubleDataFrame;
+    /**
+     * @brief Alias for a CSV series with double data type
+     * 
+     */
+    typedef Utils::CSVSeries<double, size_t> IntSeries;
+    /**
+     * @brief Alias for a CSV series with double data type and double index
+     * 
+     */
+    typedef Utils::CSVDataFrame<double, double> DoubleSeries;
 }
