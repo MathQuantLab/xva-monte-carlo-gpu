@@ -18,6 +18,7 @@
 #include <stdexcept>
 #include <exception>
 #include <vector>
+#include <filesystem>
 
 /**
  * @brief Exception class
