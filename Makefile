@@ -18,7 +18,7 @@ linux: bin/xva.out
 
 # Linux
 
-bin/xva.out: obj/main.o obj/cuda_utils.o obj/pch.o obj/utils.o obj/cuda_simulation.o Libs/libcsv.a obj/simulation.o
+bin/xva.out: obj/main.o obj/cuda_utils.o obj/pch.o obj/utils.o obj/cuda_simulation.o Libs/libcsv.a obj/simulation.o obj/nmc.o
 	@echo "Building Linux binary..."
 	$(CC) $(CFLAGS) -o $@ $^ -L./Libs -lcsv
 
@@ -46,8 +46,12 @@ Libs/libcsv.a:
 	@echo "Building Linux library..."
 	make -C Include libcsv.a RELEASE=$(RELEASE)
 
-obj/simulation.o: src/simulation.cpp headers/simulation.h headers/pch.h
+obj/simulation.o: src/simulation.cpp headers/simulation.h headers/pch.h headers/nmc.h
 	@echo "Compiling simulation.cpp..."
+	$(CC) $(CFLAGS) -o $@ -c $<
+
+obj/nmc.o: src/nmc.cpp headers/nmc.h headers/pch.h
+	@echo "Compiling nmc.cpp..."
 	$(CC) $(CFLAGS) -o $@ -c $<
 
 doc:

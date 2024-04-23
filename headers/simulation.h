@@ -11,6 +11,7 @@
 
 #pragma once
 #include "../headers/pch.h"
+#include "../headers/nmc.h"
 
 /**
  * @brief Provides simulation functions on CPU
