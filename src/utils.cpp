@@ -11,9 +11,13 @@
 
 #include <iostream>
 #include <cstring>
+#include <algorithm>
+#include <unordered_set>
+#include <numeric>
 
 #include "../headers/utils.h"
 #include "../headers/cuda_utils.h"
+#include "../Include/csv.hpp"
 
 using namespace std;
 
@@ -178,4 +182,96 @@ void Utils::parse_mandatory_arguments(int argc, char *argv[], size_t &m0, size_t
         throw Exception("Invalid horizon");
     }
     data_file_name = argv[argc + 2];
+}
+
+template <typename T, typename U>
+Utils::CSVSeries<T, U>::CSVSeries(const std::vector<T> data)
+{
+    this->m_data = data;
+    this->m_name = "";
+    this->m_index = std::vector<U>(data.size());
+    std::iota(this->m_index.begin(), this->m_index.end(), 0);
+}
+
+template <typename T, typename U>
+Utils::CSVSeries<T, U>::CSVSeries(const std::string &name, const std::vector<T> &data)
+{
+    this->m_name = name;
+    this->m_data = data;
+    this->m_index = std::vector<U>(data.size());
+    std::iota(this->m_index.begin(), this->m_index.end(), 0);
+}
+
+template <typename T, typename U>
+Utils::CSVSeries<T, U>::CSVSeries(const std::string &name, const std::vector<U> &index, const std::vector<T> &data)
+{
+    this->m_name = name;
+    this->m_data = data;
+    this->m_index = index;
+
+    if (index.size() != data.size())
+    {
+        throw Exception("Index and data sizes do not match");
+    }
+
+    if (std::unordered_set<U>(m_index.begin(), m_index.end()).size() != m_index.size())
+    {
+        throw Exception("Index contains duplicates");
+    }
+}
+
+template <typename T, typename U>
+const T& Utils::CSVSeries<T, U>::operator[](U i) const
+{
+    size_t index = std::distance(this->m_index.begin(), std::find(this->m_index.begin(), this->m_index.end(), i));
+    if (index == this->m_index.size())
+    {
+        throw std::out_of_range("Index not found");
+    }
+    return this->m_data[index];
+}
+
+template <typename T, typename U>
+T& Utils::CSVSeries<T, U>::operator[](U i)
+{
+    size_t index = std::distance(this->m_index.begin(), std::find(this->m_index.begin(), this->m_index.end(), i));
+    if (index == this->m_index.size())
+    {
+        throw std::out_of_range("Index not found");
+    }
+    return this->m_data[index];
+}
+
+template <typename T, typename U>
+void Utils::CSVSeries<T,U>::sort_index()
+{
+    std::vector<std::pair<U, T>> zipped(this->m_index.size());
+    std::transform(this->m_index.begin(), this->m_index.end(), this->m_data.begin(), zipped.begin(), [](U i, T d) { return std::make_pair(i, d); });
+    std::sort(zipped.begin(), zipped.end(), [](const std::pair<U, T> &a, const std::pair<U, T> &b) { return a.first < b.first; });
+    std::transform(zipped.begin(), zipped.end(), this->m_index.begin(), [](const std::pair<U, T> &p) { return p.first; });
+    std::transform(zipped.begin(), zipped.end(), this->m_data.begin(), [](const std::pair<U, T> &p) { return p.second; });
+}
+
+template <typename T, typename U>
+void Utils::CSVSeries<T,U>::sort_values()
+{
+    std::vector<std::pair<U, T>> zipped(this->m_index.size());
+    std::transform(this->m_index.begin(), this->m_index.end(), this->m_data.begin(), zipped.begin(), [](U i, T d) { return std::make_pair(i, d); });
+    std::sort(zipped.begin(), zipped.end(), [](const std::pair<U, T> &a, const std::pair<U, T> &b) { return a.second < b.second; });
+    std::transform(zipped.begin(), zipped.end(), this->m_index.begin(), [](const std::pair<U, T> &p) { return p.first; });
+    std::transform(zipped.begin(), zipped.end(), this->m_data.begin(), [](const std::pair<U, T> &p) { return p.second; });
+}
+
+template class Utils::CSVSeries<double, size_t>;
+
+template<typename T, typename U, typename V>
+Utils::CSVDataFrame<T, U, V>::CSVDataFrame(const std::string& file_name)
+{
+
+}
+
+template<typename T, typename U, typename V>
+Utils::CSVDataFrame<T, U, V>::CSVDataFrame(const std::filesystem::path& file_path) :
+    CSVDataFrame(file_path.string())
+{
 }
