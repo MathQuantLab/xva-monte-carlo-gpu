@@ -14,6 +14,7 @@
 #include <algorithm>
 #include <unordered_set>
 #include <numeric>
+#include <fstream>
 
 #include "../headers/utils.h"
 #include "../headers/cuda_utils.h"
@@ -263,11 +264,49 @@ void Utils::CSVSeries<T,U>::sort_values()
 }
 
 template class Utils::CSVSeries<double, size_t>;
+template class Utils::CSVSeries<double, double>;
 
 template<typename T, typename U, typename V>
 Utils::CSVDataFrame<T, U, V>::CSVDataFrame(const std::string& file_name)
-{
+{ 
+    bool first_row = false;
+    csv::CSVReader reader(file_name);
 
+    for (auto& row : reader)
+    {
+        if (!first_row)
+        {
+            for (auto& cell : row)
+            {
+                m_columns.push_back(cell.get<V>());
+                m_data.push_back(CSVSeries<T, U>(cell.get<std::string>(), std::vector<T>()));
+            }
+            first_row = true;
+        }
+        else
+        {
+            std::vector<T> data;
+            U idx;
+            bool idx_found = false;
+            for (auto& cell : row)
+            {
+                if (!idx_found)
+                {
+                    idx = cell.get<U>();
+                    idx_found = true;
+                }
+                else
+                {
+                    data.push_back(cell.get<T>());   
+                }
+            }
+            if (data.size() != m_columns.size())
+            {
+                throw std::invalid_argument("Data size does not match the number of columns");
+            }
+            this->push_back(idx, data);
+        }
+    }
 }
 
 template<typename T, typename U, typename V>
@@ -275,3 +314,58 @@ Utils::CSVDataFrame<T, U, V>::CSVDataFrame(const std::filesystem::path& file_pat
     CSVDataFrame(file_path.string())
 {
 }
+
+template<typename T, typename U, typename V>
+const Utils::CSVSeries<T, U>& Utils::CSVDataFrame<T, U, V>::operator[](const V& column) const
+{
+    size_t index = std::distance(m_columns.begin(), std::find(m_columns.begin(), m_columns.end(), column));
+    if (index == m_columns.size())
+    {
+        throw std::out_of_range("Column not found");
+    }
+    return m_data[index];
+}
+
+template<typename T, typename U, typename V>
+std::vector<T> Utils::CSVDataFrame<T, U, V>::operator[](const U& index) const
+{
+    std::vector<T> data;
+
+    for (const auto& series : m_data)
+    {
+        data.push_back(series[index]);
+    }
+
+    return data;
+}
+
+template<typename T, typename U, typename V>
+std::vector<T> Utils::CSVDataFrame<T, U, V>::at(size_t idx) const
+{
+    std::vector<T> data;
+
+    for (const auto& series : m_data)
+    {
+        data.push_back(series[idx]);
+    }
+
+    return data;
+}
+
+template<typename T, typename U, typename V>
+void Utils::CSVDataFrame<T, U, V>::push_back(const U& idx, const std::vector<T>& data)
+{
+    if (data.size() != m_columns.size())
+    {
+        throw std::invalid_argument("Data size does not match the number of columns");
+    }
+
+    for (size_t i = 0; i < m_columns.size(); i++)
+    {
+        m_data[i].push_back(idx, data[i]);
+        m_index.push_back(idx);
+    }
+}
+
+template class Utils::CSVDataFrame<double, size_t, std::string>;
+template class Utils::CSVDataFrame<double, double, std::string>;
