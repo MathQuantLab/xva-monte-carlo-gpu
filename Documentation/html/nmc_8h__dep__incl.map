@@ -1,0 +1,7 @@
+<map id="headers/nmc.h" name="headers/nmc.h">
+<area shape="rect" id="node1" title="Provides the nested Monte Carlo system." alt="" coords="148,5,267,32"/>
+<area shape="rect" id="node2" href="$simulation_8h.html" title="Provides function to run simulation on CPU." alt="" coords="52,80,211,107"/>
+<area shape="rect" id="node5" href="$nmc_8cpp.html" title="Implements nmc.h." alt="" coords="235,80,335,107"/>
+<area shape="rect" id="node3" href="$main_8cpp.html" title="Main file." alt="" coords="5,155,111,181"/>
+<area shape="rect" id="node4" href="$simulation_8cpp.html" title="Implements simulation.h." alt="" coords="134,155,275,181"/>
+</map>

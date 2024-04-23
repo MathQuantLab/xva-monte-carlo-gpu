@@ -10,3 +10,11 @@
  */
 
 #include "../headers/nmc.h"
+
+NMC::NMC() : nb_points(0)
+{
+}
+
+void NMC::run() const
+{
+}
