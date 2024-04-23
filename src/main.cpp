@@ -15,6 +15,7 @@
 
 #include "../headers/cuda_utils.h"
 #include "../headers/utils.h"
+#include "../headers/simulation.h"
 
 using namespace std;
 
