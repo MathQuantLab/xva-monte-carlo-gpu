@@ -75,6 +75,8 @@ int main(int argc, char *argv[])
 
         cout << "Data file: " << data_file_name << endl;
 
+        Utils::DoubleDataFrame data(data_file);
+
         std::map<XVA, double> xvas;
         Utils::parse_type(argv[argc - 1], xvas);
 
