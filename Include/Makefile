@@ -1,5 +1,9 @@
 
-CFLAGS=-O3 -std=c++17 -pthread
+ifeq ($(RELEASE), TRUE)
+	CFLAGS=-O3 -std=c++17 -s -pthread
+else
+	CFLAGS=-std=c++17 -Wall -Wextra -DDEBUG -pthread
+endif
 BUILD_DIR = build
 
 # Main Library
@@ -12,6 +16,6 @@ libcsv.a:
 	ar rvs ../Libs/$@ $(wildcard build/*.o)
 
 csv:
-	$(CXX) -c $(CFLAGS) $(SOURCES)
+	g++ -c $(CFLAGS) $(SOURCES)
 	mkdir -p $(BUILD_DIR)
 	mv *.o $(BUILD_DIR)

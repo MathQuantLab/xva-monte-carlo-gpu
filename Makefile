@@ -44,7 +44,7 @@ obj/cuda_simulation.o: src/cuda_simulation.cu headers/cuda_simulation.h headers/
 
 Libs/libcsv.a:
 	@echo "Building Linux library..."
-	make -C Include libcsv.a
+	make -C Include libcsv.a RELEASE=$(RELEASE)
 
 doc:
 	doxygen Doxyfile
