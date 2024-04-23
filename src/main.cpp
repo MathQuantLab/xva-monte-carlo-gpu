@@ -11,7 +11,6 @@
 
 #include <iostream>
 #include <thread>
-#include <filesystem>
 
 #include "../headers/cuda_utils.h"
 #include "../headers/utils.h"
