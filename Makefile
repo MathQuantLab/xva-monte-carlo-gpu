@@ -12,17 +12,15 @@ else
 	DEL=rm -f -v
 endif
 
-all: linux windows doc
+all: linux doc
 
 linux: bin/xva.out
 
-windows: bin/xva.exe
-
 # Linux
 
-bin/xva.out: obj/main.o obj/cuda_utils.o obj/pch.o obj/utils.o obj/cuda_simulation.obj
+bin/xva.out: obj/main.o obj/cuda_utils.o obj/pch.o obj/utils.o obj/cuda_simulation.o Libs/libcsv.a
 	@echo "Building Linux binary..."
-	$(CC) $(CFLAGS) -o $@ $^ -L./Lib
+	$(CC) $(CFLAGS) -o $@ $^ -L./Libs -lcsv
 
 obj/main.o: src/main.cpp headers/cuda_utils.h
 	@echo "Compiling main.cpp..."
@@ -44,34 +42,12 @@ obj/cuda_simulation.o: src/cuda_simulation.cu headers/cuda_simulation.h headers/
 	@echo "Compiling cuda_simulation.cu..."
 	$(CC) $(CFLAGS) -o $@ -c $<
 
-# Windows
-
-bin/xva.exe: obj/main.obj obj/cuda_utils.obj obj/pch.obj obj/utils.obj obj/cuda_simulation.obj
-	@echo "Building Windows binary..."
-	$(CC) $(CFLAGS) -o $@ $^
-
-obj/main.obj: src/main.cpp headers/cuda_utils.h
-	@echo "Compiling main.cpp..."
-	$(CC) $(CFLAGS) -o $@ -c $<
-
-obj/cuda_utils.obj: src/cuda_utils.cu headers/cuda_utils.h headers/pch.h
-	@echo "Compiling cuda_utils.cu..."
-	$(CC) $(CFLAGS) -o $@ -c $<
-
-obj/pch.obj: src/pch.cpp headers/pch.h
-	@echo "Compiling pch.cpp..."
-	$(CC) $(CFLAGS) -o $@ -c $<
-
-obj/utils.obj: src/utils.cpp headers/cuda_utils.h headers/pch.h headers/utils.h
-	@echo "Compiling utils.cpp..."
-	$(CC) $(CFLAGS) -o $@ -c $<
-
-obj/cuda_simulation.obj: src/cuda_simulation.cu headers/cuda_simulation.h headers/pch.h
-	@echo "Compiling cuda_simulation.cu..."
-	$(CC) $(CFLAGS) -o $@ -c $<
+Libs/libcsv.a:
+	@echo "Building Linux library..."
+	make -C Include libcsv.a
 
 doc:
 	doxygen Doxyfile
 
 clean:
-	$(DEL) obj/*.o* bin/xva.*
+	$(DEL) obj/*.o* bin/xva.* Libs/*.a
