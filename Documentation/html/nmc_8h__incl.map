@@ -1,11 +1,13 @@
 <map id="headers/nmc.h" name="headers/nmc.h">
-<area shape="rect" id="node1" title="Provides the nested Monte Carlo system." alt="" coords="309,5,428,32"/>
-<area shape="rect" id="node2" href="$pch_8h.html" title="Precompiled header." alt="" coords="306,80,431,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,155,71,181"/>
-<area shape="rect" id="node4" title=" " alt="" coords="95,155,218,181"/>
-<area shape="rect" id="node5" title=" " alt="" coords="242,155,301,181"/>
-<area shape="rect" id="node6" title=" " alt="" coords="325,155,412,181"/>
-<area shape="rect" id="node7" title=" " alt="" coords="436,155,523,181"/>
-<area shape="rect" id="node8" title=" " alt="" coords="547,155,609,181"/>
-<area shape="rect" id="node9" title=" " alt="" coords="634,155,725,181"/>
+<area shape="rect" id="node1" title="Provides the nested Monte Carlo system." alt="" coords="360,5,479,32"/>
+<area shape="rect" id="node2" href="$pch_8h.html" title="Precompiled header." alt="" coords="306,155,431,181"/>
+<area shape="rect" id="node10" href="$utils_8h.html" title="Provides utility functions." alt="" coords="406,80,537,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,229,71,256"/>
+<area shape="rect" id="node4" title=" " alt="" coords="95,229,218,256"/>
+<area shape="rect" id="node5" title=" " alt="" coords="242,229,301,256"/>
+<area shape="rect" id="node6" title=" " alt="" coords="325,229,412,256"/>
+<area shape="rect" id="node7" title=" " alt="" coords="436,229,523,256"/>
+<area shape="rect" id="node8" title=" " alt="" coords="547,229,609,256"/>
+<area shape="rect" id="node9" title=" " alt="" coords="634,229,725,256"/>
+<area shape="rect" id="node11" title=" " alt="" coords="455,155,506,181"/>
 </map>

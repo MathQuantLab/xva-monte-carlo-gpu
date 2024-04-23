@@ -17,7 +17,17 @@ Provides the nested Monte Carlo system.
 virtual \mbox{\hyperlink{class_n_m_c_a95aec6f812d0e27a554b374fe4b7855c}{$\sim$\+NMC}} ()=default
 \begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{class_n_m_c}{NMC}} object. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_n_m_c_a765aa6a26a15269094bc7f3805038a51}{run}} () const
-\begin{DoxyCompactList}\small\item\em Run the nested Monte Carlo system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Run the nested Monte Carlo system. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_n_m_c_a1b3f1a2d42b7e1a62899352a4701f4f5}{get\+\_\+m0}} () const
+\begin{DoxyCompactList}\small\item\em Get the m0 object. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_n_m_c_ac0376cc2cf9f111efe8b1c49678b6fd5}{get\+\_\+m1}} () const
+\begin{DoxyCompactList}\small\item\em Get the m1 object. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{namespace_utils_ac7d7f98c87ffaa8071bd56b334b7ea8f}{Utils\+::\+Double\+Data\+Frame}} \& \mbox{\hyperlink{class_n_m_c_a6fc91753e2bd0de6e91c15af9058edc4}{get\+\_\+df}} ()
+\begin{DoxyCompactList}\small\item\em Get the df object. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_n_m_c_ab7500a1af1942ceb3cb71ebb2339be05}{get\+\_\+nb\+\_\+points}} () const
+\begin{DoxyCompactList}\small\item\em Get the nb\+\_\+points object. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_n_m_c_abfdc259cd6856ca3467f9e22708195a2}{get\+\_\+T}} () const
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -47,6 +57,64 @@ Destroy the \mbox{\hyperlink{class_n_m_c}{NMC}} object.
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_n_m_c_a6fc91753e2bd0de6e91c15af9058edc4}\label{class_n_m_c_a6fc91753e2bd0de6e91c15af9058edc4}} 
+\index{NMC@{NMC}!get\_df@{get\_df}}
+\index{get\_df@{get\_df}!NMC@{NMC}}
+\doxysubsubsection{\texorpdfstring{get\_df()}{get\_df()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespace_utils_ac7d7f98c87ffaa8071bd56b334b7ea8f}{Utils\+::\+Double\+Data\+Frame}}\& NMC\+::get\+\_\+df (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the df object. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{namespace_utils_ac7d7f98c87ffaa8071bd56b334b7ea8f}{Utils\+::\+Double\+Data\+Frame}}\& df 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_n_m_c_a1b3f1a2d42b7e1a62899352a4701f4f5}\label{class_n_m_c_a1b3f1a2d42b7e1a62899352a4701f4f5}} 
+\index{NMC@{NMC}!get\_m0@{get\_m0}}
+\index{get\_m0@{get\_m0}!NMC@{NMC}}
+\doxysubsubsection{\texorpdfstring{get\_m0()}{get\_m0()}}
+{\footnotesize\ttfamily double NMC\+::get\+\_\+m0 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the m0 object. 
+
+\begin{DoxyReturn}{Returns}
+double m0 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_n_m_c_ac0376cc2cf9f111efe8b1c49678b6fd5}\label{class_n_m_c_ac0376cc2cf9f111efe8b1c49678b6fd5}} 
+\index{NMC@{NMC}!get\_m1@{get\_m1}}
+\index{get\_m1@{get\_m1}!NMC@{NMC}}
+\doxysubsubsection{\texorpdfstring{get\_m1()}{get\_m1()}}
+{\footnotesize\ttfamily double NMC\+::get\+\_\+m1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the m1 object. 
+
+\begin{DoxyReturn}{Returns}
+double m1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_n_m_c_ab7500a1af1942ceb3cb71ebb2339be05}\label{class_n_m_c_ab7500a1af1942ceb3cb71ebb2339be05}} 
+\index{NMC@{NMC}!get\_nb\_points@{get\_nb\_points}}
+\index{get\_nb\_points@{get\_nb\_points}!NMC@{NMC}}
+\doxysubsubsection{\texorpdfstring{get\_nb\_points()}{get\_nb\_points()}}
+{\footnotesize\ttfamily size\+\_\+t NMC\+::get\+\_\+nb\+\_\+points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the nb\+\_\+points object. 
+
+\begin{DoxyReturn}{Returns}
+size\+\_\+t nb\+\_\+points 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_n_m_c_abfdc259cd6856ca3467f9e22708195a2}\label{class_n_m_c_abfdc259cd6856ca3467f9e22708195a2}} 
+\index{NMC@{NMC}!get\_T@{get\_T}}
+\index{get\_T@{get\_T}!NMC@{NMC}}
+\doxysubsubsection{\texorpdfstring{get\_T()}{get\_T()}}
+{\footnotesize\ttfamily double NMC\+::get\+\_\+T (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
 \mbox{\Hypertarget{class_n_m_c_a765aa6a26a15269094bc7f3805038a51}\label{class_n_m_c_a765aa6a26a15269094bc7f3805038a51}} 
 \index{NMC@{NMC}!run@{run}}
 \index{run@{run}!NMC@{NMC}}

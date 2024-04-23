@@ -74,20 +74,41 @@ $(function() {
 <a href="nmc_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;../headers/pch.h&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_n_m_c.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_n_m_c.html">NMC</a></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_n_m_c.html#af8433e6a0076aa22030e88ae4c6052c0">NMC</a>();</div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_n_m_c.html#a95aec6f812d0e27a554b374fe4b7855c">   31</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_n_m_c.html#a95aec6f812d0e27a554b374fe4b7855c">~NMC</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_n_m_c.html#a765aa6a26a15269094bc7f3805038a51">run</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">size_t</span> nb_points;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;};</div>
-<div class="ttc" id="aclass_n_m_c_html"><div class="ttname"><a href="class_n_m_c.html">NMC</a></div><div class="ttdoc">Provides the nested Monte Carlo system.</div><div class="ttdef"><b>Definition:</b> nmc.h:20</div></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;../headers/utils.h&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_n_m_c.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_n_m_c.html">NMC</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_n_m_c.html#af8433e6a0076aa22030e88ae4c6052c0">NMC</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_n_m_c.html#a95aec6f812d0e27a554b374fe4b7855c">   32</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="class_n_m_c.html#a95aec6f812d0e27a554b374fe4b7855c">~NMC</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_n_m_c.html#a765aa6a26a15269094bc7f3805038a51">run</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="class_n_m_c.html#a1b3f1a2d42b7e1a62899352a4701f4f5">   44</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_n_m_c.html#a1b3f1a2d42b7e1a62899352a4701f4f5">get_m0</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m0; };</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_n_m_c.html#ac0376cc2cf9f111efe8b1c49678b6fd5">   51</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_n_m_c.html#ac0376cc2cf9f111efe8b1c49678b6fd5">get_m1</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m1; };</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="class_n_m_c.html#a6fc91753e2bd0de6e91c15af9058edc4">   58</a></span>&#160;    <span class="keyword">const</span> <a class="code" href="class_utils_1_1_c_s_v_data_frame.html">Utils::DoubleDataFrame</a>&amp; <a class="code" href="class_n_m_c.html#a6fc91753e2bd0de6e91c15af9058edc4">get_df</a>() { <span class="keywordflow">return</span> df; };</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_n_m_c.html#ab7500a1af1942ceb3cb71ebb2339be05">   65</a></span>&#160;    <span class="keywordtype">size_t</span> <a class="code" href="class_n_m_c.html#ab7500a1af1942ceb3cb71ebb2339be05">get_nb_points</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> nb_points; };</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="class_n_m_c.html#abfdc259cd6856ca3467f9e22708195a2">   67</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_n_m_c.html#abfdc259cd6856ca3467f9e22708195a2">get_T</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> T; };</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">double</span> m0;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">double</span> m1;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="class_utils_1_1_c_s_v_data_frame.html">Utils::DoubleDataFrame</a>&amp; df;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">size_t</span> nb_points;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">double</span> T;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;};</div>
+<div class="ttc" id="aclass_n_m_c_html"><div class="ttname"><a href="class_n_m_c.html">NMC</a></div><div class="ttdoc">Provides the nested Monte Carlo system.</div><div class="ttdef"><b>Definition:</b> nmc.h:21</div></div>
+<div class="ttc" id="aclass_n_m_c_html_a1b3f1a2d42b7e1a62899352a4701f4f5"><div class="ttname"><a href="class_n_m_c.html#a1b3f1a2d42b7e1a62899352a4701f4f5">NMC::get_m0</a></div><div class="ttdeci">double get_m0() const</div><div class="ttdoc">Get the m0 object.</div><div class="ttdef"><b>Definition:</b> nmc.h:44</div></div>
+<div class="ttc" id="aclass_n_m_c_html_a6fc91753e2bd0de6e91c15af9058edc4"><div class="ttname"><a href="class_n_m_c.html#a6fc91753e2bd0de6e91c15af9058edc4">NMC::get_df</a></div><div class="ttdeci">const Utils::DoubleDataFrame &amp; get_df()</div><div class="ttdoc">Get the df object.</div><div class="ttdef"><b>Definition:</b> nmc.h:58</div></div>
 <div class="ttc" id="aclass_n_m_c_html_a765aa6a26a15269094bc7f3805038a51"><div class="ttname"><a href="class_n_m_c.html#a765aa6a26a15269094bc7f3805038a51">NMC::run</a></div><div class="ttdeci">virtual void run() const</div><div class="ttdoc">Run the nested Monte Carlo system.</div><div class="ttdef"><b>Definition:</b> nmc.cpp:18</div></div>
 <div class="ttc" id="aclass_n_m_c_html_a95aec6f812d0e27a554b374fe4b7855c"><div class="ttname"><a href="class_n_m_c.html#a95aec6f812d0e27a554b374fe4b7855c">NMC::~NMC</a></div><div class="ttdeci">virtual ~NMC()=default</div><div class="ttdoc">Destroy the NMC object.</div></div>
+<div class="ttc" id="aclass_n_m_c_html_ab7500a1af1942ceb3cb71ebb2339be05"><div class="ttname"><a href="class_n_m_c.html#ab7500a1af1942ceb3cb71ebb2339be05">NMC::get_nb_points</a></div><div class="ttdeci">size_t get_nb_points() const</div><div class="ttdoc">Get the nb_points object.</div><div class="ttdef"><b>Definition:</b> nmc.h:65</div></div>
+<div class="ttc" id="aclass_n_m_c_html_abfdc259cd6856ca3467f9e22708195a2"><div class="ttname"><a href="class_n_m_c.html#abfdc259cd6856ca3467f9e22708195a2">NMC::get_T</a></div><div class="ttdeci">double get_T() const</div><div class="ttdef"><b>Definition:</b> nmc.h:67</div></div>
+<div class="ttc" id="aclass_n_m_c_html_ac0376cc2cf9f111efe8b1c49678b6fd5"><div class="ttname"><a href="class_n_m_c.html#ac0376cc2cf9f111efe8b1c49678b6fd5">NMC::get_m1</a></div><div class="ttdeci">double get_m1() const</div><div class="ttdoc">Get the m1 object.</div><div class="ttdef"><b>Definition:</b> nmc.h:51</div></div>
 <div class="ttc" id="aclass_n_m_c_html_af8433e6a0076aa22030e88ae4c6052c0"><div class="ttname"><a href="class_n_m_c.html#af8433e6a0076aa22030e88ae4c6052c0">NMC::NMC</a></div><div class="ttdeci">NMC()</div><div class="ttdoc">Construct a new NMC object.</div><div class="ttdef"><b>Definition:</b> nmc.cpp:14</div></div>
+<div class="ttc" id="aclass_utils_1_1_c_s_v_data_frame_html"><div class="ttname"><a href="class_utils_1_1_c_s_v_data_frame.html">Utils::CSVDataFrame</a></div><div class="ttdoc">A class to represent a CSV data frame.</div><div class="ttdef"><b>Definition:</b> utils.h:239</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
