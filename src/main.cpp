@@ -11,6 +11,7 @@
 
 #include <iostream>
 #include <thread>
+#include <future>
 
 #include "../headers/cuda_utils.h"
 #include "../headers/utils.h"
@@ -75,18 +76,20 @@ int main(int argc, char *argv[])
 
         cout << "Data file: " << data_file_name << endl;
 
-        Utils::DoubleDataFrame data(data_file);
-
+        std::future<Utils::DoubleDataFrame> df_read_future = std::async(std::launch::async, [&data_file]() -> Utils::DoubleDataFrame
+                                                                        { return Utils::DoubleDataFrame(data_file); });
         std::map<XVA, double> xvas;
         Utils::parse_type(argv[argc - 1], xvas);
 
-        #ifdef DEBUG
+        Utils::DoubleDataFrame df = df_read_future.get();
+
+#ifdef DEBUG
         cout << "XVA requested:" << endl;
         for (const auto &xva : xvas)
         {
             cout << xva.first << " with value " << xva.second << endl;
         }
-        #endif
+#endif
 
         cout << xvas.size() << " XVA requested" << endl;
 
