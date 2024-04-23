@@ -52,3 +52,5 @@ This project is released under the GNU GENERAL PUBLIC LICENSE. See the `LICENSE.
 
 ## Acknowledgments
 - Original authors of the article for providing the theoretical framework and mathematical models used in this project.
+- Open-source contributors whose libraries and tools have been instrumental in the development of this project:
+  - [CSV-Parser](https://github.com/vincentlaucsb/csv-parser).
