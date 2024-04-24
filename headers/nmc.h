@@ -52,9 +52,10 @@ public:
      * @brief Run the nested Monte Carlo system.
      * 
      * @param xva XVA types
+     * @param factor Factor
      * @param paths Paths simulated
      */
-    virtual void run(XVA xva, std::vector<std::vector<Vector>>& paths) const;
+    virtual void run(XVA xva, double factor,std::vector<std::vector<Vector>>& paths) const;
 
     /**
      * @brief Get the m0 object
@@ -84,6 +85,11 @@ public:
      */
     size_t get_nb_points() const { return nb_points; };
 
+    /**
+     * @brief Get the T object
+     * 
+     * @return double T
+     */
     double get_T() const { return T; };
 protected:
     /**

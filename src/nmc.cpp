@@ -11,8 +11,12 @@
 
 #include "../headers/nmc.h"
 
-void NMC::run(XVA xva, std::vector<std::vector<Vector>>& paths) const
+#include <iostream>
+#include <thread>
+
+void NMC::run(XVA xva, double factor, std::vector<std::vector<Vector>>& paths) const
 {
+    std::cout << "Running NMC for XVA " << xva << " on thread " << std::this_thread::get_id() << " with factor " << factor << std::endl;
     paths.resize(m0);
     for (size_t i = 0; i < paths.size(); i++)
     {
