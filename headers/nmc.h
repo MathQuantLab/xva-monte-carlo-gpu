@@ -13,6 +13,8 @@
 #include "../headers/pch.h"
 #include "../headers/utils.h"
 
+#include <map>
+
 /**
  * @brief Provides the nested Monte Carlo system.
  * 
@@ -49,8 +51,10 @@ public:
     /**
      * @brief Run the nested Monte Carlo system.
      * 
+     * @param xva XVA types
+     * @param paths Paths simulated
      */
-    virtual void run() const;
+    virtual void run(XVA xva, std::vector<std::vector<Vector>>& paths) const;
 
     /**
      * @brief Get the m0 object

@@ -97,20 +97,7 @@ int main(int argc, char *argv[])
         if (!gpu)
         {
             cout << "Running on CPU with maximum " << std::thread::hardware_concurrency() << " threads simultaneously." << endl;
-            std::thread *threads = new std::thread[xvas.size()];
-
-            for (size_t i = 0; i < xvas.size(); i++)
-            {
-                threads[i] = std::thread([]() -> void // TODO change function
-                                         { cout << "Running on CPU with id " << std::this_thread::get_id() << endl; });
-            }
-
-            for (size_t i = 0; i < xvas.size(); i++)
-            {
-                threads[i].join();
-            }
-            delete[] threads;
-            threads = nullptr;
+            // TODO Add call to CPU function to run simulation
         }
         else
         {
