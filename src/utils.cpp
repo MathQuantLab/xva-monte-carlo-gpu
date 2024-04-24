@@ -367,5 +367,61 @@ void Utils::CSVDataFrame<T, U, V>::push_back(const U& idx, const std::vector<T>&
     }
 }
 
+template<typename T, typename U, typename V>
+size_t Utils::CSVDataFrame<T, U, V>::write_to_file(const std::string& file_name) const
+{
+    std::filesystem::path path(file_name);
+    return this->write_to_file(path);
+}
+
+template<typename T, typename U, typename V>
+size_t Utils::CSVDataFrame<T, U, V>::write_to_file(const std::filesystem::path& file_name) const
+{
+    std::ofstream file(file_name, std::ios::out | std::ios::trunc);
+
+    size_t count = 0;
+
+    if (!file.is_open())
+    {
+        throw std::runtime_error("Cannot open file");
+    }
+
+    file << "index,";
+    count += 6;
+
+    for (size_t i = 0; i < m_columns.size(); i++)
+    {
+        file << m_columns[i];
+        count += m_columns[i].size() + 1;
+        if (i < m_columns.size() - 1)
+        {
+            file << ",";
+            count += 1;
+        }
+    }
+
+    file << std::endl;
+
+    for (size_t i = 0; i < m_data[0].size(); i++)
+    {
+        file << m_index[i] << ",";
+        count += sizeof(U) + 1;
+        for (size_t j = 0; j < m_data.size(); j++)
+        {
+            file << m_data[j][i];
+            count += sizeof(T);
+
+            if (j < m_data.size() - 1)
+            {
+                file << ",";
+                count += 1;
+        }
+        file << std::endl;
+        }
+    }
+    file.close();
+    return count;
+}
+
 template class Utils::CSVDataFrame<double, size_t, std::string>;
 template class Utils::CSVDataFrame<double, double, std::string>;

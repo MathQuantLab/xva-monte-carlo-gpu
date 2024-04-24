@@ -308,6 +308,23 @@ namespace Utils
          * @throws std::invalid_argument if the index already exists
          */
         void push_back(const U& idx, const std::vector<T>& data);
+
+        /**
+         * @brief Write the data frame to a file
+         * 
+         * @param file_name File name
+         * @return size_t Number of bytes written
+         */
+        inline size_t write_to_file(const std::string& file_name) const;
+
+        /**
+         * @brief Write the data frame to a file
+         * 
+         * @param file_name File path
+         * @throws std::runtime_error if the file cannot be opened
+         * @return size_t Number of bytes written
+         */
+        size_t write_to_file(const std::filesystem::path& file_name) const;
     private:
         std::vector<V> m_columns;
         std::vector<U> m_index;
