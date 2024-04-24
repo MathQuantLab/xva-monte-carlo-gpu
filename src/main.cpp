@@ -10,7 +10,6 @@
  */
 
 #include <iostream>
-#include <thread>
 #include <future>
 
 #include "../headers/cuda_utils.h"
@@ -94,10 +93,17 @@ int main(int argc, char *argv[])
 
         cout << xvas.size() << " XVA requested" << endl;
 
+        std::map<XVA, std::vector<std::vector<Vector>>> results;
+
+        for (const auto &xva : xvas)
+        {
+            results[xva.first] = std::vector<std::vector<Vector>>();
+        }
+
         if (!gpu)
         {
             cout << "Running on CPU with maximum " << std::thread::hardware_concurrency() << " threads simultaneously." << endl;
-            // TODO Add call to CPU function to run simulation
+            CPUSimulation::run_simulation(xvas, m0, m1, df, N, T, results);
         }
         else
         {
