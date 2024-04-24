@@ -9,13 +9,25 @@ Provides the nested Monte Carlo system.
 
 {\ttfamily \#include $<$nmc.\+h$>$}
 
+
+
+Collaboration diagram for NMC\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{class_n_m_c__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_n_m_c_af8433e6a0076aa22030e88ae4c6052c0}{NMC}} ()
+\mbox{\hyperlink{class_n_m_c_aef6ae888f909a08a4aff19c5e00b6c43}{NMC}} ()=delete
 \begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_n_m_c}{NMC}} object. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{class_n_m_c_a95aec6f812d0e27a554b374fe4b7855c}{$\sim$\+NMC}} ()=default
+\mbox{\hyperlink{class_n_m_c_ad1389c29b0dbb997f67c7be013966c44}{NMC}} (double \mbox{\hyperlink{class_n_m_c_aa1b0d86b068ca1f03d528255d408f91b}{m0}}, double \mbox{\hyperlink{class_n_m_c_ae575b0ac490ef07fca7ff9989cb03314}{m1}}, const \mbox{\hyperlink{namespace_utils_ac7d7f98c87ffaa8071bd56b334b7ea8f}{Utils\+::\+Double\+Data\+Frame}} \&\mbox{\hyperlink{class_n_m_c_ae2784b371f52768575e2d120e1103bed}{df}}, size\+\_\+t \mbox{\hyperlink{class_n_m_c_a1a9c1d55c398da1339bc26e2ac77922d}{nb\+\_\+points}}, double \mbox{\hyperlink{class_n_m_c_a64cee84a16eb041960b4016c37ccbb96}{T}})
 \begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{class_n_m_c}{NMC}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_n_m_c_a95aec6f812d0e27a554b374fe4b7855c}{$\sim$\+NMC}} ()=default
+\item 
 virtual void \mbox{\hyperlink{class_n_m_c_a765aa6a26a15269094bc7f3805038a51}{run}} () const
 \begin{DoxyCompactList}\small\item\em Run the nested Monte Carlo system. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{class_n_m_c_a1b3f1a2d42b7e1a62899352a4701f4f5}{get\+\_\+m0}} () const
@@ -28,31 +40,65 @@ size\+\_\+t \mbox{\hyperlink{class_n_m_c_ab7500a1af1942ceb3cb71ebb2339be05}{get\
 \begin{DoxyCompactList}\small\item\em Get the nb\+\_\+points object. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{class_n_m_c_abfdc259cd6856ca3467f9e22708195a2}{get\+\_\+T}} () const
 \end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_n_m_c_aa1b0d86b068ca1f03d528255d408f91b}{m0}}
+\begin{DoxyCompactList}\small\item\em Number of external paths. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_n_m_c_ae575b0ac490ef07fca7ff9989cb03314}{m1}}
+\begin{DoxyCompactList}\small\item\em Number of internal paths. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{namespace_utils_ac7d7f98c87ffaa8071bd56b334b7ea8f}{Utils\+::\+Double\+Data\+Frame}} \& \mbox{\hyperlink{class_n_m_c_ae2784b371f52768575e2d120e1103bed}{df}}
+\begin{DoxyCompactList}\small\item\em Data frame. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_n_m_c_a1a9c1d55c398da1339bc26e2ac77922d}{nb\+\_\+points}}
+\begin{DoxyCompactList}\small\item\em Number of points. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_n_m_c_a64cee84a16eb041960b4016c37ccbb96}{T}}
+\begin{DoxyCompactList}\small\item\em Time horizon. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Provides the nested Monte Carlo system. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_n_m_c_af8433e6a0076aa22030e88ae4c6052c0}\label{class_n_m_c_af8433e6a0076aa22030e88ae4c6052c0}} 
+\mbox{\Hypertarget{class_n_m_c_aef6ae888f909a08a4aff19c5e00b6c43}\label{class_n_m_c_aef6ae888f909a08a4aff19c5e00b6c43}} 
 \index{NMC@{NMC}!NMC@{NMC}}
 \index{NMC@{NMC}!NMC@{NMC}}
-\doxysubsubsection{\texorpdfstring{NMC()}{NMC()}}
-{\footnotesize\ttfamily NMC\+::\+NMC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{NMC()}{NMC()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily NMC\+::\+NMC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
 
 
 
 Construct a new \mbox{\hyperlink{class_n_m_c}{NMC}} object. 
 
+\mbox{\Hypertarget{class_n_m_c_ad1389c29b0dbb997f67c7be013966c44}\label{class_n_m_c_ad1389c29b0dbb997f67c7be013966c44}} 
+\index{NMC@{NMC}!NMC@{NMC}}
+\index{NMC@{NMC}!NMC@{NMC}}
+\doxysubsubsection{\texorpdfstring{NMC()}{NMC()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily NMC\+::\+NMC (\begin{DoxyParamCaption}\item[{double}]{m0,  }\item[{double}]{m1,  }\item[{const \mbox{\hyperlink{namespace_utils_ac7d7f98c87ffaa8071bd56b334b7ea8f}{Utils\+::\+Double\+Data\+Frame}} \&}]{df,  }\item[{size\+\_\+t}]{nb\+\_\+points,  }\item[{double}]{T }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destroy the \mbox{\hyperlink{class_n_m_c}{NMC}} object. 
+
+Construct a new \mbox{\hyperlink{class_n_m_c}{NMC}} object
+
+
+\begin{DoxyParams}{Parameters}
+{\em m0} & Number of external paths \\
+\hline
+{\em m1} & Number of internal paths \\
+\hline
+{\em df} & Data frame \\
+\hline
+{\em nb\+\_\+points} & Number of points \\
+\hline
+{\em T} & Time horizon \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_n_m_c_a95aec6f812d0e27a554b374fe4b7855c}\label{class_n_m_c_a95aec6f812d0e27a554b374fe4b7855c}} 
 \index{NMC@{NMC}!````~NMC@{$\sim$NMC}}
 \index{````~NMC@{$\sim$NMC}!NMC@{NMC}}
 \doxysubsubsection{\texorpdfstring{$\sim$NMC()}{~NMC()}}
 {\footnotesize\ttfamily virtual NMC\+::$\sim$\+NMC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
-
-
-
-Destroy the \mbox{\hyperlink{class_n_m_c}{NMC}} object. 
 
 
 
@@ -124,6 +170,59 @@ size\+\_\+t nb\+\_\+points
 
 
 Run the nested Monte Carlo system. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_n_m_c_ae2784b371f52768575e2d120e1103bed}\label{class_n_m_c_ae2784b371f52768575e2d120e1103bed}} 
+\index{NMC@{NMC}!df@{df}}
+\index{df@{df}!NMC@{NMC}}
+\doxysubsubsection{\texorpdfstring{df}{df}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespace_utils_ac7d7f98c87ffaa8071bd56b334b7ea8f}{Utils\+::\+Double\+Data\+Frame}}\& NMC\+::df\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Data frame. 
+
+\mbox{\Hypertarget{class_n_m_c_aa1b0d86b068ca1f03d528255d408f91b}\label{class_n_m_c_aa1b0d86b068ca1f03d528255d408f91b}} 
+\index{NMC@{NMC}!m0@{m0}}
+\index{m0@{m0}!NMC@{NMC}}
+\doxysubsubsection{\texorpdfstring{m0}{m0}}
+{\footnotesize\ttfamily double NMC\+::m0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Number of external paths. 
+
+\mbox{\Hypertarget{class_n_m_c_ae575b0ac490ef07fca7ff9989cb03314}\label{class_n_m_c_ae575b0ac490ef07fca7ff9989cb03314}} 
+\index{NMC@{NMC}!m1@{m1}}
+\index{m1@{m1}!NMC@{NMC}}
+\doxysubsubsection{\texorpdfstring{m1}{m1}}
+{\footnotesize\ttfamily double NMC\+::m1\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Number of internal paths. 
+
+\mbox{\Hypertarget{class_n_m_c_a1a9c1d55c398da1339bc26e2ac77922d}\label{class_n_m_c_a1a9c1d55c398da1339bc26e2ac77922d}} 
+\index{NMC@{NMC}!nb\_points@{nb\_points}}
+\index{nb\_points@{nb\_points}!NMC@{NMC}}
+\doxysubsubsection{\texorpdfstring{nb\_points}{nb\_points}}
+{\footnotesize\ttfamily size\+\_\+t NMC\+::nb\+\_\+points\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Number of points. 
+
+\mbox{\Hypertarget{class_n_m_c_a64cee84a16eb041960b4016c37ccbb96}\label{class_n_m_c_a64cee84a16eb041960b4016c37ccbb96}} 
+\index{NMC@{NMC}!T@{T}}
+\index{T@{T}!NMC@{NMC}}
+\doxysubsubsection{\texorpdfstring{T}{T}}
+{\footnotesize\ttfamily double NMC\+::T\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Time horizon. 
 
 
 
