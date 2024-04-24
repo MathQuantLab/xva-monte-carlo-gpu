@@ -24,11 +24,22 @@ public:
      * @brief Construct a new NMC object
      * 
      */
-    NMC();
+    NMC() = delete;
     /**
      * @brief Destroy the NMC object
      * 
      */
+
+    /**
+     * @brief Construct a new NMC object
+     * 
+     * @param m0 Number of external paths
+     * @param m1 Number of internal paths
+     * @param df Data frame
+     * @param nb_points Number of points
+     * @param T Time horizon
+     */
+    NMC(double m0, double m1, const Utils::DoubleDataFrame& df, size_t nb_points, double T) : m0(m0), m1(m1), df(df), nb_points(nb_points), T(T) {}
     virtual ~NMC() = default;
     /**
      * @brief Run the nested Monte Carlo system.
@@ -65,10 +76,30 @@ public:
     size_t get_nb_points() const { return nb_points; };
 
     double get_T() const { return T; };
-private:
+protected:
+    /**
+     * @brief Number of external paths
+     * 
+     */
     double m0;
+    /**
+     * @brief Number of internal paths
+     * 
+     */
     double m1;
-    Utils::DoubleDataFrame& df;
+    /**
+     * @brief Data frame
+     * 
+     */
+    const Utils::DoubleDataFrame& df;
+    /**
+     * @brief Number of points
+     * 
+     */
     size_t nb_points;
+    /**
+     * @brief Time horizon
+     * 
+     */
     double T;
 };
