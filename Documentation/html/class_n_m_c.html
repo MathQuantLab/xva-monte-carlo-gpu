@@ -97,9 +97,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a95aec6f812d0e27a554b374fe4b7855c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_m_c.html#a95aec6f812d0e27a554b374fe4b7855c">~NMC</a> ()=default</td></tr>
 <tr class="memdesc:a95aec6f812d0e27a554b374fe4b7855c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="class_n_m_c.html" title="Provides the nested Monte Carlo system.">NMC</a> object.  <a href="class_n_m_c.html#a95aec6f812d0e27a554b374fe4b7855c">More...</a><br /></td></tr>
 <tr class="separator:a95aec6f812d0e27a554b374fe4b7855c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67e1c431abe09a9e0f9913126c1c011f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_m_c.html#a67e1c431abe09a9e0f9913126c1c011f">run</a> (<a class="el" href="pch_8h.html#a53054d12c7fd5c029fd5baf8caa1d9a1">XVA</a> xva, std::vector&lt; std::vector&lt; <a class="el" href="pch_8h.html#a5dd127bb3cb18b011cf5fd80a906e830">Vector</a> &gt;&gt; &amp;paths) const</td></tr>
-<tr class="memdesc:a67e1c431abe09a9e0f9913126c1c011f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run the nested Monte Carlo system.  <a href="class_n_m_c.html#a67e1c431abe09a9e0f9913126c1c011f">More...</a><br /></td></tr>
-<tr class="separator:a67e1c431abe09a9e0f9913126c1c011f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabae7f9ef24ec7f57867703da47b4bb9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_m_c.html#aabae7f9ef24ec7f57867703da47b4bb9">run</a> (<a class="el" href="pch_8h.html#a53054d12c7fd5c029fd5baf8caa1d9a1">XVA</a> xva, double factor, std::vector&lt; std::vector&lt; <a class="el" href="pch_8h.html#a5dd127bb3cb18b011cf5fd80a906e830">Vector</a> &gt;&gt; &amp;paths) const</td></tr>
+<tr class="memdesc:aabae7f9ef24ec7f57867703da47b4bb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run the nested Monte Carlo system.  <a href="class_n_m_c.html#aabae7f9ef24ec7f57867703da47b4bb9">More...</a><br /></td></tr>
+<tr class="separator:aabae7f9ef24ec7f57867703da47b4bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b3f1a2d42b7e1a62899352a4701f4f5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_m_c.html#a1b3f1a2d42b7e1a62899352a4701f4f5">get_m0</a> () const</td></tr>
 <tr class="memdesc:a1b3f1a2d42b7e1a62899352a4701f4f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the m0 object.  <a href="class_n_m_c.html#a1b3f1a2d42b7e1a62899352a4701f4f5">More...</a><br /></td></tr>
 <tr class="separator:a1b3f1a2d42b7e1a62899352a4701f4f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -113,6 +113,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ab7500a1af1942ceb3cb71ebb2339be05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the nb_points object.  <a href="class_n_m_c.html#ab7500a1af1942ceb3cb71ebb2339be05">More...</a><br /></td></tr>
 <tr class="separator:ab7500a1af1942ceb3cb71ebb2339be05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfdc259cd6856ca3467f9e22708195a2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_m_c.html#abfdc259cd6856ca3467f9e22708195a2">get_T</a> () const</td></tr>
+<tr class="memdesc:abfdc259cd6856ca3467f9e22708195a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the T object.  <a href="class_n_m_c.html#abfdc259cd6856ca3467f9e22708195a2">More...</a><br /></td></tr>
 <tr class="separator:abfdc259cd6856ca3467f9e22708195a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -393,10 +394,13 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Get the T object. </p>
+<dl class="section return"><dt>Returns</dt><dd>double T </dd></dl>
+
 </div>
 </div>
-<a id="a67e1c431abe09a9e0f9913126c1c011f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67e1c431abe09a9e0f9913126c1c011f">&#9670;&nbsp;</a></span>run()</h2>
+<a id="aabae7f9ef24ec7f57867703da47b4bb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabae7f9ef24ec7f57867703da47b4bb9">&#9670;&nbsp;</a></span>run()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -409,6 +413,12 @@ Protected Attributes</h2></td></tr>
           <td>(</td>
           <td class="paramtype"><a class="el" href="pch_8h.html#a53054d12c7fd5c029fd5baf8caa1d9a1">XVA</a>&#160;</td>
           <td class="paramname"><em>xva</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>factor</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -433,10 +443,21 @@ Protected Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">xva</td><td>XVA types </td></tr>
+    <tr><td class="paramname">factor</td><td>Factor </td></tr>
     <tr><td class="paramname">paths</td><td>Paths simulated </td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_n_m_c_aabae7f9ef24ec7f57867703da47b4bb9_icgraph.png" border="0" usemap="#aclass_n_m_c_aabae7f9ef24ec7f57867703da47b4bb9_icgraph" alt=""/></div>
+<map name="aclass_n_m_c_aabae7f9ef24ec7f57867703da47b4bb9_icgraph" id="aclass_n_m_c_aabae7f9ef24ec7f57867703da47b4bb9_icgraph">
+<area shape="rect" title="Run the nested Monte Carlo system." alt="" coords="304,13,387,39"/>
+<area shape="rect" href="namespace_c_p_u_simulation.html#a359d6932129330c4aa060c80fcab69a7" title="Run the simulation on CPU." alt="" coords="108,5,256,47"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function." alt="" coords="5,13,60,39"/>
+</map>
+</div>
 
 </div>
 </div>

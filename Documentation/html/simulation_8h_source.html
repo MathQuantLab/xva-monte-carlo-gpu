@@ -76,11 +76,19 @@ $(function() {
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;../headers/pch.h&quot;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;../headers/nmc.h&quot;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="namespace_c_p_u_simulation.html">   20</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_c_p_u_simulation.html">CPUSimulation</a></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
-<div class="ttc" id="anamespace_c_p_u_simulation_html"><div class="ttname"><a href="namespace_c_p_u_simulation.html">CPUSimulation</a></div><div class="ttdoc">Provides simulation functions on CPU.</div><div class="ttdef"><b>Definition:</b> simulation.h:21</div></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="namespace_c_p_u_simulation.html">   22</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_c_p_u_simulation.html">CPUSimulation</a></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="namespace_c_p_u_simulation.html#a359d6932129330c4aa060c80fcab69a7">run_simulation</a>(std::map&lt;XVA, double&gt;,</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                        <span class="keywordtype">double</span> m0, <span class="keywordtype">double</span> m1,</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                        <span class="keyword">const</span> <a class="code" href="class_utils_1_1_c_s_v_data_frame.html">Utils::DoubleDataFrame</a> &amp;df, <span class="keywordtype">size_t</span> nb_points, <span class="keywordtype">double</span> T,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                        std::map&lt;<a class="code" href="pch_8h.html#a53054d12c7fd5c029fd5baf8caa1d9a1">XVA</a>, std::vector&lt;std::vector&lt;Vector&gt;&gt;&gt; &amp;paths);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+<div class="ttc" id="aclass_utils_1_1_c_s_v_data_frame_html"><div class="ttname"><a href="class_utils_1_1_c_s_v_data_frame.html">Utils::CSVDataFrame</a></div><div class="ttdoc">A class to represent a CSV data frame.</div><div class="ttdef"><b>Definition:</b> utils.h:239</div></div>
+<div class="ttc" id="anamespace_c_p_u_simulation_html"><div class="ttname"><a href="namespace_c_p_u_simulation.html">CPUSimulation</a></div><div class="ttdoc">Provides simulation functions on CPU.</div><div class="ttdef"><b>Definition:</b> simulation.h:23</div></div>
+<div class="ttc" id="anamespace_c_p_u_simulation_html_a359d6932129330c4aa060c80fcab69a7"><div class="ttname"><a href="namespace_c_p_u_simulation.html#a359d6932129330c4aa060c80fcab69a7">CPUSimulation::run_simulation</a></div><div class="ttdeci">void run_simulation(std::map&lt; XVA, double &gt;, double m0, double m1, const Utils::DoubleDataFrame &amp;df, size_t nb_points, double T, std::map&lt; XVA, std::vector&lt; std::vector&lt; Vector &gt;&gt;&gt; &amp;paths)</div><div class="ttdoc">Run the simulation on CPU.</div><div class="ttdef"><b>Definition:</b> simulation.cpp:16</div></div>
+<div class="ttc" id="apch_8h_html_a53054d12c7fd5c029fd5baf8caa1d9a1"><div class="ttname"><a href="pch_8h.html#a53054d12c7fd5c029fd5baf8caa1d9a1">XVA</a></div><div class="ttdeci">XVA</div><div class="ttdoc">XVA types.</div><div class="ttdef"><b>Definition:</b> pch.h:59</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -27,7 +27,7 @@ Collaboration diagram for NMC\+:\nopagebreak
 \begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{class_n_m_c}{NMC}} object. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{class_n_m_c_a95aec6f812d0e27a554b374fe4b7855c}{$\sim$\+NMC}} ()=default
 \begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{class_n_m_c}{NMC}} object. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{class_n_m_c_a67e1c431abe09a9e0f9913126c1c011f}{run}} (\mbox{\hyperlink{pch_8h_a53054d12c7fd5c029fd5baf8caa1d9a1}{XVA}} xva, std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{pch_8h_a5dd127bb3cb18b011cf5fd80a906e830}{Vector}} $>$$>$ \&paths) const
+virtual void \mbox{\hyperlink{class_n_m_c_aabae7f9ef24ec7f57867703da47b4bb9}{run}} (\mbox{\hyperlink{pch_8h_a53054d12c7fd5c029fd5baf8caa1d9a1}{XVA}} xva, double factor, std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{pch_8h_a5dd127bb3cb18b011cf5fd80a906e830}{Vector}} $>$$>$ \&paths) const
 \begin{DoxyCompactList}\small\item\em Run the nested Monte Carlo system. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{class_n_m_c_a1b3f1a2d42b7e1a62899352a4701f4f5}{get\+\_\+m0}} () const
 \begin{DoxyCompactList}\small\item\em Get the m0 object. \end{DoxyCompactList}\item 
@@ -38,7 +38,7 @@ const \mbox{\hyperlink{namespace_utils_ac7d7f98c87ffaa8071bd56b334b7ea8f}{Utils\
 size\+\_\+t \mbox{\hyperlink{class_n_m_c_ab7500a1af1942ceb3cb71ebb2339be05}{get\+\_\+nb\+\_\+points}} () const
 \begin{DoxyCompactList}\small\item\em Get the nb\+\_\+points object. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{class_n_m_c_abfdc259cd6856ca3467f9e22708195a2}{get\+\_\+T}} () const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get the T object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -164,11 +164,18 @@ size\+\_\+t nb\+\_\+points
 \doxysubsubsection{\texorpdfstring{get\_T()}{get\_T()}}
 {\footnotesize\ttfamily double NMC\+::get\+\_\+T (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
-\mbox{\Hypertarget{class_n_m_c_a67e1c431abe09a9e0f9913126c1c011f}\label{class_n_m_c_a67e1c431abe09a9e0f9913126c1c011f}} 
+
+
+Get the T object. 
+
+\begin{DoxyReturn}{Returns}
+double T 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_n_m_c_aabae7f9ef24ec7f57867703da47b4bb9}\label{class_n_m_c_aabae7f9ef24ec7f57867703da47b4bb9}} 
 \index{NMC@{NMC}!run@{run}}
 \index{run@{run}!NMC@{NMC}}
 \doxysubsubsection{\texorpdfstring{run()}{run()}}
-{\footnotesize\ttfamily void NMC\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pch_8h_a53054d12c7fd5c029fd5baf8caa1d9a1}{XVA}}}]{xva,  }\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{pch_8h_a5dd127bb3cb18b011cf5fd80a906e830}{Vector}} $>$$>$ \&}]{paths }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily void NMC\+::run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pch_8h_a53054d12c7fd5c029fd5baf8caa1d9a1}{XVA}}}]{xva,  }\item[{double}]{factor,  }\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{pch_8h_a5dd127bb3cb18b011cf5fd80a906e830}{Vector}} $>$$>$ \&}]{paths }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -178,9 +185,19 @@ Run the nested Monte Carlo system.
 \begin{DoxyParams}{Parameters}
 {\em xva} & XVA types \\
 \hline
+{\em factor} & Factor \\
+\hline
 {\em paths} & Paths simulated \\
 \hline
 \end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_n_m_c_aabae7f9ef24ec7f57867703da47b4bb9_icgraph}
+\end{center}
+\end{figure}
 
 
 \doxysubsection{Member Data Documentation}

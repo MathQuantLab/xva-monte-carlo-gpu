@@ -63,6 +63,8 @@ $(function() {
 
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">CPUSimulation Namespace Reference</div>  </div>
 </div><!--header-->
@@ -70,9 +72,107 @@ $(function() {
 
 <p>Provides simulation functions on CPU.  
 <a href="namespace_c_p_u_simulation.html#details">More...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a359d6932129330c4aa060c80fcab69a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_p_u_simulation.html#a359d6932129330c4aa060c80fcab69a7">run_simulation</a> (std::map&lt; <a class="el" href="pch_8h.html#a53054d12c7fd5c029fd5baf8caa1d9a1">XVA</a>, double &gt;, double m0, double m1, const <a class="el" href="namespace_utils.html#ac7d7f98c87ffaa8071bd56b334b7ea8f">Utils::DoubleDataFrame</a> &amp;df, size_t nb_points, double T, std::map&lt; <a class="el" href="pch_8h.html#a53054d12c7fd5c029fd5baf8caa1d9a1">XVA</a>, std::vector&lt; std::vector&lt; <a class="el" href="pch_8h.html#a5dd127bb3cb18b011cf5fd80a906e830">Vector</a> &gt;&gt;&gt; &amp;paths)</td></tr>
+<tr class="memdesc:a359d6932129330c4aa060c80fcab69a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run the simulation on CPU.  <a href="namespace_c_p_u_simulation.html#a359d6932129330c4aa060c80fcab69a7">More...</a><br /></td></tr>
+<tr class="separator:a359d6932129330c4aa060c80fcab69a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Provides simulation functions on CPU. </p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a359d6932129330c4aa060c80fcab69a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a359d6932129330c4aa060c80fcab69a7">&#9670;&nbsp;</a></span>run_simulation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CPUSimulation::run_simulation </td>
+          <td>(</td>
+          <td class="paramtype">std::map&lt; <a class="el" href="pch_8h.html#a53054d12c7fd5c029fd5baf8caa1d9a1">XVA</a>, double &gt;&#160;</td>
+          <td class="paramname"><em>xvas</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>m0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>m1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="namespace_utils.html#ac7d7f98c87ffaa8071bd56b334b7ea8f">Utils::DoubleDataFrame</a> &amp;&#160;</td>
+          <td class="paramname"><em>df</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>nb_points</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>T</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::map&lt; <a class="el" href="pch_8h.html#a53054d12c7fd5c029fd5baf8caa1d9a1">XVA</a>, std::vector&lt; std::vector&lt; <a class="el" href="pch_8h.html#a5dd127bb3cb18b011cf5fd80a906e830">Vector</a> &gt;&gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>paths</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Run the simulation on CPU. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xva</td><td>XVA types </td></tr>
+    <tr><td class="paramname">m0</td><td>Number of external paths </td></tr>
+    <tr><td class="paramname">m1</td><td>Number of internal paths </td></tr>
+    <tr><td class="paramname">df</td><td>Data frame </td></tr>
+    <tr><td class="paramname">nb_points</td><td>Number of points </td></tr>
+    <tr><td class="paramname">T</td><td>Time horizon </td></tr>
+    <tr><td class="paramname">paths</td><td>Paths simulated </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespace_c_p_u_simulation_a359d6932129330c4aa060c80fcab69a7_cgraph.png" border="0" usemap="#anamespace_c_p_u_simulation_a359d6932129330c4aa060c80fcab69a7_cgraph" alt=""/></div>
+<map name="anamespace_c_p_u_simulation_a359d6932129330c4aa060c80fcab69a7_cgraph" id="anamespace_c_p_u_simulation_a359d6932129330c4aa060c80fcab69a7_cgraph">
+<area shape="rect" title="Run the simulation on CPU." alt="" coords="5,5,153,47"/>
+<area shape="rect" href="class_n_m_c.html#aabae7f9ef24ec7f57867703da47b4bb9" title="Run the nested Monte Carlo system." alt="" coords="201,13,284,39"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespace_c_p_u_simulation_a359d6932129330c4aa060c80fcab69a7_icgraph.png" border="0" usemap="#anamespace_c_p_u_simulation_a359d6932129330c4aa060c80fcab69a7_icgraph" alt=""/></div>
+<map name="anamespace_c_p_u_simulation_a359d6932129330c4aa060c80fcab69a7_icgraph" id="anamespace_c_p_u_simulation_a359d6932129330c4aa060c80fcab69a7_icgraph">
+<area shape="rect" title="Run the simulation on CPU." alt="" coords="108,5,256,47"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function." alt="" coords="5,13,60,39"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
