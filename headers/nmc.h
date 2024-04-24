@@ -40,6 +40,11 @@ public:
      * @param T Time horizon
      */
     NMC(double m0, double m1, const Utils::DoubleDataFrame& df, size_t nb_points, double T) : m0(m0), m1(m1), df(df), nb_points(nb_points), T(T) {}
+
+    /**
+     * @brief Destroy the NMC object
+     * 
+     */
     virtual ~NMC() = default;
     /**
      * @brief Run the nested Monte Carlo system.
