@@ -10,7 +10,7 @@
  */
 
 #include <iostream>
-#include <future>
+#include <thread>
 
 #include "../headers/cuda_utils.h"
 #include "../headers/utils.h"
@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
 
         int first_mandatory_argument = Utils::parse_options(argc, argv, gpu);
 
-        if (first_mandatory_argument + 6 != argc)
+        if (first_mandatory_argument + 5 != argc)
         {
             cerr << "Missing arguments" << endl;
             Utils::info(argv[0]);
@@ -56,32 +56,15 @@ int main(int argc, char *argv[])
         }
 
         string data_file_name;
-        Utils::parse_mandatory_arguments(first_mandatory_argument, argv, m0, m1, N, T, data_file_name);
+        Utils::parse_mandatory_arguments(first_mandatory_argument, argv, m0, m1, N, T);
 
         cout << "External trajectories number: " << m0 << endl;
         cout << "Internal trajectories number: " << m1 << endl;
         cout << "Points number: " << N << endl;
         cout << "Horizon: " << T << endl;
 
-        if (data_file_name.find("Data") == std::string::npos)
-        {
-            data_file_name = "Data/" + data_file_name;
-        }
-
-        std::filesystem::path data_file(data_file_name);
-        if (!std::filesystem::exists(data_file))
-        {
-            throw std::runtime_error("Data file not found");
-        }
-
-        cout << "Data file: " << data_file_name << endl;
-
-        std::future<Utils::DoubleDataFrame> df_read_future = std::async(std::launch::async, [&data_file]() -> Utils::DoubleDataFrame
-                                                                        { return Utils::DoubleDataFrame(data_file); });
         std::map<XVA, double> xvas;
         Utils::parse_type(argv[argc - 1], xvas);
-
-        Utils::DoubleDataFrame df = df_read_future.get();
 
 #ifdef DEBUG
         cout << "XVA requested:" << endl;
@@ -103,7 +86,7 @@ int main(int argc, char *argv[])
         if (!gpu)
         {
             cout << "Running on CPU with maximum " << std::thread::hardware_concurrency() << " threads simultaneously." << endl;
-            CPUSimulation::run_simulation(xvas, m0, m1, df, N, T, results);
+            CPUSimulation::run_simulation(xvas, m0, m1, N, T, results);
         }
         else
         {

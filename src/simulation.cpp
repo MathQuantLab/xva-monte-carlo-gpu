@@ -15,10 +15,10 @@
 
 void CPUSimulation::run_simulation(std::map<XVA, double> xvas,
                                    double m0, double m1,
-                                   const Utils::DoubleDataFrame &df, size_t nb_points, double T,
+                                   size_t nb_points, double T,
                                    std::map<XVA, std::vector<std::vector<Vector>>> &paths)
 {
-    NMC nmc(m0, m1, df, nb_points, T);
+    NMC nmc(m0, m1, nb_points, T);
 
     std::cout << "Running simulation on CPU using at maximum " << std::thread::hardware_concurrency() << " threads" << std::endl;
 

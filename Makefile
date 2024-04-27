@@ -18,9 +18,9 @@ linux: bin/xva.out
 
 # Linux
 
-bin/xva.out: obj/main.o obj/cuda_utils.o obj/pch.o obj/utils.o obj/cuda_simulation.o Libs/libcsv.a obj/simulation.o obj/nmc.o
+bin/xva.out: obj/main.o obj/cuda_utils.o obj/pch.o obj/utils.o obj/cuda_simulation.o obj/simulation.o obj/nmc.o
 	@echo "Building Linux binary..."
-	$(CC) $(CFLAGS) -o $@ $^ -L./Libs -lcsv
+	$(CC) $(CFLAGS) -o $@ $^
 
 obj/main.o: src/main.cpp headers/cuda_utils.h headers/utils.h headers/simulation.h
 	@echo "Compiling main.cpp..."
@@ -42,10 +42,6 @@ obj/cuda_simulation.o: src/cuda_simulation.cu headers/cuda_simulation.h headers/
 	@echo "Compiling cuda_simulation.cu..."
 	$(CC) $(CFLAGS) -o $@ -c $<
 
-Libs/libcsv.a:
-	@echo "Building Linux library..."
-	make -C Include libcsv.a RELEASE=$(RELEASE)
-
 obj/simulation.o: src/simulation.cpp headers/simulation.h headers/pch.h headers/nmc.h
 	@echo "Compiling simulation.cpp..."
 	$(CC) $(CFLAGS) -o $@ -c $<
@@ -58,4 +54,4 @@ doc:
 	doxygen Doxyfile
 
 clean:
-	$(DEL) obj/*.o* bin/xva.* Libs/*.a
+	$(DEL) obj/*.o* bin/xva.*
