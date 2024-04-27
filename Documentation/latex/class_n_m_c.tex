@@ -20,6 +20,12 @@ virtual \mbox{\hyperlink{class_n_m_c_a95aec6f812d0e27a554b374fe4b7855c}{$\sim$\+
 \begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{class_n_m_c}{NMC}} object. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_n_m_c_a05a8e93b456c528dd27c03d029700fea}{run}} (\mbox{\hyperlink{pch_8h_a53054d12c7fd5c029fd5baf8caa1d9a1}{XVA}} xva, double factor, const std\+::map$<$ \mbox{\hyperlink{pch_8h_a1388f46797f19b2b6d1fc65184776253}{External\+Paths}}, std\+::vector$<$ \mbox{\hyperlink{pch_8h_a5dd127bb3cb18b011cf5fd80a906e830}{Vector}} $>$$>$ \&external\+\_\+paths, \mbox{\hyperlink{pch_8h_ac7ce98196a5fadeb82ff94df591a363a}{Matrix}} \&paths) const
 \begin{DoxyCompactList}\small\item\em Run the nested Monte Carlo system. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_n_m_c_abfcc036d9d6ecc018f16f974f1cdac5c}{generate\+\_\+interest\+\_\+rate\+\_\+paths}} (std\+::vector$<$ \mbox{\hyperlink{pch_8h_a5dd127bb3cb18b011cf5fd80a906e830}{Vector}} $>$ \&paths) const
+\begin{DoxyCompactList}\small\item\em Generate interrest rate paths. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_n_m_c_af827702fd99f1016dbe7b9db0645a0ce}{generate\+\_\+fx\+\_\+rate\+\_\+paths}} (std\+::vector$<$ \mbox{\hyperlink{pch_8h_a5dd127bb3cb18b011cf5fd80a906e830}{Vector}} $>$ \&paths) const
+\begin{DoxyCompactList}\small\item\em Generate FX rate paths. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_n_m_c_a4f78aec3e5b28b148240c6826404e53e}{generate\+\_\+equity\+\_\+paths}} (std\+::vector$<$ \mbox{\hyperlink{pch_8h_a5dd127bb3cb18b011cf5fd80a906e830}{Vector}} $>$ \&paths) const
+\begin{DoxyCompactList}\small\item\em Generate equity paths. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{class_n_m_c_a1b3f1a2d42b7e1a62899352a4701f4f5}{get\+\_\+m0}} () const
 \begin{DoxyCompactList}\small\item\em Get the m0 object. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{class_n_m_c_ac0376cc2cf9f111efe8b1c49678b6fd5}{get\+\_\+m1}} () const
@@ -91,6 +97,75 @@ Destroy the \mbox{\hyperlink{class_n_m_c}{NMC}} object.
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_n_m_c_a4f78aec3e5b28b148240c6826404e53e}\label{class_n_m_c_a4f78aec3e5b28b148240c6826404e53e}} 
+\index{NMC@{NMC}!generate\_equity\_paths@{generate\_equity\_paths}}
+\index{generate\_equity\_paths@{generate\_equity\_paths}!NMC@{NMC}}
+\doxysubsubsection{\texorpdfstring{generate\_equity\_paths()}{generate\_equity\_paths()}}
+{\footnotesize\ttfamily void NMC\+::generate\+\_\+equity\+\_\+paths (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{pch_8h_a5dd127bb3cb18b011cf5fd80a906e830}{Vector}} $>$ \&}]{paths }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Generate equity paths. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em paths} & Paths generated \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_n_m_c_a4f78aec3e5b28b148240c6826404e53e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_n_m_c_af827702fd99f1016dbe7b9db0645a0ce}\label{class_n_m_c_af827702fd99f1016dbe7b9db0645a0ce}} 
+\index{NMC@{NMC}!generate\_fx\_rate\_paths@{generate\_fx\_rate\_paths}}
+\index{generate\_fx\_rate\_paths@{generate\_fx\_rate\_paths}!NMC@{NMC}}
+\doxysubsubsection{\texorpdfstring{generate\_fx\_rate\_paths()}{generate\_fx\_rate\_paths()}}
+{\footnotesize\ttfamily void NMC\+::generate\+\_\+fx\+\_\+rate\+\_\+paths (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{pch_8h_a5dd127bb3cb18b011cf5fd80a906e830}{Vector}} $>$ \&}]{paths }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Generate FX rate paths. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em paths} & Paths generated \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_n_m_c_af827702fd99f1016dbe7b9db0645a0ce_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_n_m_c_abfcc036d9d6ecc018f16f974f1cdac5c}\label{class_n_m_c_abfcc036d9d6ecc018f16f974f1cdac5c}} 
+\index{NMC@{NMC}!generate\_interest\_rate\_paths@{generate\_interest\_rate\_paths}}
+\index{generate\_interest\_rate\_paths@{generate\_interest\_rate\_paths}!NMC@{NMC}}
+\doxysubsubsection{\texorpdfstring{generate\_interest\_rate\_paths()}{generate\_interest\_rate\_paths()}}
+{\footnotesize\ttfamily void NMC\+::generate\+\_\+interest\+\_\+rate\+\_\+paths (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{pch_8h_a5dd127bb3cb18b011cf5fd80a906e830}{Vector}} $>$ \&}]{paths }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Generate interrest rate paths. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em paths} & Paths generated \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_n_m_c_abfcc036d9d6ecc018f16f974f1cdac5c_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_n_m_c_a1b3f1a2d42b7e1a62899352a4701f4f5}\label{class_n_m_c_a1b3f1a2d42b7e1a62899352a4701f4f5}} 
 \index{NMC@{NMC}!get\_m0@{get\_m0}}
 \index{get\_m0@{get\_m0}!NMC@{NMC}}

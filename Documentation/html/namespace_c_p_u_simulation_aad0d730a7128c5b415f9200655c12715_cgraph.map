@@ -1,4 +1,7 @@
 <map id="CPUSimulation::run_simulation" name="CPUSimulation::run_simulation">
-<area shape="rect" id="node1" title="Run the simulation on CPU." alt="" coords="5,5,153,47"/>
-<area shape="rect" id="node2" href="$class_n_m_c.html#a05a8e93b456c528dd27c03d029700fea" title="Run the nested Monte Carlo system." alt="" coords="201,13,284,39"/>
+<area shape="rect" id="node1" title="Run the simulation on CPU." alt="" coords="5,104,153,145"/>
+<area shape="rect" id="node2" href="$class_n_m_c.html#a4f78aec3e5b28b148240c6826404e53e" title="Generate equity paths." alt="" coords="206,5,373,47"/>
+<area shape="rect" id="node3" href="$class_n_m_c.html#af827702fd99f1016dbe7b9db0645a0ce" title="Generate FX rate paths." alt="" coords="203,71,375,112"/>
+<area shape="rect" id="node4" href="$class_n_m_c.html#abfcc036d9d6ecc018f16f974f1cdac5c" title="Generate interrest rate paths." alt="" coords="201,136,377,177"/>
+<area shape="rect" id="node5" href="$class_n_m_c.html#a05a8e93b456c528dd27c03d029700fea" title="Run the nested Monte Carlo system." alt="" coords="248,202,331,229"/>
 </map>

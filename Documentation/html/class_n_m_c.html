@@ -91,6 +91,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a05a8e93b456c528dd27c03d029700fea"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_m_c.html#a05a8e93b456c528dd27c03d029700fea">run</a> (<a class="el" href="pch_8h.html#a53054d12c7fd5c029fd5baf8caa1d9a1">XVA</a> xva, double factor, const std::map&lt; <a class="el" href="pch_8h.html#a1388f46797f19b2b6d1fc65184776253">ExternalPaths</a>, std::vector&lt; <a class="el" href="pch_8h.html#a5dd127bb3cb18b011cf5fd80a906e830">Vector</a> &gt;&gt; &amp;external_paths, <a class="el" href="pch_8h.html#ac7ce98196a5fadeb82ff94df591a363a">Matrix</a> &amp;paths) const</td></tr>
 <tr class="memdesc:a05a8e93b456c528dd27c03d029700fea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run the nested Monte Carlo system.  <a href="class_n_m_c.html#a05a8e93b456c528dd27c03d029700fea">More...</a><br /></td></tr>
 <tr class="separator:a05a8e93b456c528dd27c03d029700fea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfcc036d9d6ecc018f16f974f1cdac5c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_m_c.html#abfcc036d9d6ecc018f16f974f1cdac5c">generate_interest_rate_paths</a> (std::vector&lt; <a class="el" href="pch_8h.html#a5dd127bb3cb18b011cf5fd80a906e830">Vector</a> &gt; &amp;paths) const</td></tr>
+<tr class="memdesc:abfcc036d9d6ecc018f16f974f1cdac5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate interrest rate paths.  <a href="class_n_m_c.html#abfcc036d9d6ecc018f16f974f1cdac5c">More...</a><br /></td></tr>
+<tr class="separator:abfcc036d9d6ecc018f16f974f1cdac5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af827702fd99f1016dbe7b9db0645a0ce"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_m_c.html#af827702fd99f1016dbe7b9db0645a0ce">generate_fx_rate_paths</a> (std::vector&lt; <a class="el" href="pch_8h.html#a5dd127bb3cb18b011cf5fd80a906e830">Vector</a> &gt; &amp;paths) const</td></tr>
+<tr class="memdesc:af827702fd99f1016dbe7b9db0645a0ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate FX rate paths.  <a href="class_n_m_c.html#af827702fd99f1016dbe7b9db0645a0ce">More...</a><br /></td></tr>
+<tr class="separator:af827702fd99f1016dbe7b9db0645a0ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f78aec3e5b28b148240c6826404e53e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_m_c.html#a4f78aec3e5b28b148240c6826404e53e">generate_equity_paths</a> (std::vector&lt; <a class="el" href="pch_8h.html#a5dd127bb3cb18b011cf5fd80a906e830">Vector</a> &gt; &amp;paths) const</td></tr>
+<tr class="memdesc:a4f78aec3e5b28b148240c6826404e53e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate equity paths.  <a href="class_n_m_c.html#a4f78aec3e5b28b148240c6826404e53e">More...</a><br /></td></tr>
+<tr class="separator:a4f78aec3e5b28b148240c6826404e53e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b3f1a2d42b7e1a62899352a4701f4f5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_m_c.html#a1b3f1a2d42b7e1a62899352a4701f4f5">get_m0</a> () const</td></tr>
 <tr class="memdesc:a1b3f1a2d42b7e1a62899352a4701f4f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the m0 object.  <a href="class_n_m_c.html#a1b3f1a2d42b7e1a62899352a4701f4f5">More...</a><br /></td></tr>
 <tr class="separator:a1b3f1a2d42b7e1a62899352a4701f4f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -237,6 +246,138 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4f78aec3e5b28b148240c6826404e53e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f78aec3e5b28b148240c6826404e53e">&#9670;&nbsp;</a></span>generate_equity_paths()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NMC::generate_equity_paths </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="pch_8h.html#a5dd127bb3cb18b011cf5fd80a906e830">Vector</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>paths</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generate equity paths. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">paths</td><td>Paths generated </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_n_m_c_a4f78aec3e5b28b148240c6826404e53e_icgraph.png" border="0" usemap="#aclass_n_m_c_a4f78aec3e5b28b148240c6826404e53e_icgraph" alt=""/></div>
+<map name="aclass_n_m_c_a4f78aec3e5b28b148240c6826404e53e_icgraph" id="aclass_n_m_c_a4f78aec3e5b28b148240c6826404e53e_icgraph">
+<area shape="rect" title="Generate equity paths." alt="" coords="304,5,471,47"/>
+<area shape="rect" href="namespace_c_p_u_simulation.html#aad0d730a7128c5b415f9200655c12715" title="Run the simulation on CPU." alt="" coords="108,5,256,47"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function." alt="" coords="5,13,60,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af827702fd99f1016dbe7b9db0645a0ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af827702fd99f1016dbe7b9db0645a0ce">&#9670;&nbsp;</a></span>generate_fx_rate_paths()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NMC::generate_fx_rate_paths </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="pch_8h.html#a5dd127bb3cb18b011cf5fd80a906e830">Vector</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>paths</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generate FX rate paths. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">paths</td><td>Paths generated </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_n_m_c_af827702fd99f1016dbe7b9db0645a0ce_icgraph.png" border="0" usemap="#aclass_n_m_c_af827702fd99f1016dbe7b9db0645a0ce_icgraph" alt=""/></div>
+<map name="aclass_n_m_c_af827702fd99f1016dbe7b9db0645a0ce_icgraph" id="aclass_n_m_c_af827702fd99f1016dbe7b9db0645a0ce_icgraph">
+<area shape="rect" title="Generate FX rate paths." alt="" coords="304,5,476,47"/>
+<area shape="rect" href="namespace_c_p_u_simulation.html#aad0d730a7128c5b415f9200655c12715" title="Run the simulation on CPU." alt="" coords="108,5,256,47"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function." alt="" coords="5,13,60,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abfcc036d9d6ecc018f16f974f1cdac5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfcc036d9d6ecc018f16f974f1cdac5c">&#9670;&nbsp;</a></span>generate_interest_rate_paths()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void NMC::generate_interest_rate_paths </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="pch_8h.html#a5dd127bb3cb18b011cf5fd80a906e830">Vector</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>paths</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generate interrest rate paths. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">paths</td><td>Paths generated </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_n_m_c_abfcc036d9d6ecc018f16f974f1cdac5c_icgraph.png" border="0" usemap="#aclass_n_m_c_abfcc036d9d6ecc018f16f974f1cdac5c_icgraph" alt=""/></div>
+<map name="aclass_n_m_c_abfcc036d9d6ecc018f16f974f1cdac5c_icgraph" id="aclass_n_m_c_abfcc036d9d6ecc018f16f974f1cdac5c_icgraph">
+<area shape="rect" title="Generate interrest rate paths." alt="" coords="304,5,480,47"/>
+<area shape="rect" href="namespace_c_p_u_simulation.html#aad0d730a7128c5b415f9200655c12715" title="Run the simulation on CPU." alt="" coords="108,5,256,47"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function." alt="" coords="5,13,60,39"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a1b3f1a2d42b7e1a62899352a4701f4f5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1b3f1a2d42b7e1a62899352a4701f4f5">&#9670;&nbsp;</a></span>get_m0()</h2>
 
