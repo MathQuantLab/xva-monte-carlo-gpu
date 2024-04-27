@@ -76,17 +76,13 @@ int main(int argc, char *argv[])
 
         cout << xvas.size() << " XVA requested" << endl;
 
+        std::map<XVA, std::vector<Vector>> external_paths;
         std::map<XVA, std::vector<std::vector<Vector>>> results;
-
-        for (const auto &xva : xvas)
-        {
-            results[xva.first] = std::vector<std::vector<Vector>>();
-        }
 
         if (!gpu)
         {
             cout << "Running on CPU with maximum " << std::thread::hardware_concurrency() << " threads simultaneously." << endl;
-            CPUSimulation::run_simulation(xvas, m0, m1, N, T, results);
+            CPUSimulation::run_simulation(xvas, m0, m1, N, T, external_paths, results);
         }
         else
         {

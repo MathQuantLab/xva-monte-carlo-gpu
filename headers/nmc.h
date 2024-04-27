@@ -52,9 +52,10 @@ public:
      * 
      * @param xva XVA types
      * @param factor Factor
+     * @param external_paths External paths simulated
      * @param paths Paths simulated
      */
-    virtual void run(XVA xva, double factor,std::vector<std::vector<Vector>>& paths) const;
+    virtual void run(XVA xva, double factor, const std::vector<Vector>& external_paths, std::vector<std::vector<Vector>>& paths) const;
 
     /**
      * @brief Get the m0 object

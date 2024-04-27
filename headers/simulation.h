@@ -29,10 +29,12 @@ namespace CPUSimulation
      * @param m1 Number of internal paths
      * @param nb_points Number of points
      * @param T Time horizon
+     * @param external_paths External paths simulated
      * @param paths Paths simulated
      */
     void run_simulation(std::map<XVA, double> xva,
                         double m0, double m1,
                         size_t nb_points, double T,
+                        std::map<XVA, std::vector<Vector>> &external_paths,
                         std::map<XVA, std::vector<std::vector<Vector>>> &paths);
 }
