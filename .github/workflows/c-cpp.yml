@@ -9,7 +9,7 @@ on:
 jobs:
   Build:
 
-    runs-on: ubuntu-latest
+    runs-on: linux-gpu
 
     steps:
     - uses: actions/checkout@v3
