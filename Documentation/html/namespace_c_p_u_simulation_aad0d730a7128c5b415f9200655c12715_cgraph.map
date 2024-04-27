@@ -1,0 +1,4 @@
+<map id="CPUSimulation::run_simulation" name="CPUSimulation::run_simulation">
+<area shape="rect" id="node1" title="Run the simulation on CPU." alt="" coords="5,5,153,47"/>
+<area shape="rect" id="node2" href="$class_n_m_c.html#a05a8e93b456c528dd27c03d029700fea" title="Run the nested Monte Carlo system." alt="" coords="201,13,284,39"/>
+</map>

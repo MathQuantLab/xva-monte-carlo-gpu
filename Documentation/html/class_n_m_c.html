@@ -88,9 +88,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a95aec6f812d0e27a554b374fe4b7855c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_m_c.html#a95aec6f812d0e27a554b374fe4b7855c">~NMC</a> ()=default</td></tr>
 <tr class="memdesc:a95aec6f812d0e27a554b374fe4b7855c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="class_n_m_c.html" title="Provides the nested Monte Carlo system.">NMC</a> object.  <a href="class_n_m_c.html#a95aec6f812d0e27a554b374fe4b7855c">More...</a><br /></td></tr>
 <tr class="separator:a95aec6f812d0e27a554b374fe4b7855c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabae7f9ef24ec7f57867703da47b4bb9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_m_c.html#aabae7f9ef24ec7f57867703da47b4bb9">run</a> (<a class="el" href="pch_8h.html#a53054d12c7fd5c029fd5baf8caa1d9a1">XVA</a> xva, double factor, std::vector&lt; std::vector&lt; <a class="el" href="pch_8h.html#a5dd127bb3cb18b011cf5fd80a906e830">Vector</a> &gt;&gt; &amp;paths) const</td></tr>
-<tr class="memdesc:aabae7f9ef24ec7f57867703da47b4bb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run the nested Monte Carlo system.  <a href="class_n_m_c.html#aabae7f9ef24ec7f57867703da47b4bb9">More...</a><br /></td></tr>
-<tr class="separator:aabae7f9ef24ec7f57867703da47b4bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05a8e93b456c528dd27c03d029700fea"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_m_c.html#a05a8e93b456c528dd27c03d029700fea">run</a> (<a class="el" href="pch_8h.html#a53054d12c7fd5c029fd5baf8caa1d9a1">XVA</a> xva, double factor, const std::map&lt; <a class="el" href="pch_8h.html#a1388f46797f19b2b6d1fc65184776253">ExternalPaths</a>, std::vector&lt; <a class="el" href="pch_8h.html#a5dd127bb3cb18b011cf5fd80a906e830">Vector</a> &gt;&gt; &amp;external_paths, <a class="el" href="pch_8h.html#ac7ce98196a5fadeb82ff94df591a363a">Matrix</a> &amp;paths) const</td></tr>
+<tr class="memdesc:a05a8e93b456c528dd27c03d029700fea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run the nested Monte Carlo system.  <a href="class_n_m_c.html#a05a8e93b456c528dd27c03d029700fea">More...</a><br /></td></tr>
+<tr class="separator:a05a8e93b456c528dd27c03d029700fea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b3f1a2d42b7e1a62899352a4701f4f5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_n_m_c.html#a1b3f1a2d42b7e1a62899352a4701f4f5">get_m0</a> () const</td></tr>
 <tr class="memdesc:a1b3f1a2d42b7e1a62899352a4701f4f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the m0 object.  <a href="class_n_m_c.html#a1b3f1a2d42b7e1a62899352a4701f4f5">More...</a><br /></td></tr>
 <tr class="separator:a1b3f1a2d42b7e1a62899352a4701f4f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -349,8 +349,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="aabae7f9ef24ec7f57867703da47b4bb9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aabae7f9ef24ec7f57867703da47b4bb9">&#9670;&nbsp;</a></span>run()</h2>
+<a id="a05a8e93b456c528dd27c03d029700fea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05a8e93b456c528dd27c03d029700fea">&#9670;&nbsp;</a></span>run()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -373,7 +373,13 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; std::vector&lt; <a class="el" href="pch_8h.html#a5dd127bb3cb18b011cf5fd80a906e830">Vector</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">const std::map&lt; <a class="el" href="pch_8h.html#a1388f46797f19b2b6d1fc65184776253">ExternalPaths</a>, std::vector&lt; <a class="el" href="pch_8h.html#a5dd127bb3cb18b011cf5fd80a906e830">Vector</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>external_paths</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="pch_8h.html#ac7ce98196a5fadeb82ff94df591a363a">Matrix</a> &amp;&#160;</td>
           <td class="paramname"><em>paths</em>&#160;</td>
         </tr>
         <tr>
@@ -394,6 +400,7 @@ Protected Attributes</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">xva</td><td>XVA types </td></tr>
     <tr><td class="paramname">factor</td><td>Factor </td></tr>
+    <tr><td class="paramname">external_paths</td><td>External paths simulated </td></tr>
     <tr><td class="paramname">paths</td><td>Paths simulated </td></tr>
   </table>
   </dd>
@@ -401,10 +408,10 @@ Protected Attributes</h2></td></tr>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_n_m_c_aabae7f9ef24ec7f57867703da47b4bb9_icgraph.png" border="0" usemap="#aclass_n_m_c_aabae7f9ef24ec7f57867703da47b4bb9_icgraph" alt=""/></div>
-<map name="aclass_n_m_c_aabae7f9ef24ec7f57867703da47b4bb9_icgraph" id="aclass_n_m_c_aabae7f9ef24ec7f57867703da47b4bb9_icgraph">
+<div class="center"><img src="class_n_m_c_a05a8e93b456c528dd27c03d029700fea_icgraph.png" border="0" usemap="#aclass_n_m_c_a05a8e93b456c528dd27c03d029700fea_icgraph" alt=""/></div>
+<map name="aclass_n_m_c_a05a8e93b456c528dd27c03d029700fea_icgraph" id="aclass_n_m_c_a05a8e93b456c528dd27c03d029700fea_icgraph">
 <area shape="rect" title="Run the nested Monte Carlo system." alt="" coords="304,13,387,39"/>
-<area shape="rect" href="namespace_c_p_u_simulation.html#ab4449b67c41eeea425c65f7ab25b2321" title="Run the simulation on CPU." alt="" coords="108,5,256,47"/>
+<area shape="rect" href="namespace_c_p_u_simulation.html#aad0d730a7128c5b415f9200655c12715" title="Run the simulation on CPU." alt="" coords="108,5,256,47"/>
 <area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function." alt="" coords="5,13,60,39"/>
 </map>
 </div>

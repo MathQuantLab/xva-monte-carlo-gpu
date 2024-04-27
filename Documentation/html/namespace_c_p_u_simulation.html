@@ -75,15 +75,15 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ab4449b67c41eeea425c65f7ab25b2321"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_p_u_simulation.html#ab4449b67c41eeea425c65f7ab25b2321">run_simulation</a> (std::map&lt; <a class="el" href="pch_8h.html#a53054d12c7fd5c029fd5baf8caa1d9a1">XVA</a>, double &gt; xva, double m0, double m1, size_t nb_points, double T, std::map&lt; <a class="el" href="pch_8h.html#a53054d12c7fd5c029fd5baf8caa1d9a1">XVA</a>, std::vector&lt; std::vector&lt; <a class="el" href="pch_8h.html#a5dd127bb3cb18b011cf5fd80a906e830">Vector</a> &gt;&gt;&gt; &amp;paths)</td></tr>
-<tr class="memdesc:ab4449b67c41eeea425c65f7ab25b2321"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run the simulation on CPU.  <a href="namespace_c_p_u_simulation.html#ab4449b67c41eeea425c65f7ab25b2321">More...</a><br /></td></tr>
-<tr class="separator:ab4449b67c41eeea425c65f7ab25b2321"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad0d730a7128c5b415f9200655c12715"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_c_p_u_simulation.html#aad0d730a7128c5b415f9200655c12715">run_simulation</a> (std::map&lt; <a class="el" href="pch_8h.html#a53054d12c7fd5c029fd5baf8caa1d9a1">XVA</a>, double &gt; xva, double m0, double m1, size_t nb_points, double T, std::map&lt; <a class="el" href="pch_8h.html#a1388f46797f19b2b6d1fc65184776253">ExternalPaths</a>, std::vector&lt; <a class="el" href="pch_8h.html#a5dd127bb3cb18b011cf5fd80a906e830">Vector</a> &gt;&gt; &amp;external_paths, std::map&lt; <a class="el" href="pch_8h.html#a53054d12c7fd5c029fd5baf8caa1d9a1">XVA</a>, <a class="el" href="pch_8h.html#ac7ce98196a5fadeb82ff94df591a363a">Matrix</a> &gt; &amp;paths)</td></tr>
+<tr class="memdesc:aad0d730a7128c5b415f9200655c12715"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run the simulation on CPU.  <a href="namespace_c_p_u_simulation.html#aad0d730a7128c5b415f9200655c12715">More...</a><br /></td></tr>
+<tr class="separator:aad0d730a7128c5b415f9200655c12715"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Provides simulation functions on CPU. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="ab4449b67c41eeea425c65f7ab25b2321"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab4449b67c41eeea425c65f7ab25b2321">&#9670;&nbsp;</a></span>run_simulation()</h2>
+<a id="aad0d730a7128c5b415f9200655c12715"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad0d730a7128c5b415f9200655c12715">&#9670;&nbsp;</a></span>run_simulation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -121,7 +121,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::map&lt; <a class="el" href="pch_8h.html#a53054d12c7fd5c029fd5baf8caa1d9a1">XVA</a>, std::vector&lt; std::vector&lt; <a class="el" href="pch_8h.html#a5dd127bb3cb18b011cf5fd80a906e830">Vector</a> &gt;&gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">std::map&lt; <a class="el" href="pch_8h.html#a1388f46797f19b2b6d1fc65184776253">ExternalPaths</a>, std::vector&lt; <a class="el" href="pch_8h.html#a5dd127bb3cb18b011cf5fd80a906e830">Vector</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>external_paths</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::map&lt; <a class="el" href="pch_8h.html#a53054d12c7fd5c029fd5baf8caa1d9a1">XVA</a>, <a class="el" href="pch_8h.html#ac7ce98196a5fadeb82ff94df591a363a">Matrix</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>paths</em>&#160;</td>
         </tr>
         <tr>
@@ -140,6 +146,7 @@ Functions</h2></td></tr>
     <tr><td class="paramname">m1</td><td>Number of internal paths </td></tr>
     <tr><td class="paramname">nb_points</td><td>Number of points </td></tr>
     <tr><td class="paramname">T</td><td>Time horizon </td></tr>
+    <tr><td class="paramname">external_paths</td><td>External paths simulated </td></tr>
     <tr><td class="paramname">paths</td><td>Paths simulated </td></tr>
   </table>
   </dd>
@@ -147,17 +154,17 @@ Functions</h2></td></tr>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespace_c_p_u_simulation_ab4449b67c41eeea425c65f7ab25b2321_cgraph.png" border="0" usemap="#anamespace_c_p_u_simulation_ab4449b67c41eeea425c65f7ab25b2321_cgraph" alt=""/></div>
-<map name="anamespace_c_p_u_simulation_ab4449b67c41eeea425c65f7ab25b2321_cgraph" id="anamespace_c_p_u_simulation_ab4449b67c41eeea425c65f7ab25b2321_cgraph">
+<div class="center"><img src="namespace_c_p_u_simulation_aad0d730a7128c5b415f9200655c12715_cgraph.png" border="0" usemap="#anamespace_c_p_u_simulation_aad0d730a7128c5b415f9200655c12715_cgraph" alt=""/></div>
+<map name="anamespace_c_p_u_simulation_aad0d730a7128c5b415f9200655c12715_cgraph" id="anamespace_c_p_u_simulation_aad0d730a7128c5b415f9200655c12715_cgraph">
 <area shape="rect" title="Run the simulation on CPU." alt="" coords="5,5,153,47"/>
-<area shape="rect" href="class_n_m_c.html#aabae7f9ef24ec7f57867703da47b4bb9" title="Run the nested Monte Carlo system." alt="" coords="201,13,284,39"/>
+<area shape="rect" href="class_n_m_c.html#a05a8e93b456c528dd27c03d029700fea" title="Run the nested Monte Carlo system." alt="" coords="201,13,284,39"/>
 </map>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespace_c_p_u_simulation_ab4449b67c41eeea425c65f7ab25b2321_icgraph.png" border="0" usemap="#anamespace_c_p_u_simulation_ab4449b67c41eeea425c65f7ab25b2321_icgraph" alt=""/></div>
-<map name="anamespace_c_p_u_simulation_ab4449b67c41eeea425c65f7ab25b2321_icgraph" id="anamespace_c_p_u_simulation_ab4449b67c41eeea425c65f7ab25b2321_icgraph">
+<div class="center"><img src="namespace_c_p_u_simulation_aad0d730a7128c5b415f9200655c12715_icgraph.png" border="0" usemap="#anamespace_c_p_u_simulation_aad0d730a7128c5b415f9200655c12715_icgraph" alt=""/></div>
+<map name="anamespace_c_p_u_simulation_aad0d730a7128c5b415f9200655c12715_icgraph" id="anamespace_c_p_u_simulation_aad0d730a7128c5b415f9200655c12715_icgraph">
 <area shape="rect" title="Run the simulation on CPU." alt="" coords="108,5,256,47"/>
 <area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function." alt="" coords="5,13,60,39"/>
 </map>
