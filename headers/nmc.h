@@ -55,7 +55,7 @@ public:
      * @param external_paths External paths simulated
      * @param paths Paths simulated
      */
-    virtual void run(XVA xva, double factor, const std::vector<Vector>& external_paths, std::vector<std::vector<Vector>>& paths) const;
+    virtual void run(XVA xva, double factor, const std::map<ExternalPaths, std::vector<Vector>> &external_paths, Matrix& paths) const;
 
     /**
      * @brief Get the m0 object

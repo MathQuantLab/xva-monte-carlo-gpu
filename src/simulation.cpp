@@ -16,8 +16,8 @@
 void CPUSimulation::run_simulation(std::map<XVA, double> xvas,
                                    double m0, double m1,
                                    size_t nb_points, double T,
-                                   std::map<XVA, std::vector<Vector>> &external_paths,
-                                   std::map<XVA, std::vector<std::vector<Vector>>> &paths)
+                                   std::map<ExternalPaths, std::vector<Vector>> &external_paths,
+                                   std::map<XVA, Matrix> &paths)
 {
     NMC nmc(m0, m1, nb_points, T);
 
@@ -27,7 +27,7 @@ void CPUSimulation::run_simulation(std::map<XVA, double> xvas,
 
     for (auto const &xva : xvas)
     {
-        threads[xva.first] = std::thread(&NMC::run, nmc, xva.first, xva.second, std::ref(external_paths[xva.first]),std::ref(paths[xva.first]));
+        threads[xva.first] = std::thread(&NMC::run, nmc, xva.first, xva.second, external_paths, std::ref(paths[xva.first]));
     }
     for (auto const &xva : xvas)
     {

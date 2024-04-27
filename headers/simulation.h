@@ -35,6 +35,6 @@ namespace CPUSimulation
     void run_simulation(std::map<XVA, double> xva,
                         double m0, double m1,
                         size_t nb_points, double T,
-                        std::map<XVA, std::vector<Vector>> &external_paths,
-                        std::map<XVA, std::vector<std::vector<Vector>>> &paths);
+                        std::map<ExternalPaths, std::vector<Vector>> &external_paths,
+                        std::map<XVA, Matrix> &paths);
 }

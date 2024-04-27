@@ -95,3 +95,25 @@ typedef std::vector<double> Vector;
  * 
  */
 typedef std::vector<Vector> Matrix;
+
+/**
+ * @brief External paths
+ * 
+ */
+enum ExternalPaths {
+    /**
+     * @brief Interest rate
+     * 
+     */
+    Interest,
+    /**
+     * @brief FX
+     * 
+     */
+    FX,
+    /**
+     * @brief Equity
+     * 
+     */
+    Equity
+};
