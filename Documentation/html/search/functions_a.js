@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['run_128',['run',['../class_n_m_c.html#aabae7f9ef24ec7f57867703da47b4bb9',1,'NMC']]],
-  ['run_5fsimulation_129',['run_simulation',['../namespace_c_p_u_simulation.html#a359d6932129330c4aa060c80fcab69a7',1,'CPUSimulation']]]
+  ['_7ecudaexception_102',['~CUDAException',['../class_c_u_d_a_1_1_c_u_d_a_exception.html#a71d3e63cc36450e3fa9ef098c7e9c91c',1,'CUDA::CUDAException']]],
+  ['_7eexception_103',['~Exception',['../class_exception.html#a5c134c74b84c0a7a4c106ac60cabe10c',1,'Exception']]],
+  ['_7enmc_104',['~NMC',['../class_n_m_c.html#a95aec6f812d0e27a554b374fe4b7855c',1,'NMC']]]
 ];

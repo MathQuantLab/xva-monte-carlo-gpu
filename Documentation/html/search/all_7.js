@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['kva_34',['KVA',['../pch_8h.html#a53054d12c7fd5c029fd5baf8caa1d9a1ada73e17e9a41dcc275179dd518571207',1,'pch.h']]]
+  ['license_23',['LICENSE',['../md__l_i_c_e_n_s_e.html',1,'']]],
+  ['license_2emd_24',['LICENSE.md',['../_l_i_c_e_n_s_e_8md.html',1,'']]]
 ];

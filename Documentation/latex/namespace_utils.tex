@@ -5,24 +5,6 @@
 Provides utility functions.  
 
 
-\doxysubsection*{Classes}
-\begin{DoxyCompactItemize}
-\item 
-class \mbox{\hyperlink{class_utils_1_1_c_s_v_series}{CSVSeries}}
-\begin{DoxyCompactList}\small\item\em A class to represent a CSV series. \end{DoxyCompactList}\item 
-class \mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame}{CSVData\+Frame}}
-\begin{DoxyCompactList}\small\item\em A class to represent a CSV data frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Typedefs}
-\begin{DoxyCompactItemize}
-\item 
-typedef \mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame}{Utils\+::\+CSVData\+Frame}}$<$ double, size\+\_\+t, std\+::string $>$ \mbox{\hyperlink{namespace_utils_a1eaf437a867a6bbe8277746ed580c903}{Int\+Data\+Frame}}
-\begin{DoxyCompactList}\small\item\em Alias for a CSV data frame with double data type. \end{DoxyCompactList}\item 
-typedef \mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame}{Utils\+::\+CSVData\+Frame}}$<$ double, double, std\+::string $>$ \mbox{\hyperlink{namespace_utils_ac7d7f98c87ffaa8071bd56b334b7ea8f}{Double\+Data\+Frame}}
-\begin{DoxyCompactList}\small\item\em Alias for a CSV data frame with double data type and double index. \end{DoxyCompactList}\item 
-typedef \mbox{\hyperlink{class_utils_1_1_c_s_v_series}{Utils\+::\+CSVSeries}}$<$ double, size\+\_\+t $>$ \mbox{\hyperlink{namespace_utils_a2d791dfb54c9525f3224797f9abcf214}{Int\+Series}}
-\begin{DoxyCompactList}\small\item\em Alias for a CSV series with double data type. \end{DoxyCompactList}\item 
-typedef \mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame}{Utils\+::\+CSVData\+Frame}}$<$ double, double $>$ \mbox{\hyperlink{namespace_utils_a4ec2e37b65895a6e42b4963a7ec7f5a4}{Double\+Series}}
-\begin{DoxyCompactList}\small\item\em Alias for a CSV series with double data type and double index. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -30,7 +12,7 @@ void \mbox{\hyperlink{namespace_utils_ace6934aad7553d4fa9891e34afe23254}{info}} 
 \begin{DoxyCompactList}\small\item\em Application information. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespace_utils_a57085921573df272b730d8dc0e33b703}{parse\+\_\+options}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]}, bool \&gpu)
 \begin{DoxyCompactList}\small\item\em Parse command line arguments. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{namespace_utils_a14f7a24724d1d7350c5b9c3ae362ebd4}{parse\+\_\+mandatory\+\_\+arguments}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]}, size\+\_\+t \&m0, size\+\_\+t \&m1, size\+\_\+t \&N, double \&T, std\+::string \&data\+\_\+file\+\_\+name)
+void \mbox{\hyperlink{namespace_utils_a87f81a17a7978e7c2968490ab7134277}{parse\+\_\+mandatory\+\_\+arguments}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]}, size\+\_\+t \&m0, size\+\_\+t \&m1, size\+\_\+t \&N, double \&T)
 \begin{DoxyCompactList}\small\item\em Parse mandatory arguments. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespace_utils_a9b26c6a3f0f0d3f094d034815e687c15}{parse\+\_\+type}} (const std\+::string \&str, std\+::map$<$ \mbox{\hyperlink{pch_8h_a53054d12c7fd5c029fd5baf8caa1d9a1}{XVA}}, double $>$ \&xvas)
 \begin{DoxyCompactList}\small\item\em Parse XVA type. \end{DoxyCompactList}\item 
@@ -40,49 +22,6 @@ void \mbox{\hyperlink{namespace_utils_a56c6508c58c2bf4bc5a4953000f0cc7d}{split\+
 
 \doxysubsection{Detailed Description}
 Provides utility functions. 
-
-\doxysubsection{Typedef Documentation}
-\mbox{\Hypertarget{namespace_utils_ac7d7f98c87ffaa8071bd56b334b7ea8f}\label{namespace_utils_ac7d7f98c87ffaa8071bd56b334b7ea8f}} 
-\index{Utils@{Utils}!DoubleDataFrame@{DoubleDataFrame}}
-\index{DoubleDataFrame@{DoubleDataFrame}!Utils@{Utils}}
-\doxysubsubsection{\texorpdfstring{DoubleDataFrame}{DoubleDataFrame}}
-{\footnotesize\ttfamily typedef \mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame}{Utils\+::\+CSVData\+Frame}}$<$double, double, std\+::string$>$ \mbox{\hyperlink{namespace_utils_ac7d7f98c87ffaa8071bd56b334b7ea8f}{Utils\+::\+Double\+Data\+Frame}}}
-
-
-
-Alias for a CSV data frame with double data type and double index. 
-
-\mbox{\Hypertarget{namespace_utils_a4ec2e37b65895a6e42b4963a7ec7f5a4}\label{namespace_utils_a4ec2e37b65895a6e42b4963a7ec7f5a4}} 
-\index{Utils@{Utils}!DoubleSeries@{DoubleSeries}}
-\index{DoubleSeries@{DoubleSeries}!Utils@{Utils}}
-\doxysubsubsection{\texorpdfstring{DoubleSeries}{DoubleSeries}}
-{\footnotesize\ttfamily typedef \mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame}{Utils\+::\+CSVData\+Frame}}$<$double, double$>$ \mbox{\hyperlink{namespace_utils_a4ec2e37b65895a6e42b4963a7ec7f5a4}{Utils\+::\+Double\+Series}}}
-
-
-
-Alias for a CSV series with double data type and double index. 
-
-\mbox{\Hypertarget{namespace_utils_a1eaf437a867a6bbe8277746ed580c903}\label{namespace_utils_a1eaf437a867a6bbe8277746ed580c903}} 
-\index{Utils@{Utils}!IntDataFrame@{IntDataFrame}}
-\index{IntDataFrame@{IntDataFrame}!Utils@{Utils}}
-\doxysubsubsection{\texorpdfstring{IntDataFrame}{IntDataFrame}}
-{\footnotesize\ttfamily typedef \mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame}{Utils\+::\+CSVData\+Frame}}$<$double, size\+\_\+t, std\+::string$>$ \mbox{\hyperlink{namespace_utils_a1eaf437a867a6bbe8277746ed580c903}{Utils\+::\+Int\+Data\+Frame}}}
-
-
-
-Alias for a CSV data frame with double data type. 
-
-\mbox{\Hypertarget{namespace_utils_a2d791dfb54c9525f3224797f9abcf214}\label{namespace_utils_a2d791dfb54c9525f3224797f9abcf214}} 
-\index{Utils@{Utils}!IntSeries@{IntSeries}}
-\index{IntSeries@{IntSeries}!Utils@{Utils}}
-\doxysubsubsection{\texorpdfstring{IntSeries}{IntSeries}}
-{\footnotesize\ttfamily typedef \mbox{\hyperlink{class_utils_1_1_c_s_v_series}{Utils\+::\+CSVSeries}}$<$double, size\+\_\+t$>$ \mbox{\hyperlink{namespace_utils_a2d791dfb54c9525f3224797f9abcf214}{Utils\+::\+Int\+Series}}}
-
-
-
-Alias for a CSV series with double data type. 
-
-
 
 \doxysubsection{Function Documentation}
 \mbox{\Hypertarget{namespace_utils_ace6934aad7553d4fa9891e34afe23254}\label{namespace_utils_ace6934aad7553d4fa9891e34afe23254}} 
@@ -100,18 +39,19 @@ Application information.
 {\em name} & Application name \\
 \hline
 \end{DoxyParams}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{namespace_utils_ace6934aad7553d4fa9891e34afe23254_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{namespace_utils_a14f7a24724d1d7350c5b9c3ae362ebd4}\label{namespace_utils_a14f7a24724d1d7350c5b9c3ae362ebd4}} 
+\mbox{\Hypertarget{namespace_utils_a87f81a17a7978e7c2968490ab7134277}\label{namespace_utils_a87f81a17a7978e7c2968490ab7134277}} 
 \index{Utils@{Utils}!parse\_mandatory\_arguments@{parse\_mandatory\_arguments}}
 \index{parse\_mandatory\_arguments@{parse\_mandatory\_arguments}!Utils@{Utils}}
 \doxysubsubsection{\texorpdfstring{parse\_mandatory\_arguments()}{parse\_mandatory\_arguments()}}
-{\footnotesize\ttfamily void Utils\+::parse\+\_\+mandatory\+\_\+arguments (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]},  }\item[{size\+\_\+t \&}]{m0,  }\item[{size\+\_\+t \&}]{m1,  }\item[{size\+\_\+t \&}]{N,  }\item[{double \&}]{T,  }\item[{std\+::string \&}]{data\+\_\+file\+\_\+name }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Utils\+::parse\+\_\+mandatory\+\_\+arguments (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]},  }\item[{size\+\_\+t \&}]{m0,  }\item[{size\+\_\+t \&}]{m1,  }\item[{size\+\_\+t \&}]{N,  }\item[{double \&}]{T }\end{DoxyParamCaption})}
 
 
 
@@ -131,14 +71,13 @@ Parse mandatory arguments.
 \hline
 {\em T} & Horizon \\
 \hline
-{\em data\+\_\+file\+\_\+name} & Data file name \\
-\hline
 \end{DoxyParams}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=288pt]{namespace_utils_a14f7a24724d1d7350c5b9c3ae362ebd4_icgraph}
+\includegraphics[width=288pt]{namespace_utils_a87f81a17a7978e7c2968490ab7134277_icgraph}
 \end{center}
 \end{figure}
 \mbox{\Hypertarget{namespace_utils_a57085921573df272b730d8dc0e33b703}\label{namespace_utils_a57085921573df272b730d8dc0e33b703}} 
@@ -160,14 +99,16 @@ Parse command line arguments.
 {\em gpu} & GPU flag \\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{namespace_utils_a57085921573df272b730d8dc0e33b703_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -191,14 +132,16 @@ Parse XVA type.
 {\em xvas} & XVA types \\
 \hline
 \end{DoxyParams}
-Here is the call graph for this function\+:\nopagebreak
+Here is the call graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=314pt]{namespace_utils_a9b26c6a3f0f0d3f094d034815e687c15_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -224,7 +167,8 @@ Split a string.
 {\em tokens} & Tokens \\
 \hline
 \end{DoxyParams}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

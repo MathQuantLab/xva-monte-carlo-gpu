@@ -1,10 +1,7 @@
 var searchData=
 [
-  ['m0_37',['m0',['../class_n_m_c.html#aa1b0d86b068ca1f03d528255d408f91b',1,'NMC']]],
-  ['m1_38',['m1',['../class_n_m_c.html#ae575b0ac490ef07fca7ff9989cb03314',1,'NMC']]],
-  ['m_5fmessage_39',['m_message',['../class_exception.html#a3283a359dcd394128a22371285edc55d',1,'Exception']]],
-  ['main_40',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]],
-  ['main_2ecpp_41',['main.cpp',['../main_8cpp.html',1,'']]],
-  ['matrix_42',['Matrix',['../pch_8h.html#ac7ce98196a5fadeb82ff94df591a363a',1,'pch.h']]],
-  ['mva_43',['MVA',['../pch_8h.html#a53054d12c7fd5c029fd5baf8caa1d9a1ad03511ae5a35c690b8030d5304518d52',1,'pch.h']]]
+  ['nb_5fpoints_32',['nb_points',['../class_n_m_c.html#a1a9c1d55c398da1339bc26e2ac77922d',1,'NMC']]],
+  ['nmc_33',['NMC',['../class_n_m_c.html',1,'NMC'],['../class_n_m_c.html#aef6ae888f909a08a4aff19c5e00b6c43',1,'NMC::NMC()=delete'],['../class_n_m_c.html#a99fd99c16b370a8570b22be5bd701866',1,'NMC::NMC(double m0, double m1, size_t nb_points, double T)']]],
+  ['nmc_2ecpp_34',['nmc.cpp',['../nmc_8cpp.html',1,'']]],
+  ['nmc_2eh_35',['nmc.h',['../nmc_8h.html',1,'']]]
 ];

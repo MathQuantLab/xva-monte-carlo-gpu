@@ -7,43 +7,27 @@ Provides utility functions.
 
 {\ttfamily \#include \char`\"{}../headers/pch.\+h\char`\"{}}\newline
 {\ttfamily \#include $<$map$>$}\newline
-Include dependency graph for utils.\+h\+:\nopagebreak
+Include dependency graph for utils.\+h\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{utils_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:\nopagebreak
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{utils_8h__dep__incl}
 \end{center}
 \end{figure}
-\doxysubsection*{Classes}
-\begin{DoxyCompactItemize}
-\item 
-class \mbox{\hyperlink{class_utils_1_1_c_s_v_series}{Utils\+::\+CSVSeries$<$ T, U $>$}}
-\begin{DoxyCompactList}\small\item\em A class to represent a CSV series. \end{DoxyCompactList}\item 
-class \mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame}{Utils\+::\+CSVData\+Frame$<$ T, U, V $>$}}
-\begin{DoxyCompactList}\small\item\em A class to represent a CSV data frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
  \mbox{\hyperlink{namespace_utils}{Utils}}
 \begin{DoxyCompactList}\small\item\em Provides utility functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Typedefs}
-\begin{DoxyCompactItemize}
-\item 
-typedef \mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame}{Utils\+::\+CSVData\+Frame}}$<$ double, size\+\_\+t, std\+::string $>$ \mbox{\hyperlink{namespace_utils_a1eaf437a867a6bbe8277746ed580c903}{Utils\+::\+Int\+Data\+Frame}}
-\begin{DoxyCompactList}\small\item\em Alias for a CSV data frame with double data type. \end{DoxyCompactList}\item 
-typedef \mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame}{Utils\+::\+CSVData\+Frame}}$<$ double, double, std\+::string $>$ \mbox{\hyperlink{namespace_utils_ac7d7f98c87ffaa8071bd56b334b7ea8f}{Utils\+::\+Double\+Data\+Frame}}
-\begin{DoxyCompactList}\small\item\em Alias for a CSV data frame with double data type and double index. \end{DoxyCompactList}\item 
-typedef \mbox{\hyperlink{class_utils_1_1_c_s_v_series}{Utils\+::\+CSVSeries}}$<$ double, size\+\_\+t $>$ \mbox{\hyperlink{namespace_utils_a2d791dfb54c9525f3224797f9abcf214}{Utils\+::\+Int\+Series}}
-\begin{DoxyCompactList}\small\item\em Alias for a CSV series with double data type. \end{DoxyCompactList}\item 
-typedef \mbox{\hyperlink{class_utils_1_1_c_s_v_data_frame}{Utils\+::\+CSVData\+Frame}}$<$ double, double $>$ \mbox{\hyperlink{namespace_utils_a4ec2e37b65895a6e42b4963a7ec7f5a4}{Utils\+::\+Double\+Series}}
-\begin{DoxyCompactList}\small\item\em Alias for a CSV series with double data type and double index. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -51,7 +35,7 @@ void \mbox{\hyperlink{namespace_utils_ace6934aad7553d4fa9891e34afe23254}{Utils\+
 \begin{DoxyCompactList}\small\item\em Application information. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{namespace_utils_a57085921573df272b730d8dc0e33b703}{Utils\+::parse\+\_\+options}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]}, bool \&gpu)
 \begin{DoxyCompactList}\small\item\em Parse command line arguments. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{namespace_utils_a14f7a24724d1d7350c5b9c3ae362ebd4}{Utils\+::parse\+\_\+mandatory\+\_\+arguments}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]}, size\+\_\+t \&m0, size\+\_\+t \&m1, size\+\_\+t \&N, double \&T, std\+::string \&data\+\_\+file\+\_\+name)
+void \mbox{\hyperlink{namespace_utils_a87f81a17a7978e7c2968490ab7134277}{Utils\+::parse\+\_\+mandatory\+\_\+arguments}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]}, size\+\_\+t \&m0, size\+\_\+t \&m1, size\+\_\+t \&N, double \&T)
 \begin{DoxyCompactList}\small\item\em Parse mandatory arguments. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespace_utils_a9b26c6a3f0f0d3f094d034815e687c15}{Utils\+::parse\+\_\+type}} (const std\+::string \&str, std\+::map$<$ \mbox{\hyperlink{pch_8h_a53054d12c7fd5c029fd5baf8caa1d9a1}{XVA}}, double $>$ \&xvas)
 \begin{DoxyCompactList}\small\item\em Parse XVA type. \end{DoxyCompactList}\item 

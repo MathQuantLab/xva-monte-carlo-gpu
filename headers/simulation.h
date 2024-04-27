@@ -31,7 +31,7 @@ namespace CPUSimulation
      * @param T Time horizon
      * @param paths Paths simulated
      */
-    void run_simulation(std::map<XVA, double>,
+    void run_simulation(std::map<XVA, double> xva,
                         double m0, double m1,
                         size_t nb_points, double T,
                         std::map<XVA, std::vector<std::vector<Vector>>> &paths);
