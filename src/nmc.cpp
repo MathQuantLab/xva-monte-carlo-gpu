@@ -13,6 +13,8 @@
 
 #include <iostream>
 #include <thread>
+#include <random>
+#include <cmath>
 
 void NMC::run(XVA xva, double factor, const std::map<ExternalPaths, std::vector<Vector>> &external_paths, Matrix &paths) const
 {
@@ -22,4 +24,45 @@ void NMC::run(XVA xva, double factor, const std::map<ExternalPaths, std::vector<
     {
         paths[i].resize(nb_points);
     }
+}
+
+void NMC::generate_interest_rate_paths(std::vector<Vector> &paths) const
+{
+    std::cout << "Generating interest rate paths on thread " << std::this_thread::get_id() << std::endl;
+    double r0 = 0.03;
+    double k(0.5);
+    double theta = 0.04;
+    double sigma = 0.1;
+
+
+    std::random_device rd;
+    std::mt19937 gen(rd());
+
+    double dt = T / double(nb_points);
+    
+    for (size_t i = 0; i < paths.size(); i++)
+    {
+        paths[i].resize(nb_points);
+        paths[i][0] = r0;
+        for (size_t j = 1; j < nb_points; j++)
+        {
+            double dW = std::normal_distribution<double>(0.0, std::sqrt(dt))(gen);
+            paths[i][j] = paths[i][j - 1] + k * (theta - paths[i][j - 1]) * dt + sigma * dW * std::sqrt(paths[i][j-1]);
+
+            if (paths[i][j] < 0)
+            {
+                paths[i][j] = 0;
+            }
+        }
+    }
+}
+
+void NMC::generate_fx_rate_paths(std::vector<Vector> &paths) const
+{
+
+}
+
+void NMC::generate_equity_paths(std::vector<Vector> &paths) const
+{
+
 }

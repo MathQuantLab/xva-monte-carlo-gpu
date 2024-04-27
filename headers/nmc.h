@@ -58,6 +58,27 @@ public:
     virtual void run(XVA xva, double factor, const std::map<ExternalPaths, std::vector<Vector>> &external_paths, Matrix& paths) const;
 
     /**
+     * @brief Generate interrest rate paths
+     * 
+     * @param paths Paths generated
+     */
+    virtual void generate_interest_rate_paths(std::vector<Vector>& paths) const;
+
+    /**
+     * @brief Generate FX rate paths
+     * 
+     * @param paths Paths generated
+     */
+    virtual void generate_fx_rate_paths(std::vector<Vector>& paths) const;
+
+    /**
+     * @brief Generate equity paths
+     * 
+     * @param paths Paths generated
+     */
+    virtual void generate_equity_paths(std::vector<Vector>& paths) const;
+
+    /**
      * @brief Get the m0 object
      * 
      * @return double m0
