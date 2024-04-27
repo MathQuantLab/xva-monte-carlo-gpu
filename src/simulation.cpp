@@ -27,7 +27,7 @@ void CPUSimulation::run_simulation(std::map<XVA, double> xvas,
 
     for (auto const &xva : xvas)
     {
-        threads[xva.first] = std::thread(&NMC::run, nmc, xva.first, xva.second, external_paths, std::ref(paths[xva.first]));
+        threads[xva.first] = std::thread(&NMC::run, nmc, xva.first, xva.second, std::ref(external_paths), std::ref(paths[xva.first]));
     }
     for (auto const &xva : xvas)
     {
