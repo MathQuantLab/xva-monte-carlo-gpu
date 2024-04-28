@@ -59,10 +59,48 @@ void NMC::generate_interest_rate_paths(std::vector<Vector> &paths) const
 
 void NMC::generate_fx_rate_paths(std::vector<Vector> &paths) const
 {
+    std::cout << "Generating interest rate paths on thread " << std::this_thread::get_id() << std::endl;
+    double S0(1.15);
+    double mu(0.02);
+    double sigma = 0.1;
+    
+    std::random_device rd;
+    std::mt19937 gen(rd());
 
+    double dt = T / double(nb_points);
+
+    for (size_t i = 0; i < paths.size(); i++)
+    {
+        paths[i].resize(nb_points);
+        paths[i][0] = S0;
+        for (size_t j = 1; j < nb_points; j++)
+        {
+            double dW = std::normal_distribution<double>(0.0, std::sqrt(dt))(gen);
+            paths[i][j] = paths[i][j - 1] * std::exp((mu - 0.5 * sigma * sigma) * dt + sigma * dW);
+        }
+    }
 }
 
 void NMC::generate_equity_paths(std::vector<Vector> &paths) const
 {
+    std::cout << "Generating interest rate paths on thread " << std::this_thread::get_id() << std::endl;
+    double S0(100);
+    double mu(0.08);
+    double sigma = 0.2;
 
+    std::random_device rd;
+    std::mt19937 gen(rd());
+
+    double dt = T / double(nb_points);
+
+    for (size_t i = 0; i < paths.size(); i++)
+    {
+        paths[i].resize(nb_points);
+        paths[i][0] = S0;
+        for (size_t j = 1; j < nb_points; j++)
+        {
+            double dW = std::normal_distribution<double>(0.0, std::sqrt(dt))(gen);
+            paths[i][j] = paths[i][j - 1] * std::exp((mu - 0.5 * sigma * sigma) * dt + sigma * dW);
+        }
+    }
 }
