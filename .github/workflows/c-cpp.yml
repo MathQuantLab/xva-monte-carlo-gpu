@@ -9,11 +9,11 @@ on:
 jobs:
   Build:
 
-    runs-on: linux-gpu
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
-    #- name: Configure
-    #  run: ./.github/config/configure.sh
+    - name: Configure
+      run: ./.github/config/configure.sh
     - name: Make
       run: make linux
