@@ -28,7 +28,7 @@
 \DoxyCodeLine{85         \mbox{\hyperlink{namespace_c_u_d_a_a8849517350a758e3d271679b0b2bd173}{GridBlockSize}} \mbox{\hyperlink{namespace_c_u_d_a_1_1_utils_a117649b42f37ee252259c00d4ae60f96}{get\_block\_size}}(\textcolor{keywordtype}{int} device\_id);}
 \DoxyCodeLine{86     \};}
 \DoxyCodeLine{87 }
-\DoxyCodeLine{92     class \mbox{\hyperlink{class_c_u_d_a_1_1_c_u_d_a_exception}{CUDAException}} : public \mbox{\hyperlink{class_exception}{Exception}}}
+\DoxyCodeLine{92     class \mbox{\hyperlink{class_c_u_d_a_1_1_c_u_d_a_exception}{CUDAException}} final: public \mbox{\hyperlink{class_exception}{Exception}}}
 \DoxyCodeLine{93     \{}
 \DoxyCodeLine{94     \textcolor{keyword}{public}:}
 \DoxyCodeLine{101         \mbox{\hyperlink{class_c_u_d_a_1_1_c_u_d_a_exception_a99362a4d0cb58bc9ce7c365e7b732911}{CUDAException}}(\textcolor{keyword}{const} std::string \&message, cudaError\_t error) : \mbox{\hyperlink{class_exception}{Exception}}(message), m\_error(error) \{\}}
