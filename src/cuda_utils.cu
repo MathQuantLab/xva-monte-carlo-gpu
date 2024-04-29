@@ -36,8 +36,51 @@ void CUDA::Utils::select_gpu(int device_id)
     }
 }
 
+int CUDA::Utils::get_gpu_id()
+{
+    int device;
+    cudaGetDevice(&device);
+    return device;
+}
+
 const char *CUDA::CUDAException::what() const noexcept
 {
     std::string error_string = cudaGetErrorString(m_error);
     return (m_message + "\n" + error_string).c_str();
+}
+
+CUDA::GridBlockSize CUDA::Utils::get_grid_size()
+{
+    int id = get_gpu_id();
+
+    cudaDeviceProp prop;
+    cudaGetDeviceProperties(&prop, id);
+
+    return {prop.maxGridSize[0], prop.maxGridSize[1], prop.maxGridSize[2]};
+}
+
+CUDA::GridBlockSize CUDA::Utils::get_grid_size(int device_id)
+{
+    cudaDeviceProp prop;
+    cudaGetDeviceProperties(&prop, device_id);
+
+    return {prop.maxGridSize[0], prop.maxGridSize[1], prop.maxGridSize[2]};
+}
+
+CUDA::GridBlockSize CUDA::Utils::get_block_size()
+{
+    int id = get_gpu_id();
+
+    cudaDeviceProp prop;
+    cudaGetDeviceProperties(&prop, id);
+
+    return {prop.maxThreadsDim[0], prop.maxThreadsDim[1], prop.maxThreadsDim[2]};
+}
+
+CUDA::GridBlockSize CUDA::Utils::get_block_size(int device_id)
+{
+    cudaDeviceProp prop;
+    cudaGetDeviceProperties(&prop, device_id);
+
+    return {prop.maxThreadsDim[0], prop.maxThreadsDim[1], prop.maxThreadsDim[2]};
 }

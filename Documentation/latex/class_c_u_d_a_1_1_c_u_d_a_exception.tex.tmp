@@ -1,0 +1,111 @@
+\hypertarget{class_c_u_d_a_1_1_c_u_d_a_exception}{}\doxysection{CUDA\+::CUDAException Class Reference}
+\label{class_c_u_d_a_1_1_c_u_d_a_exception}\index{CUDA::CUDAException@{CUDA::CUDAException}}
+
+
+\mbox{\hyperlink{namespace_c_u_d_a}{CUDA}} exception.  
+
+
+
+
+{\ttfamily \#include $<$cuda\+\_\+utils.\+h$>$}
+
+
+
+Inheritance diagram for CUDA\+::CUDAException\+:
+% FIG 0
+
+
+Collaboration diagram for CUDA\+::CUDAException\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_u_d_a_1_1_c_u_d_a_exception_a99362a4d0cb58bc9ce7c365e7b732911}{CUDAException}} (const std\+::string \&message, cuda\+Error\+\_\+t error)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_c_u_d_a_1_1_c_u_d_a_exception}{CUDAException}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_c_u_d_a_1_1_c_u_d_a_exception_a71d3e63cc36450e3fa9ef098c7e9c91c}{$\sim$\+CUDAException}} ()=default
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{class_c_u_d_a_1_1_c_u_d_a_exception}{CUDAException}} object. \end{DoxyCompactList}\item 
+cuda\+Error\+\_\+t \mbox{\hyperlink{class_c_u_d_a_1_1_c_u_d_a_exception_ac8a05e1bbac53efec484d1a107cc6eb4}{get\+\_\+error}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Get the \mbox{\hyperlink{namespace_c_u_d_a}{CUDA}} error. \end{DoxyCompactList}\item 
+virtual const char $\ast$ \mbox{\hyperlink{class_c_u_d_a_1_1_c_u_d_a_exception_aa7a841a01de7ebd8ccab4d52dd50a34f}{what}} () const noexcept override
+\begin{DoxyCompactList}\small\item\em Get the exception message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{namespace_c_u_d_a}{CUDA}} exception. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_u_d_a_1_1_c_u_d_a_exception_a99362a4d0cb58bc9ce7c365e7b732911}\label{class_c_u_d_a_1_1_c_u_d_a_exception_a99362a4d0cb58bc9ce7c365e7b732911}} 
+\index{CUDA::CUDAException@{CUDA::CUDAException}!CUDAException@{CUDAException}}
+\index{CUDAException@{CUDAException}!CUDA::CUDAException@{CUDA::CUDAException}}
+\doxysubsubsection{\texorpdfstring{CUDAException()}{CUDAException()}}
+{\footnotesize\ttfamily CUDA\+::\+CUDAException\+::\+CUDAException (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message,  }\item[{cuda\+Error\+\_\+t}]{error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \mbox{\hyperlink{class_c_u_d_a_1_1_c_u_d_a_exception}{CUDAException}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & \mbox{\hyperlink{class_exception}{Exception}} message \\
+\hline
+{\em error} & \mbox{\hyperlink{namespace_c_u_d_a}{CUDA}} error \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_c_u_d_a_1_1_c_u_d_a_exception_a71d3e63cc36450e3fa9ef098c7e9c91c}\label{class_c_u_d_a_1_1_c_u_d_a_exception_a71d3e63cc36450e3fa9ef098c7e9c91c}} 
+\index{CUDA::CUDAException@{CUDA::CUDAException}!````~CUDAException@{$\sim$CUDAException}}
+\index{````~CUDAException@{$\sim$CUDAException}!CUDA::CUDAException@{CUDA::CUDAException}}
+\doxysubsubsection{\texorpdfstring{$\sim$CUDAException()}{~CUDAException()}}
+{\footnotesize\ttfamily virtual CUDA\+::\+CUDAException\+::$\sim$\+CUDAException (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Destroy the \mbox{\hyperlink{class_c_u_d_a_1_1_c_u_d_a_exception}{CUDAException}} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_u_d_a_1_1_c_u_d_a_exception_ac8a05e1bbac53efec484d1a107cc6eb4}\label{class_c_u_d_a_1_1_c_u_d_a_exception_ac8a05e1bbac53efec484d1a107cc6eb4}} 
+\index{CUDA::CUDAException@{CUDA::CUDAException}!get\_error@{get\_error}}
+\index{get\_error@{get\_error}!CUDA::CUDAException@{CUDA::CUDAException}}
+\doxysubsubsection{\texorpdfstring{get\_error()}{get\_error()}}
+{\footnotesize\ttfamily cuda\+Error\+\_\+t CUDA\+::\+CUDAException\+::get\+\_\+error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Get the \mbox{\hyperlink{namespace_c_u_d_a}{CUDA}} error. 
+
+\begin{DoxyReturn}{Returns}
+cuda\+Error\+\_\+t \mbox{\hyperlink{namespace_c_u_d_a}{CUDA}} error 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{class_c_u_d_a_1_1_c_u_d_a_exception_ac8a05e1bbac53efec484d1a107cc6eb4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_c_u_d_a_1_1_c_u_d_a_exception_aa7a841a01de7ebd8ccab4d52dd50a34f}\label{class_c_u_d_a_1_1_c_u_d_a_exception_aa7a841a01de7ebd8ccab4d52dd50a34f}} 
+\index{CUDA::CUDAException@{CUDA::CUDAException}!what@{what}}
+\index{what@{what}!CUDA::CUDAException@{CUDA::CUDAException}}
+\doxysubsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily virtual const char $\ast$ CUDA\+::\+CUDAException\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Get the exception message. 
+
+\begin{DoxyReturn}{Returns}
+const char$\ast$ \mbox{\hyperlink{class_exception}{Exception}} message 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_exception_a0b8d17c8edff8888ad3652aaf97e4c0b}{Exception}}.
+
+Here is the caller graph for this function\+:
+% FIG 2
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+headers/\mbox{\hyperlink{cuda__utils_8h}{cuda\+\_\+utils.\+h}}\end{DoxyCompactItemize}

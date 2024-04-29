@@ -1,0 +1,37 @@
+digraph "main"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Main function."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="CUDA::CUDAException\l::get_error",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_u_d_a_1_1_c_u_d_a_exception.html#ac8a05e1bbac53efec484d1a107cc6eb4",tooltip="Get the CUDA error."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Utils::info",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_utils.html#ace6934aad7553d4fa9891e34afe23254",tooltip="Application information."];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="CUDA::Utils::is_gpu\l_available",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_c_u_d_a_1_1_utils.html#a4d2175570accb1f866c819ad3d984537",tooltip="Check if a GPU is available."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Utils::parse_mandatory\l_arguments",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_utils.html#a87f81a17a7978e7c2968490ab7134277",tooltip="Parse mandatory arguments."];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="Utils::parse_options",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_utils.html#a57085921573df272b730d8dc0e33b703",tooltip="Parse command line arguments."];
+  Node6 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="CUDA::Utils::select_gpu",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_c_u_d_a_1_1_utils.html#a368032f0338fadbd527f5de59fc3bbc4",tooltip="Select a GPU."];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="Utils::parse_type",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_utils.html#a9b26c6a3f0f0d3f094d034815e687c15",tooltip="Parse XVA type."];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="Utils::split_string",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_utils.html#a56c6508c58c2bf4bc5a4953000f0cc7d",tooltip="Split a string."];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="CPUSimulation::run\l_simulation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_c_p_u_simulation.html#a632c99c15666e72e49c81f8a8e4e26b5",tooltip="Run the simulation on CPU."];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="NMC::generate_equity\l_paths",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_n_m_c.html#a4f78aec3e5b28b148240c6826404e53e",tooltip="Generate equity paths."];
+  Node10 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="NMC::generate_fx_rate\l_paths",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_n_m_c.html#af827702fd99f1016dbe7b9db0645a0ce",tooltip="Generate FX rate paths."];
+  Node10 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="NMC::generate_interest\l_rate_paths",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_n_m_c.html#abfcc036d9d6ecc018f16f974f1cdac5c",tooltip="Generate interrest rate paths."];
+  Node10 -> Node14 [color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="NMC::run",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_n_m_c.html#aedbd705fcc7e948ffa5f81e7eadf3abe",tooltip="Run the nested Monte Carlo system."];
+  Node1 -> Node15 [color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="CUDA::CUDAException\l::what",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_c_u_d_a_1_1_c_u_d_a_exception.html#aa7a841a01de7ebd8ccab4d52dd50a34f",tooltip="Get the exception message."];
+}

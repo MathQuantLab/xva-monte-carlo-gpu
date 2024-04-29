@@ -11,13 +11,98 @@
 bool \mbox{\hyperlink{namespace_c_u_d_a_1_1_utils_a4d2175570accb1f866c819ad3d984537}{is\+\_\+gpu\+\_\+available}} () noexcept
 \begin{DoxyCompactList}\small\item\em Check if a GPU is available. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespace_c_u_d_a_1_1_utils_a368032f0338fadbd527f5de59fc3bbc4}{select\+\_\+gpu}} (int device\+\_\+id)
-\begin{DoxyCompactList}\small\item\em Select a GPU. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Select a GPU. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespace_c_u_d_a_1_1_utils_a7dcb1432b22e9ebb25665afc4bce494b}{get\+\_\+gpu\+\_\+id}} ()
+\begin{DoxyCompactList}\small\item\em Get the GPU device id. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_c_u_d_a_a8849517350a758e3d271679b0b2bd173}{Grid\+Block\+Size}} \mbox{\hyperlink{namespace_c_u_d_a_1_1_utils_ac6f92685943e14b9c024a157e55ed412}{get\+\_\+grid\+\_\+size}} ()
+\begin{DoxyCompactList}\small\item\em Get the grid size for the current device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_c_u_d_a_a8849517350a758e3d271679b0b2bd173}{Grid\+Block\+Size}} \mbox{\hyperlink{namespace_c_u_d_a_1_1_utils_a3536cca03d8b32df973ea9e6e05aeb68}{get\+\_\+grid\+\_\+size}} (int device\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Get the grid size for a specific device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_c_u_d_a_a8849517350a758e3d271679b0b2bd173}{Grid\+Block\+Size}} \mbox{\hyperlink{namespace_c_u_d_a_1_1_utils_a117649b42f37ee252259c00d4ae60f96}{get\+\_\+block\+\_\+size}} ()
+\begin{DoxyCompactList}\small\item\em Get the block size for the current device. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_c_u_d_a_a8849517350a758e3d271679b0b2bd173}{Grid\+Block\+Size}} \mbox{\hyperlink{namespace_c_u_d_a_1_1_utils_a76e7ec77a1458b07570a75a88b17774e}{get\+\_\+block\+\_\+size}} (int device\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Get the block size for a specific device. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 \mbox{\hyperlink{namespace_c_u_d_a}{CUDA}} utils functions. 
 
 \doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespace_c_u_d_a_1_1_utils_a117649b42f37ee252259c00d4ae60f96}\label{namespace_c_u_d_a_1_1_utils_a117649b42f37ee252259c00d4ae60f96}} 
+\index{CUDA::Utils@{CUDA::Utils}!get\_block\_size@{get\_block\_size}}
+\index{get\_block\_size@{get\_block\_size}!CUDA::Utils@{CUDA::Utils}}
+\doxysubsubsection{\texorpdfstring{get\_block\_size()}{get\_block\_size()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_c_u_d_a_a8849517350a758e3d271679b0b2bd173}{Grid\+Block\+Size}} CUDA\+::\+Utils\+::get\+\_\+block\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the block size for the current device. 
+
+\begin{DoxyReturn}{Returns}
+Grid\+Block\+Size Block size for current device 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespace_c_u_d_a_1_1_utils_a76e7ec77a1458b07570a75a88b17774e}\label{namespace_c_u_d_a_1_1_utils_a76e7ec77a1458b07570a75a88b17774e}} 
+\index{CUDA::Utils@{CUDA::Utils}!get\_block\_size@{get\_block\_size}}
+\index{get\_block\_size@{get\_block\_size}!CUDA::Utils@{CUDA::Utils}}
+\doxysubsubsection{\texorpdfstring{get\_block\_size()}{get\_block\_size()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_c_u_d_a_a8849517350a758e3d271679b0b2bd173}{Grid\+Block\+Size}} CUDA\+::\+Utils\+::get\+\_\+block\+\_\+size (\begin{DoxyParamCaption}\item[{int}]{device\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Get the block size for a specific device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device\+\_\+id} & GPU device id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Grid\+Block\+Size Block size for the device 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespace_c_u_d_a_1_1_utils_a7dcb1432b22e9ebb25665afc4bce494b}\label{namespace_c_u_d_a_1_1_utils_a7dcb1432b22e9ebb25665afc4bce494b}} 
+\index{CUDA::Utils@{CUDA::Utils}!get\_gpu\_id@{get\_gpu\_id}}
+\index{get\_gpu\_id@{get\_gpu\_id}!CUDA::Utils@{CUDA::Utils}}
+\doxysubsubsection{\texorpdfstring{get\_gpu\_id()}{get\_gpu\_id()}}
+{\footnotesize\ttfamily int CUDA\+::\+Utils\+::get\+\_\+gpu\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the GPU device id. 
+
+\begin{DoxyReturn}{Returns}
+int GPU device id 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespace_c_u_d_a_1_1_utils_ac6f92685943e14b9c024a157e55ed412}\label{namespace_c_u_d_a_1_1_utils_ac6f92685943e14b9c024a157e55ed412}} 
+\index{CUDA::Utils@{CUDA::Utils}!get\_grid\_size@{get\_grid\_size}}
+\index{get\_grid\_size@{get\_grid\_size}!CUDA::Utils@{CUDA::Utils}}
+\doxysubsubsection{\texorpdfstring{get\_grid\_size()}{get\_grid\_size()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_c_u_d_a_a8849517350a758e3d271679b0b2bd173}{Grid\+Block\+Size}} CUDA\+::\+Utils\+::get\+\_\+grid\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the grid size for the current device. 
+
+\begin{DoxyReturn}{Returns}
+Grid\+Block\+Size Grid size for current device 
+\end{DoxyReturn}
+\mbox{\Hypertarget{namespace_c_u_d_a_1_1_utils_a3536cca03d8b32df973ea9e6e05aeb68}\label{namespace_c_u_d_a_1_1_utils_a3536cca03d8b32df973ea9e6e05aeb68}} 
+\index{CUDA::Utils@{CUDA::Utils}!get\_grid\_size@{get\_grid\_size}}
+\index{get\_grid\_size@{get\_grid\_size}!CUDA::Utils@{CUDA::Utils}}
+\doxysubsubsection{\texorpdfstring{get\_grid\_size()}{get\_grid\_size()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespace_c_u_d_a_a8849517350a758e3d271679b0b2bd173}{Grid\+Block\+Size}} CUDA\+::\+Utils\+::get\+\_\+grid\+\_\+size (\begin{DoxyParamCaption}\item[{int}]{device\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Get the grid size for a specific device. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em device\+\_\+id} & GPU device id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Grid\+Block\+Size Grid size for the device 
+\end{DoxyReturn}
 \mbox{\Hypertarget{namespace_c_u_d_a_1_1_utils_a4d2175570accb1f866c819ad3d984537}\label{namespace_c_u_d_a_1_1_utils_a4d2175570accb1f866c819ad3d984537}} 
 \index{CUDA::Utils@{CUDA::Utils}!is\_gpu\_available@{is\_gpu\_available}}
 \index{is\_gpu\_available@{is\_gpu\_available}!CUDA::Utils@{CUDA::Utils}}

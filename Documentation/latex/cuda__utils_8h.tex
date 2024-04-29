@@ -28,17 +28,32 @@ class \mbox{\hyperlink{class_c_u_d_a_1_1_c_u_d_a_exception}{CUDA\+::\+CUDAExcept
 \doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
- \mbox{\hyperlink{namespace_c_u_d_a}{CUDA}}
+namespace \mbox{\hyperlink{namespace_c_u_d_a}{CUDA}}
 \begin{DoxyCompactList}\small\item\em All \mbox{\hyperlink{namespace_c_u_d_a}{CUDA}} functions. \end{DoxyCompactList}\item 
- \mbox{\hyperlink{namespace_c_u_d_a_1_1_utils}{CUDA\+::\+Utils}}
+namespace \mbox{\hyperlink{namespace_c_u_d_a_1_1_utils}{CUDA\+::\+Utils}}
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespace_c_u_d_a}{CUDA}} utils functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::tuple$<$ int, int, int $>$ \mbox{\hyperlink{namespace_c_u_d_a_a8849517350a758e3d271679b0b2bd173}{CUDA\+::\+Grid\+Block\+Size}}
+\begin{DoxyCompactList}\small\item\em Grid block size. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{namespace_c_u_d_a_1_1_utils_a4d2175570accb1f866c819ad3d984537}{CUDA\+::\+Utils\+::is\+\_\+gpu\+\_\+available}} () noexcept
 \begin{DoxyCompactList}\small\item\em Check if a GPU is available. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespace_c_u_d_a_1_1_utils_a368032f0338fadbd527f5de59fc3bbc4}{CUDA\+::\+Utils\+::select\+\_\+gpu}} (int device\+\_\+id)
-\begin{DoxyCompactList}\small\item\em Select a GPU. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Select a GPU. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{namespace_c_u_d_a_1_1_utils_a7dcb1432b22e9ebb25665afc4bce494b}{CUDA\+::\+Utils\+::get\+\_\+gpu\+\_\+id}} ()
+\begin{DoxyCompactList}\small\item\em Get the GPU device id. \end{DoxyCompactList}\item 
+Grid\+Block\+Size \mbox{\hyperlink{namespace_c_u_d_a_1_1_utils_ac6f92685943e14b9c024a157e55ed412}{CUDA\+::\+Utils\+::get\+\_\+grid\+\_\+size}} ()
+\begin{DoxyCompactList}\small\item\em Get the grid size for the current device. \end{DoxyCompactList}\item 
+Grid\+Block\+Size \mbox{\hyperlink{namespace_c_u_d_a_1_1_utils_a3536cca03d8b32df973ea9e6e05aeb68}{CUDA\+::\+Utils\+::get\+\_\+grid\+\_\+size}} (int device\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Get the grid size for a specific device. \end{DoxyCompactList}\item 
+Grid\+Block\+Size \mbox{\hyperlink{namespace_c_u_d_a_1_1_utils_a117649b42f37ee252259c00d4ae60f96}{CUDA\+::\+Utils\+::get\+\_\+block\+\_\+size}} ()
+\begin{DoxyCompactList}\small\item\em Get the block size for the current device. \end{DoxyCompactList}\item 
+Grid\+Block\+Size \mbox{\hyperlink{namespace_c_u_d_a_1_1_utils_a76e7ec77a1458b07570a75a88b17774e}{CUDA\+::\+Utils\+::get\+\_\+block\+\_\+size}} (int device\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Get the block size for a specific device. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}

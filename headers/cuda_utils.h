@@ -20,6 +20,12 @@
 namespace CUDA
 {
     /**
+     * @brief Grid block size
+     *
+     */
+    typedef std::tuple<int, int, int> GridBlockSize;
+
+    /**
      * @brief CUDA utils functions
      *
      */
@@ -40,6 +46,43 @@ namespace CUDA
          * @throws CUDAException If the id is invalid or if the device cannot be selected
          */
         void select_gpu(int device_id);
+
+        /**
+         * @brief Get the GPU device id
+         *
+         * @return int GPU device id
+         */
+        inline int get_gpu_id();
+
+        /**
+         * @brief Get the grid size for the current device
+         *
+         * @return GridBlockSize Grid size for current device
+         */
+        GridBlockSize get_grid_size();
+
+        /**
+         * @brief Get the grid size for a specific device
+         *
+         * @param device_id GPU device id
+         * @return GridBlockSize Grid size for the device
+         */
+        GridBlockSize get_grid_size(int device_id);
+
+        /**
+         * @brief Get the block size for the current device
+         *
+         * @return GridBlockSize Block size for current device
+         */
+        GridBlockSize get_block_size();
+
+        /**
+         * @brief Get the block size for a specific device
+         *
+         * @param device_id GPU device id
+         * @return GridBlockSize Block size for the device
+         */
+        GridBlockSize get_block_size(int device_id);
     };
 
     /**

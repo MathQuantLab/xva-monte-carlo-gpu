@@ -1,0 +1,41 @@
+\hypertarget{nmc_8h_source}{}\doxysection{nmc.\+h}
+\label{nmc_8h_source}\index{headers/nmc.h@{headers/nmc.h}}
+\mbox{\hyperlink{nmc_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}../headers/pch.h"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}../headers/utils.h"{}}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{22 \textcolor{keyword}{class }\mbox{\hyperlink{class_n_m_c}{NMC}}}
+\DoxyCodeLine{23 \{}
+\DoxyCodeLine{24 \textcolor{keyword}{public}:}
+\DoxyCodeLine{29     \mbox{\hyperlink{class_n_m_c_aef6ae888f909a08a4aff19c5e00b6c43}{NMC}}() = \textcolor{keyword}{delete};}
+\DoxyCodeLine{43     \mbox{\hyperlink{class_n_m_c_a99fd99c16b370a8570b22be5bd701866}{NMC}}(\textcolor{keywordtype}{double} \mbox{\hyperlink{class_n_m_c_aa1b0d86b068ca1f03d528255d408f91b}{m0}}, \textcolor{keywordtype}{double} \mbox{\hyperlink{class_n_m_c_ae575b0ac490ef07fca7ff9989cb03314}{m1}}, \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_n_m_c_a1a9c1d55c398da1339bc26e2ac77922d}{nb\_points}}, \textcolor{keywordtype}{double} \mbox{\hyperlink{class_n_m_c_a64cee84a16eb041960b4016c37ccbb96}{T}}) : \mbox{\hyperlink{class_n_m_c_aa1b0d86b068ca1f03d528255d408f91b}{m0}}(\mbox{\hyperlink{class_n_m_c_aa1b0d86b068ca1f03d528255d408f91b}{m0}}), \mbox{\hyperlink{class_n_m_c_ae575b0ac490ef07fca7ff9989cb03314}{m1}}(\mbox{\hyperlink{class_n_m_c_ae575b0ac490ef07fca7ff9989cb03314}{m1}}), \mbox{\hyperlink{class_n_m_c_a1a9c1d55c398da1339bc26e2ac77922d}{nb\_points}}(\mbox{\hyperlink{class_n_m_c_a1a9c1d55c398da1339bc26e2ac77922d}{nb\_points}}), \mbox{\hyperlink{class_n_m_c_a64cee84a16eb041960b4016c37ccbb96}{T}}(\mbox{\hyperlink{class_n_m_c_a64cee84a16eb041960b4016c37ccbb96}{T}}) \{\}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{49     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_n_m_c_a95aec6f812d0e27a554b374fe4b7855c}{\string~NMC}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{58     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_n_m_c_aedbd705fcc7e948ffa5f81e7eadf3abe}{run}}(\mbox{\hyperlink{pch_8h_a53054d12c7fd5c029fd5baf8caa1d9a1}{XVA}} xva, \textcolor{keywordtype}{double} factor, \textcolor{keyword}{const} std::map<\mbox{\hyperlink{pch_8h_a1388f46797f19b2b6d1fc65184776253}{ExternalPaths}}, std::vector<Vector>> \&external\_paths, \mbox{\hyperlink{pch_8h_ac7ce98196a5fadeb82ff94df591a363a}{Matrix}}\& paths) \textcolor{keyword}{const};}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{65     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_n_m_c_abfcc036d9d6ecc018f16f974f1cdac5c}{generate\_interest\_rate\_paths}}(std::vector<Vector>\& paths) \textcolor{keyword}{const};}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{72     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_n_m_c_af827702fd99f1016dbe7b9db0645a0ce}{generate\_fx\_rate\_paths}}(std::vector<Vector>\& paths) \textcolor{keyword}{const};}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{79     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_n_m_c_a4f78aec3e5b28b148240c6826404e53e}{generate\_equity\_paths}}(std::vector<Vector>\& paths) \textcolor{keyword}{const};}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{86     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_n_m_c_a1b3f1a2d42b7e1a62899352a4701f4f5}{get\_m0}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_n_m_c_aa1b0d86b068ca1f03d528255d408f91b}{m0}}; \};}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{93     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_n_m_c_ac0376cc2cf9f111efe8b1c49678b6fd5}{get\_m1}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_n_m_c_ae575b0ac490ef07fca7ff9989cb03314}{m1}}; \};}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{100     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_n_m_c_ab7500a1af1942ceb3cb71ebb2339be05}{get\_nb\_points}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_n_m_c_a1a9c1d55c398da1339bc26e2ac77922d}{nb\_points}}; \};}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{107     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_n_m_c_abfdc259cd6856ca3467f9e22708195a2}{get\_T}}()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_n_m_c_a64cee84a16eb041960b4016c37ccbb96}{T}}; \};}
+\DoxyCodeLine{108 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{113     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_n_m_c_aa1b0d86b068ca1f03d528255d408f91b}{m0}};}
+\DoxyCodeLine{118     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_n_m_c_ae575b0ac490ef07fca7ff9989cb03314}{m1}};}
+\DoxyCodeLine{123     \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{class_n_m_c_a1a9c1d55c398da1339bc26e2ac77922d}{nb\_points}};}
+\DoxyCodeLine{128     \textcolor{keywordtype}{double} \mbox{\hyperlink{class_n_m_c_a64cee84a16eb041960b4016c37ccbb96}{T}};}
+\DoxyCodeLine{129 \};}
+
+\end{DoxyCode}

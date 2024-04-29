@@ -1,0 +1,12 @@
+digraph "NMC::run"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="NMC::run",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Run the nested Monte Carlo system."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="CPUSimulation::run\l_simulation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_c_p_u_simulation.html#a632c99c15666e72e49c81f8a8e4e26b5",tooltip="Run the simulation on CPU."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97",tooltip="Main function."];
+}

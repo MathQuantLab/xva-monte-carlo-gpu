@@ -1,0 +1,46 @@
+\hypertarget{cuda__utils_8h_source}{}\doxysection{cuda\+\_\+utils.\+h}
+\label{cuda__utils_8h_source}\index{headers/cuda\_utils.h@{headers/cuda\_utils.h}}
+\mbox{\hyperlink{cuda__utils_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}../headers/pch.h"{}}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{20 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_c_u_d_a}{CUDA}}}
+\DoxyCodeLine{21 \{}
+\DoxyCodeLine{26     \textcolor{keyword}{typedef} std::tuple<int, int, int> \mbox{\hyperlink{namespace_c_u_d_a_a8849517350a758e3d271679b0b2bd173}{GridBlockSize}};}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{32     \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_utils}{Utils}}}
+\DoxyCodeLine{33     \{}
+\DoxyCodeLine{40         \textcolor{keywordtype}{bool} \mbox{\hyperlink{namespace_c_u_d_a_1_1_utils_a4d2175570accb1f866c819ad3d984537}{is\_gpu\_available}}() noexcept;}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{48         \textcolor{keywordtype}{void} \mbox{\hyperlink{namespace_c_u_d_a_1_1_utils_a368032f0338fadbd527f5de59fc3bbc4}{select\_gpu}}(\textcolor{keywordtype}{int} device\_id);}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{55         inline \textcolor{keywordtype}{int} \mbox{\hyperlink{namespace_c_u_d_a_1_1_utils_a7dcb1432b22e9ebb25665afc4bce494b}{get\_gpu\_id}}();}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{62         \mbox{\hyperlink{namespace_c_u_d_a_a8849517350a758e3d271679b0b2bd173}{GridBlockSize}} \mbox{\hyperlink{namespace_c_u_d_a_1_1_utils_ac6f92685943e14b9c024a157e55ed412}{get\_grid\_size}}();}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{70         \mbox{\hyperlink{namespace_c_u_d_a_a8849517350a758e3d271679b0b2bd173}{GridBlockSize}} \mbox{\hyperlink{namespace_c_u_d_a_1_1_utils_ac6f92685943e14b9c024a157e55ed412}{get\_grid\_size}}(\textcolor{keywordtype}{int} device\_id);}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{77         \mbox{\hyperlink{namespace_c_u_d_a_a8849517350a758e3d271679b0b2bd173}{GridBlockSize}} \mbox{\hyperlink{namespace_c_u_d_a_1_1_utils_a117649b42f37ee252259c00d4ae60f96}{get\_block\_size}}();}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{85         \mbox{\hyperlink{namespace_c_u_d_a_a8849517350a758e3d271679b0b2bd173}{GridBlockSize}} \mbox{\hyperlink{namespace_c_u_d_a_1_1_utils_a117649b42f37ee252259c00d4ae60f96}{get\_block\_size}}(\textcolor{keywordtype}{int} device\_id);}
+\DoxyCodeLine{86     \};}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{92     class \mbox{\hyperlink{class_c_u_d_a_1_1_c_u_d_a_exception}{CUDAException}} : public \mbox{\hyperlink{class_exception}{Exception}}}
+\DoxyCodeLine{93     \{}
+\DoxyCodeLine{94     \textcolor{keyword}{public}:}
+\DoxyCodeLine{101         \mbox{\hyperlink{class_c_u_d_a_1_1_c_u_d_a_exception_a99362a4d0cb58bc9ce7c365e7b732911}{CUDAException}}(\textcolor{keyword}{const} std::string \&message, cudaError\_t error) : \mbox{\hyperlink{class_exception}{Exception}}(message), m\_error(error) \{\}}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{107         \textcolor{keyword}{virtual} \mbox{\hyperlink{class_c_u_d_a_1_1_c_u_d_a_exception_a71d3e63cc36450e3fa9ef098c7e9c91c}{\string~CUDAException}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{114         cudaError\_t \mbox{\hyperlink{class_c_u_d_a_1_1_c_u_d_a_exception_ac8a05e1bbac53efec484d1a107cc6eb4}{get\_error}}() const noexcept \{ \textcolor{keywordflow}{return} m\_error; \}}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{121         \textcolor{keyword}{virtual} \textcolor{keyword}{const} \textcolor{keywordtype}{char} *\mbox{\hyperlink{class_c_u_d_a_1_1_c_u_d_a_exception_aa7a841a01de7ebd8ccab4d52dd50a34f}{what}}() const noexcept override;}
+\DoxyCodeLine{122     private:}
+\DoxyCodeLine{123         cudaError\_t m\_error;}
+\DoxyCodeLine{124     \};}
+\DoxyCodeLine{125 \}}
+
+\end{DoxyCode}

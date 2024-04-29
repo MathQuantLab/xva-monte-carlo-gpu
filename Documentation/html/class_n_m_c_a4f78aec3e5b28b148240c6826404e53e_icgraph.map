@@ -1,5 +1,5 @@
 <map id="NMC::generate_equity_paths" name="NMC::generate_equity_paths">
 <area shape="rect" id="node1" title="Generate equity paths." alt="" coords="304,5,471,47"/>
-<area shape="rect" id="node2" href="$namespace_c_p_u_simulation.html#aad0d730a7128c5b415f9200655c12715" title="Run the simulation on CPU." alt="" coords="108,5,256,47"/>
+<area shape="rect" id="node2" href="$namespace_c_p_u_simulation.html#a632c99c15666e72e49c81f8a8e4e26b5" title="Run the simulation on CPU." alt="" coords="108,5,256,47"/>
 <area shape="rect" id="node3" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function." alt="" coords="5,13,60,39"/>
 </map>

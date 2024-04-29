@@ -1,0 +1,49 @@
+\hypertarget{pch_8h_source}{}\doxysection{pch.\+h}
+\label{pch_8h_source}\index{headers/pch.h@{headers/pch.h}}
+\mbox{\hyperlink{pch_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <cuda.h>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <cuda\_runtime.h>}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include <stdexcept>}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include <exception>}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include <filesystem>}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{27 \textcolor{keyword}{class }\mbox{\hyperlink{class_exception}{Exception}} : \textcolor{keyword}{public} std::exception}
+\DoxyCodeLine{28 \{}
+\DoxyCodeLine{29 \textcolor{keyword}{public}:}
+\DoxyCodeLine{35     \mbox{\hyperlink{class_exception_a472b7904dadf1047ba48c23741888456}{Exception}}(\textcolor{keyword}{const} std::string \&message) : \mbox{\hyperlink{class_exception_a3283a359dcd394128a22371285edc55d}{m\_message}}(message) \{\}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{41     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_exception_a5c134c74b84c0a7a4c106ac60cabe10c}{\string~Exception}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{48     \textcolor{keyword}{virtual} \textcolor{keyword}{const} \textcolor{keywordtype}{char} *\mbox{\hyperlink{class_exception_a0b8d17c8edff8888ad3652aaf97e4c0b}{what}}() const noexcept\textcolor{keyword}{ override }\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_exception_a3283a359dcd394128a22371285edc55d}{m\_message}}.c\_str(); \}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{51     std::string \mbox{\hyperlink{class_exception_a3283a359dcd394128a22371285edc55d}{m\_message}};}
+\DoxyCodeLine{52 \};}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{58 \textcolor{keyword}{enum} \mbox{\hyperlink{pch_8h_a53054d12c7fd5c029fd5baf8caa1d9a1}{XVA}}}
+\DoxyCodeLine{59 \{}
+\DoxyCodeLine{64     \mbox{\hyperlink{pch_8h_a53054d12c7fd5c029fd5baf8caa1d9a1a7e2aaafb79803e878bfea9643e456a5e}{CVA}},}
+\DoxyCodeLine{69     \mbox{\hyperlink{pch_8h_a53054d12c7fd5c029fd5baf8caa1d9a1abadf42799080d4b04cb166bff84dc28d}{DVA}},}
+\DoxyCodeLine{74     \mbox{\hyperlink{pch_8h_a53054d12c7fd5c029fd5baf8caa1d9a1abf807f197f9a543224bd038a8f8559d4}{FVA}},}
+\DoxyCodeLine{79     \mbox{\hyperlink{pch_8h_a53054d12c7fd5c029fd5baf8caa1d9a1ad03511ae5a35c690b8030d5304518d52}{MVA}},}
+\DoxyCodeLine{84     \mbox{\hyperlink{pch_8h_a53054d12c7fd5c029fd5baf8caa1d9a1ada73e17e9a41dcc275179dd518571207}{KVA}}}
+\DoxyCodeLine{85 \};}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{91 \textcolor{keyword}{typedef} std::vector<double> \mbox{\hyperlink{pch_8h_a5dd127bb3cb18b011cf5fd80a906e830}{Vector}};}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{97 \textcolor{keyword}{typedef} std::vector<Vector> \mbox{\hyperlink{pch_8h_ac7ce98196a5fadeb82ff94df591a363a}{Matrix}};}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{103 \textcolor{keyword}{enum} \mbox{\hyperlink{pch_8h_a1388f46797f19b2b6d1fc65184776253}{ExternalPaths}} \{}
+\DoxyCodeLine{108     \mbox{\hyperlink{pch_8h_a1388f46797f19b2b6d1fc65184776253a6fb749649c54feb81233d19c93116a86}{Interest}},}
+\DoxyCodeLine{113     \mbox{\hyperlink{pch_8h_a1388f46797f19b2b6d1fc65184776253a48b424735b6e21a4a4fe044feaee5a50}{FX}},}
+\DoxyCodeLine{118     \mbox{\hyperlink{pch_8h_a1388f46797f19b2b6d1fc65184776253afca045892cfb54a0a740fda38d76448e}{Equity}}}
+\DoxyCodeLine{119 \};}
+
+\end{DoxyCode}
