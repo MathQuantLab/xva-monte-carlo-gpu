@@ -6,7 +6,7 @@ else
 	ifeq ($(OS), Windows_NT)
 		CFLAGS=-g -G -std=c++17 -I./Include -DDEBUG
 	else
-		CFLAGS=CFLAGS=-g -G -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -I./Include -DDEBUG
+		CFLAGS=-g -G -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -I./Include -DDEBUG
 	endif
 endif
 
