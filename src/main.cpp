@@ -27,17 +27,11 @@ using namespace std;
  */
 int main(int argc, char *argv[])
 {
+    std::cout << "\t\t-----XVA CUDA-enabled computation system-----" << std::endl;
     if (argc < 2)
     {
         Utils::info(argv[0]);
         return 0;
-    }
-
-    if (argc < 6)
-    {
-        cerr << "Missing arguments" << endl;
-        Utils::info(argv[0]);
-        return 1;
     }
 
     try
@@ -47,6 +41,13 @@ int main(int argc, char *argv[])
         double T(0);
 
         int first_mandatory_argument = Utils::parse_options(argc, argv, gpu);
+
+        if (argc < 6)
+        {
+            cerr << "Missing arguments" << endl;
+            Utils::info(argv[0]);
+            return 1;
+        }
 
         if (first_mandatory_argument + 5 != argc)
         {

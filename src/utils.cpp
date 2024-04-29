@@ -23,7 +23,7 @@ using namespace std;
 
 void Utils::info(const char *name)
 {
-    cout << "Usage: " << name << " [options] <m0> <m1> <data-file> <N> <T> <type>" << endl;
+    cout << "Usage: " << name << " [options] <m0> <m1> <N> <T> <type>" << endl;
     cout << "Options:" << endl;
     cout << "  -h, --help      Display this information" << endl;
     cout << "  -v, --version   Display application version" << endl;
