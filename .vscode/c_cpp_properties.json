@@ -15,7 +15,7 @@
         {
             "name": "Debug",
             "includePath": [
-                "/home/thomas/Projets/xva-monte-carlo-gpu/**",
+                "${workspaceFolder}/**",
                 "/usr/local/cuda-12.2/targets/x86_64-linux/include"
             ],
             "defines": [
@@ -29,8 +29,7 @@
             "mergeConfigurations": false,
             "browse": {
                 "path": [
-                    "/home/thomas/Projets/xva-monte-carlo-gpu/**",
-                    "${workspaceFolder}"
+                    "${workspaceFolder}/**"
                 ],
                 "limitSymbolsToIncludedHeaders": true
             },
