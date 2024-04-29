@@ -89,7 +89,7 @@ namespace CUDA
      * @brief CUDA exception
      * 
      */
-    class CUDAException : public Exception
+    class CUDAException final: public Exception
     {
     public:
         /**
