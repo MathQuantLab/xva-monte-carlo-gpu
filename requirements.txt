@@ -1,3 +1,4 @@
 aiohttp
 matplotlib
 numpy
+torch
