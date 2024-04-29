@@ -71,7 +71,7 @@ int main(int argc, char *argv[])
         cout << "XVA requested:" << endl;
         for (const auto &xva : xvas)
         {
-            cout << xva.first << " with value " << xva.second << endl;
+            cout << Utils::pretty_print_xva_name(xva.first) << " with value " << xva.second << endl;
         }
 #endif
 

@@ -4,9 +4,9 @@
  * @brief Provides utility functions
  * @version 1.0
  * @date 2024-04-21
- * 
+ *
  * @copyright Copyright (c) 2024
- * 
+ *
  */
 
 #pragma once
@@ -17,7 +17,7 @@
 
 /**
  * @brief Provides utility functions
- * 
+ *
  */
 namespace Utils
 {
@@ -39,7 +39,7 @@ namespace Utils
 
     /**
      * @brief Parse mandatory arguments
-     * 
+     *
      * @param argc Number of arguments
      * @param argv Arguments
      * @param m0 Number of external trajectories
@@ -55,7 +55,7 @@ namespace Utils
      * @param str String to parse
      * @param xvas XVA types
      */
-    void parse_type(const std::string& str, std::map<XVA, double> &xvas);
+    void parse_type(const std::string &str, std::map<XVA, double> &xvas);
 
     /**
      * @brief Split a string
@@ -65,4 +65,12 @@ namespace Utils
      * @param tokens Tokens
      */
     void split_string(const std::string &str, const std::string &delim, std::vector<std::string> &tokens);
+
+    /**
+     * @brief Pretty print XVA name
+     *
+     * @param xva XVA type
+     * @return const char* XVA name
+     */
+    const char *pretty_print_xva_name(XVA xva);
 }

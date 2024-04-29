@@ -18,7 +18,7 @@
 
 void NMC::run(XVA xva, double factor, const std::map<ExternalPaths, std::vector<Vector>> &external_paths, Matrix &paths) const
 {
-    std::cout << "Running NMC for XVA " << xva << " on thread " << std::this_thread::get_id() << " with factor " << factor << std::endl;
+    std::cout << "Running NMC for XVA " << Utils::pretty_print_xva_name(xva) << " on thread " << std::this_thread::get_id() << " with factor " << factor << std::endl;
     paths.resize(m1);
     for (size_t i = 0; i < paths.size(); i++)
     {

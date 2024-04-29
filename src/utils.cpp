@@ -181,3 +181,22 @@ void Utils::parse_mandatory_arguments(int argc, char *argv[], size_t &m0, size_t
         throw Exception("Invalid horizon");
     }
 }
+
+const char *Utils::pretty_print_xva_name(XVA xva)
+{
+    switch (xva)
+    {
+    case XVA::CVA:
+        return "Credit Valuation Adjustment";
+    case XVA::DVA:
+        return "Debit Valuation Adjustment";
+    case XVA::FVA:
+        return "Funding Valuation Adjustment";
+    case XVA::MVA:
+        return "Margin Valuation Adjustment";
+    case XVA::KVA:
+        return "Capital Valuation Adjustment";
+    default:
+        return "Unknown";
+    }
+}
