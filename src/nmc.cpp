@@ -152,27 +152,47 @@ void NMC::run(XVA xva, double factor, const std::map<ExternalPaths, std::vector<
         EPE[i] -= factor;
         DPE[i] = factor - DPE[i];
     }
+    
+    double loss_given_default = 0.4;
+    double funding_cost = 0.05;
+    double capital_cost = 0.1;
 
     switch (xva)
     {
     case CVA:
-        /* code */
+        for (size_t i = 0; i < nb_points; i++)
+        {
+            final_path[i] = EPE[i] * (1 - loss_given_default) * 0.01;
+        }
         break;
 
     case DVA:
-        /* code */
+        for (size_t i = 0; i < nb_points; i++)
+        {
+            final_path[i] = DPE[i] * (1 - loss_given_default) * 0.01;
+        }
         break;
 
     case FVA:
-        /* code */
+        for (size_t i = 0; i < nb_points; i++)
+        {
+            final_path[i] = std::max(EPE[i] - DPE[i], 0.0) * funding_cost * exp(-0.03 * i * T / nb_points);
+        }
+        
         break;
 
     case MVA:
-        /* code */
+        for (size_t i = 0; i < nb_points; i++)
+        {
+            final_path[i] = EPE[i] * funding_cost * exp(-0.03 * i * T / nb_points);
+        }
         break;
 
     case KVA:
-        /* code */
+        for (size_t i = 0; i < nb_points; i++)
+        {
+            final_path[i] = EPE[i] * capital_cost * exp(-0.03 * i * T / nb_points);
+        }
         break;
 
     default:
