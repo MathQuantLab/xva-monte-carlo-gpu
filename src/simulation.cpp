@@ -13,8 +13,8 @@
 #include <thread>
 #include <iostream>
 
-void CPUSimulation::run_simulation(std::map<XVA, double> xvas,
-                                   double m0, double m1,
+void CPUSimulation::run_simulation(const std::map<XVA, double>& xvas,
+                                   size_t m0, size_t m1,
                                    size_t nb_points, double T,
                                    std::map<ExternalPaths, std::vector<Vector>> &external_paths,
                                    std::map<XVA, Vector> &paths)

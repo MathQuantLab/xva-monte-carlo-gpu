@@ -13,11 +13,184 @@
 
 #include <curand_kernel.h>
 
-void CUDA::Simulation::run_simulation(std::map<XVA, double> xva,
-                    double m0, double m1,
+/**
+ * @brief Generate a sample from a Gaussian distribution
+ * 
+ * @param mean 
+ * @param std_dev 
+ * @param state 
+ * @return double Gaussian sample
+ */
+__device__ double generate_gaussian_sample(double mean, double std_dev, curandState *state)
+{
+    return mean + std_dev * curand_normal_double(state);
+}
+
+/**
+ * @brief Generate the external path for the interest rate on GPU
+ * 
+ * @param paths External paths
+ * @param m0 Number of paths
+ * @param N Size of each path
+ * @param T Time horizon
+ */
+__global__ void generate_external_path_interest_rate(double **paths, size_t *m0, size_t *N, double *T)
+{
+    double r0 = 0.03;
+    double k(0.5);
+    double theta = 0.04;
+    double sigma = 0.1;
+
+    double dt = *T / *N;
+
+    int idx = blockIdx.x * blockDim.x + threadIdx.x;
+
+    curandState state;
+    curand_init(1234, idx, 0, &state);
+
+    if (idx < *m0)
+    {
+        for (size_t i = 0; i < *N; i++)
+        {
+            double dW = generate_gaussian_sample(0, sqrt(dt), &state);
+            paths[idx][i] = paths[idx][i - 1] + k * (theta - paths[idx][i - 1]) * dt + sigma * dW * sqrt(paths[idx][i - 1]);
+        }
+    }
+}
+
+/**
+ * @brief Generate the external path for the FX rate on GPU
+ * 
+ * @param paths External paths
+ * @param m0 Number of paths
+ * @param N Size of each path
+ * @param T Time horizon
+ */
+__global__ void generate_external_path_fx(double **paths, size_t *m0, size_t *N, double *T)
+{
+    double S0 = 1.15;
+    double mu = 0.02;
+    double sigma = 0.1;
+
+    double dt = *T / *N;
+
+    int idx = blockIdx.x * blockDim.x + threadIdx.x;
+
+    curandState state;
+    curand_init(1234, idx, 0, &state);
+
+    if (idx < *m0)
+    {
+        for (size_t i = 0; i < *N; i++)
+        {
+            double dW = generate_gaussian_sample(0, sqrt(dt), &state);
+            paths[idx][i] = paths[idx][i - 1] * exp((mu - 0.5 * sigma * sigma) * dt + sigma * dW);
+        }
+    }
+}
+
+__global__ void generate_external_path_equity(double **paths, size_t *m0, size_t *N, double *T)
+{
+    double S0 = 100;
+    double mu = 0.05;
+    double sigma = 0.2;
+
+    double dt = *T / *N;
+
+    int idx = blockIdx.x * blockDim.x + threadIdx.x;
+
+    curandState state;
+    curand_init(1234, idx, 0, &state);
+
+    if (idx < *m0)
+    {
+        for (size_t i = 0; i < *N; i++)
+        {
+            double dW = generate_gaussian_sample(0, sqrt(dt), &state);
+            paths[idx][i] = paths[idx][i - 1] * exp((mu - 0.5 * sigma * sigma) * dt + sigma * dW);
+        }
+    }
+}
+
+void CUDA::Simulation::run_simulation(const std::map<XVA, double>& xva,
+                    size_t m0, size_t m1,
                     size_t nb_points, double T,
                     std::map<ExternalPaths, std::vector<Vector>> &external_paths,
                     std::map<XVA, Vector> &paths)
 {
+    double *d_T;
+    size_t *d_N, *d_m0, *d_m1;
+    double **d_paths;
+    double **generated_paths = new double*[m0];
 
+
+    cudaMalloc(&d_m0, sizeof(size_t));
+    cudaMalloc(&d_m1, sizeof(size_t));
+    cudaMalloc(&d_T, sizeof(double));
+    cudaMalloc(&d_N, sizeof(size_t));
+
+    cudaMemcpy(d_m0, &m0, sizeof(size_t), cudaMemcpyHostToDevice);
+    cudaMemcpy(d_m1, &m1, sizeof(size_t), cudaMemcpyHostToDevice);
+    cudaMemcpy(d_T, &T, sizeof(double), cudaMemcpyHostToDevice);
+    cudaMemcpy(d_N, &nb_points, sizeof(size_t), cudaMemcpyHostToDevice);
+
+    cudaMalloc(&d_paths, m0 * sizeof(double *));
+
+    for (size_t i = 0; i < m0; i++)
+    {
+        cudaMalloc(&d_paths[i], nb_points * sizeof(double));
+    }
+
+    generate_external_path_interest_rate<<<m0, 1>>>(d_paths, d_m0, d_N, d_T);
+    for (size_t i = 0; i < m0; i++)
+    {
+        generated_paths[i] = new double[nb_points];
+        cudaMemcpy(generated_paths[i], d_paths[i], nb_points * sizeof(double), cudaMemcpyDeviceToHost);
+        external_paths[ExternalPaths::Interest].push_back(Vector(nb_points));
+        for (size_t j = 0; j < nb_points; j++)
+        {
+            external_paths[ExternalPaths::Interest][i][j] = generated_paths[i][j];
+        }
+    }
+
+    generate_external_path_fx<<<m0, 1>>>(d_paths, d_m0, d_N, d_T);
+    for (size_t i = 0; i < m0; i++)
+    {
+        generated_paths[i] = new double[nb_points];
+        cudaMemcpy(generated_paths[i], d_paths[i], nb_points * sizeof(double), cudaMemcpyDeviceToHost);
+        external_paths[ExternalPaths::FX].push_back(Vector(nb_points));
+        for (size_t j = 0; j < nb_points; j++)
+        {
+            external_paths[ExternalPaths::FX][i][j] = generated_paths[i][j];
+        }
+    }
+
+    generate_external_path_equity<<<m0, 1>>>(d_paths, d_m0, d_N, d_T);
+    for (size_t i = 0; i < m0; i++)
+    {
+        generated_paths[i] = new double[nb_points];
+        cudaMemcpy(generated_paths[i], d_paths[i], nb_points * sizeof(double), cudaMemcpyDeviceToHost);
+        external_paths[ExternalPaths::Equity].push_back(Vector(nb_points));
+        for (size_t j = 0; j < nb_points; j++)
+        {
+            external_paths[ExternalPaths::Equity][i][j] = generated_paths[i][j];
+        }
+    }
+
+    for (size_t i = 0; i < m0; i++)
+    {
+        delete[] generated_paths[i];
+    }
+    delete[] generated_paths;
+
+    for (size_t i = 0; i < m0; i++)
+    {
+        cudaFree(d_paths[i]);
+    }
+
+    cudaFree(d_paths);
+    cudaFree(d_m0);
+    cudaFree(d_m1);
+    cudaFree(d_T);
+    cudaFree(d_N);
 }
