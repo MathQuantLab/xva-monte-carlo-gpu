@@ -91,6 +91,13 @@ int main(int argc, char *argv[])
             atexit([]() -> void
                    { cudaDeviceReset(); });
         }
+
+        cout << "Simulation done" << endl;
+        cout << "Writing results to file" << endl;
+
+        Utils::print_results(results, "Data/results.csv");
+
+        cout << "Results written to file" << endl;
     }
     catch (const CUDA::CUDAException &e)
     {

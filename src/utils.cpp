@@ -200,3 +200,37 @@ const char *Utils::pretty_print_xva_name(XVA xva)
         return "Unknown";
     }
 }
+
+void Utils::print_results(const std::map<XVA, Vector> &results, const std::string &filename)
+{
+    std::ofstream file(filename);
+
+    file << "T,";
+
+    for (const auto& xva: results)
+    {
+        file << pretty_print_xva_name(xva.first);
+        if (xva.first != results.rbegin()->first)
+        {
+            file << ",";
+        }
+    }
+
+    file << std::endl;
+
+    for (size_t i = 0; i < results.begin()->second.size(); i++)
+    {
+        file << i << ",";
+        for (const auto& xva: results)
+        {
+            file << xva.second[i];
+            if (xva.first != results.rbegin()->first)
+            {
+                file << ",";
+            }
+        }
+        file << std::endl;
+    }
+
+    file.close();
+}

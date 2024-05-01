@@ -73,4 +73,12 @@ namespace Utils
      * @return const char* XVA name
      */
     const char *pretty_print_xva_name(XVA xva);
+
+    /**
+     * @brief Print results
+     *
+     * @param results Results
+     * @param filename Filename
+     */
+    void print_results(const std::map<XVA, Vector> &results, const std::string &filename);
 }
