@@ -13,3 +13,11 @@
 
 #include <curand_kernel.h>
 
+void CUDA::Simulation::run_simulation(std::map<XVA, double> xva,
+                    double m0, double m1,
+                    size_t nb_points, double T,
+                    std::map<ExternalPaths, std::vector<Vector>> &external_paths,
+                    std::map<XVA, Vector> &paths)
+{
+
+}

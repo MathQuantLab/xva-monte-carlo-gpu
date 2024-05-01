@@ -15,6 +15,7 @@
 #include "../headers/cuda_utils.h"
 #include "../headers/utils.h"
 #include "../headers/simulation.h"
+#include "../headers/cuda_simulation.h"
 
 using namespace std;
 
@@ -90,6 +91,7 @@ int main(int argc, char *argv[])
             cout << "Running on GPU" << endl;
             atexit([]() -> void
                    { cudaDeviceReset(); });
+            CUDA::Simulation::run_simulation(xvas, m0, m1, N, T, external_paths, results);
         }
 
         cout << "Simulation done" << endl;

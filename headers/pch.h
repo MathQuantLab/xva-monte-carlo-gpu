@@ -19,6 +19,7 @@
 #include <exception>
 #include <vector>
 #include <filesystem>
+#include <map>
 
 /**
  * @brief Exception class

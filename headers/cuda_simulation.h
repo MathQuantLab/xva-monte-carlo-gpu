@@ -21,6 +21,21 @@ namespace CUDA
      */
     namespace Simulation
     {
-
+        /**
+         * @brief Run the simulation on GPU
+         *
+         * @param xva XVA types
+         * @param m0 Number of external paths
+         * @param m1 Number of internal paths
+         * @param nb_points Number of points
+         * @param T Time horizon
+         * @param external_paths External paths simulated
+         * @param paths Paths simulated
+         */
+        void run_simulation(std::map<XVA, double> xva,
+                            double m0, double m1,
+                            size_t nb_points, double T,
+                            std::map<ExternalPaths, std::vector<Vector>> &external_paths,
+                            std::map<XVA, Vector> &paths);
     }
 }
