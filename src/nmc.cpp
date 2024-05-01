@@ -21,32 +21,70 @@ void NMC::run(XVA xva, double factor, const std::map<ExternalPaths, std::vector<
     std::cout << "Running NMC for XVA " << Utils::pretty_print_xva_name(xva) << " on thread " << std::this_thread::get_id() << " with factor " << factor << std::endl;
     path.resize(m1);
 
-    Matrix paths(m1, Vector(nb_points));
+    std::map<ExternalPaths, Matrix> internal_paths;
+    std::map<ExternalPaths, Vector> mean_internal_paths;
+
+    for (auto const &external_path : external_paths)
+    {
+        internal_paths[external_path.first].resize(m1);
+        for (size_t i = 0; i < m1; i++)
+        {
+            internal_paths[external_path.first][i].resize(nb_points);
+        }
+    }
+
+    for (auto& internal_path : internal_paths)
+    {
+        generate_internal_paths(external_paths.at(internal_path.first), internal_path.second);
+    }
+
+    for (auto const &internal_path : internal_paths)
+    {
+        mean_internal_paths[internal_path.first].resize(nb_points);
+        for (size_t j = 0; j < nb_points; j++)
+        {
+            double sum = 0;
+            for (size_t i = 0; i < m1; i++)
+            {
+                sum += internal_path.second[i][j];
+            }
+            mean_internal_paths[internal_path.first][j] = sum / m1;
+        }
+    }
+
+    for (size_t i = 0; i < nb_points; i++)
+    {
+        double sum = 0;
+        for (auto const &internal_path : internal_paths)
+        {
+            sum += mean_internal_paths[internal_path.first][i];
+        }
+        path[i] = sum / 3;
+    }
 
     switch (xva)
     {
     case CVA:
-        generate_internal_paths(external_paths.at(ExternalPaths::Interest), paths);
+        /* code */
         break;
-    
+
     case DVA:
-        generate_internal_paths(external_paths.at(ExternalPaths::Interest), paths);
+        /* code */
         break;
 
     case FVA:
-        generate_internal_paths(external_paths.at(ExternalPaths::Interest), paths);
+        /* code */
         break;
 
     case MVA:
-        generate_internal_paths(external_paths.at(ExternalPaths::Interest), paths);
+        /* code */
         break;
 
     case KVA:
-        generate_internal_paths(external_paths.at(ExternalPaths::Interest), paths);
+        /* code */
         break;
     
     default:
-        std::cerr << "XVA not supported" << std::endl;
         break;
     }
 }
