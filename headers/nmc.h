@@ -126,4 +126,12 @@ protected:
      * 
      */
     double T;
+private:
+    /**
+     * @brief Generate internal paths
+     * 
+     * @param external_paths External paths
+     * @param paths Internal paths
+     */
+    void generate_internal_paths(const Matrix& external_paths, Matrix& paths) const;
 };
