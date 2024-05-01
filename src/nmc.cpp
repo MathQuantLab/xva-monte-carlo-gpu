@@ -16,14 +16,12 @@
 #include <random>
 #include <cmath>
 
-void NMC::run(XVA xva, double factor, const std::map<ExternalPaths, std::vector<Vector>> &external_paths, Matrix &paths) const
+void NMC::run(XVA xva, double factor, const std::map<ExternalPaths, std::vector<Vector>> &external_paths, Vector &path) const
 {
     std::cout << "Running NMC for XVA " << Utils::pretty_print_xva_name(xva) << " on thread " << std::this_thread::get_id() << " with factor " << factor << std::endl;
-    paths.resize(m1);
-    for (size_t i = 0; i < paths.size(); i++)
-    {
-        paths[i].resize(nb_points);
-    }
+    path.resize(m1);
+
+    Matrix paths(m1, Vector(nb_points));
 
     switch (xva)
     {

@@ -78,7 +78,7 @@ int main(int argc, char *argv[])
         cout << xvas.size() << " XVA requested" << endl;
 
         std::map<ExternalPaths, std::vector<Vector>> external_paths;
-        std::map<XVA, Matrix> results;
+        std::map<XVA, Vector> results;
 
         if (!gpu)
         {

@@ -17,7 +17,7 @@ void CPUSimulation::run_simulation(std::map<XVA, double> xvas,
                                    double m0, double m1,
                                    size_t nb_points, double T,
                                    std::map<ExternalPaths, std::vector<Vector>> &external_paths,
-                                   std::map<XVA, Matrix> &paths)
+                                   std::map<XVA, Vector> &paths)
 {
     NMC nmc(m0, m1, nb_points, T);
 
