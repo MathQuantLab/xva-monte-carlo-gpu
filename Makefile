@@ -6,9 +6,11 @@ else
 	ifeq ($(OS), Windows_NT)
 		CFLAGS=-g -G -std=c++17 -I./Include -DDEBUG
 	else
-		CFLAGS=-g -G -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -I./Include -DDEBUG
+		CFLAGS=-g -G -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -I./Include -DDEBUG 
 	endif
 endif
+
+LIBS=-lcurand
 
 ifeq ($(OS), Windows_NT)
 	DEL=del /Q
@@ -26,7 +28,7 @@ windows: bin/xva.exe
 
 bin/xva.out: obj/main.o obj/cuda_utils.o obj/pch.o obj/utils.o obj/cuda_simulation.o obj/simulation.o obj/nmc.o
 	@echo "Building Linux binary..."
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ $^ $(LIBS)
 
 obj/main.o: src/main.cpp headers/cuda_utils.h headers/utils.h headers/simulation.h
 	@echo "Compiling main.cpp..."
@@ -60,7 +62,7 @@ obj/nmc.o: src/nmc.cpp headers/nmc.h headers/pch.h
 
 bin/xva.exe: obj/main.obj obj/cuda_utils.obj obj/pch.obj obj/utils.obj obj/cuda_simulation.obj obj/simulation.obj obj/nmc.obj
 	@echo "Building Linux binary..."
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ $^ $(LIBS)
 
 obj/main.obj: src/main.cpp headers/cuda_utils.h headers/utils.h headers/simulation.h
 	@echo "Compiling main.cpp..."
