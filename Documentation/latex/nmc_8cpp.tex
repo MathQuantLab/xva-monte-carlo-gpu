@@ -2,7 +2,7 @@
 \label{nmc_8cpp}\index{src/nmc.cpp@{src/nmc.cpp}}
 
 
-Implements {\ttfamily \mbox{\hyperlink{nmc_8h}{nmc.\+h}}}.  
+Implements \mbox{\hyperlink{nmc_8h}{nmc.\+h}}.  
 
 
 {\ttfamily \#include \char`\"{}../headers/nmc.\+h\char`\"{}}\newline
@@ -17,10 +17,21 @@ Include dependency graph for nmc.\+cpp\+:\nopagebreak
 \includegraphics[width=350pt]{nmc_8cpp__incl}
 \end{center}
 \end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{nmc_8cpp_a780de791b06b86cae775e988169bcec8}{maximum}} (const std\+::vector$<$ T $>$ \&a, const std\+::vector$<$ T $>$ \&b, std\+::vector$<$ T $>$ \&c)
+\begin{DoxyCompactList}\small\item\em Compute the maximum of two vectors element-\/wise. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{nmc_8cpp_a58115f045d4e1d9d7ca360e364b5ff62}{maximum}} (const std\+::vector$<$ T $>$ \&a, const T \&b, std\+::vector$<$ T $>$ \&c)
+\begin{DoxyCompactList}\small\item\em Compute the maximum of two vectors element-\/wise. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{nmc_8cpp_acec49ab1ec75d276cdaedac256fd0e7c}{minimum}} (const std\+::vector$<$ T $>$ \&a, const std\+::vector$<$ T $>$ \&b, std\+::vector$<$ T $>$ \&c)
+\begin{DoxyCompactList}\small\item\em Compute the minimum of two vectors element-\/wise. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{nmc_8cpp_acc53bfb6df268a764f3a2b52bc8adc5b}{minimum}} (const std\+::vector$<$ T $>$ \&a, const T \&b, std\+::vector$<$ T $>$ \&c)
+\begin{DoxyCompactList}\small\item\em Compute the minimum of two vectors element-\/wise. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Implements {\ttfamily \mbox{\hyperlink{nmc_8h}{nmc.\+h}}}. 
+Implements \mbox{\hyperlink{nmc_8h}{nmc.\+h}}. 
 
 \begin{DoxyAuthor}{Author}
 Thomas Roiseux (thomas.\+roiseux@mathquantlab.\+com) 
@@ -34,3 +45,106 @@ Thomas Roiseux (thomas.\+roiseux@mathquantlab.\+com)
 \begin{DoxyCopyright}{Copyright}
 Copyright (c) 2024 
 \end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{nmc_8cpp_a780de791b06b86cae775e988169bcec8}\label{nmc_8cpp_a780de791b06b86cae775e988169bcec8}} 
+\index{nmc.cpp@{nmc.cpp}!maximum@{maximum}}
+\index{maximum@{maximum}!nmc.cpp@{nmc.cpp}}
+\doxysubsubsection{\texorpdfstring{maximum()}{maximum()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void maximum (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ T $>$ \&}]{a,  }\item[{const std\+::vector$<$ T $>$ \&}]{b,  }\item[{std\+::vector$<$ T $>$ \&}]{c }\end{DoxyParamCaption})}
+
+
+
+Compute the maximum of two vectors element-\/wise. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Element type \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em a} & First vector \\
+\hline
+{\em b} & Second vector \\
+\hline
+{\em c} & Output vector \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{nmc_8cpp_a58115f045d4e1d9d7ca360e364b5ff62}\label{nmc_8cpp_a58115f045d4e1d9d7ca360e364b5ff62}} 
+\index{nmc.cpp@{nmc.cpp}!maximum@{maximum}}
+\index{maximum@{maximum}!nmc.cpp@{nmc.cpp}}
+\doxysubsubsection{\texorpdfstring{maximum()}{maximum()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void maximum (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ T $>$ \&}]{a,  }\item[{const T \&}]{b,  }\item[{std\+::vector$<$ T $>$ \&}]{c }\end{DoxyParamCaption})}
+
+
+
+Compute the maximum of two vectors element-\/wise. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Element type \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em a} & First vector \\
+\hline
+{\em b} & Second vector \\
+\hline
+{\em c} & Output vector \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{nmc_8cpp_acec49ab1ec75d276cdaedac256fd0e7c}\label{nmc_8cpp_acec49ab1ec75d276cdaedac256fd0e7c}} 
+\index{nmc.cpp@{nmc.cpp}!minimum@{minimum}}
+\index{minimum@{minimum}!nmc.cpp@{nmc.cpp}}
+\doxysubsubsection{\texorpdfstring{minimum()}{minimum()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void minimum (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ T $>$ \&}]{a,  }\item[{const std\+::vector$<$ T $>$ \&}]{b,  }\item[{std\+::vector$<$ T $>$ \&}]{c }\end{DoxyParamCaption})}
+
+
+
+Compute the minimum of two vectors element-\/wise. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Element type \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em a} & First vector \\
+\hline
+{\em b} & Second vector \\
+\hline
+{\em c} & Output vector \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{nmc_8cpp_acc53bfb6df268a764f3a2b52bc8adc5b}\label{nmc_8cpp_acc53bfb6df268a764f3a2b52bc8adc5b}} 
+\index{nmc.cpp@{nmc.cpp}!minimum@{minimum}}
+\index{minimum@{minimum}!nmc.cpp@{nmc.cpp}}
+\doxysubsubsection{\texorpdfstring{minimum()}{minimum()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void minimum (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ T $>$ \&}]{a,  }\item[{const T \&}]{b,  }\item[{std\+::vector$<$ T $>$ \&}]{c }\end{DoxyParamCaption})}
+
+
+
+Compute the minimum of two vectors element-\/wise. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Element type \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em a} & First vector \\
+\hline
+{\em b} & Second vector \\
+\hline
+{\em c} & Output vector \\
+\hline
+\end{DoxyParams}

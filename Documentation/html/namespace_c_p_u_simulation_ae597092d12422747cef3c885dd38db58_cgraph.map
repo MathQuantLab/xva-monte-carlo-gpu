@@ -1,0 +1,8 @@
+<map id="CPUSimulation::run_simulation" name="CPUSimulation::run_simulation">
+<area shape="rect" id="node1" title="Run the simulation on CPU." alt="" coords="5,104,153,145"/>
+<area shape="rect" id="node2" href="$class_n_m_c.html#a4f78aec3e5b28b148240c6826404e53e" title="Generate equity paths." alt="" coords="206,5,373,47"/>
+<area shape="rect" id="node3" href="$class_n_m_c.html#af827702fd99f1016dbe7b9db0645a0ce" title="Generate FX rate paths." alt="" coords="203,71,375,112"/>
+<area shape="rect" id="node4" href="$class_n_m_c.html#abfcc036d9d6ecc018f16f974f1cdac5c" title="Generate interrest rate paths." alt="" coords="201,136,377,177"/>
+<area shape="rect" id="node5" href="$class_n_m_c.html#ac1d977c229356b5a51da849883af8ddc" title="Run the nested Monte Carlo system." alt="" coords="248,202,331,229"/>
+<area shape="rect" id="node6" href="$namespace_utils.html#a846878409c8c41d43bb545191a0a988d" title="Pretty print XVA name." alt="" coords="425,195,561,236"/>
+</map>

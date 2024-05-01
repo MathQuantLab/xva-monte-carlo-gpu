@@ -26,7 +26,7 @@ virtual \mbox{\hyperlink{class_c_u_d_a_1_1_c_u_d_a_exception_a71d3e63cc36450e3fa
 \begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{class_c_u_d_a_1_1_c_u_d_a_exception}{CUDAException}} object. \end{DoxyCompactList}\item 
 cuda\+Error\+\_\+t \mbox{\hyperlink{class_c_u_d_a_1_1_c_u_d_a_exception_ac8a05e1bbac53efec484d1a107cc6eb4}{get\+\_\+error}} () const noexcept
 \begin{DoxyCompactList}\small\item\em Get the \mbox{\hyperlink{namespace_c_u_d_a}{CUDA}} error. \end{DoxyCompactList}\item 
-virtual const char $\ast$ \mbox{\hyperlink{class_c_u_d_a_1_1_c_u_d_a_exception_aa7a841a01de7ebd8ccab4d52dd50a34f}{what}} () const noexcept override
+virtual const char $\ast$ \mbox{\hyperlink{class_c_u_d_a_1_1_c_u_d_a_exception_a33cba537cb439017a0c2db0a3f12c6db}{what}} () const noexcept override
 \begin{DoxyCompactList}\small\item\em Get the exception message. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
@@ -85,11 +85,11 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=285pt]{class_c_u_d_a_1_1_c_u_d_a_exception_ac8a05e1bbac53efec484d1a107cc6eb4_icgraph}
 \end{center}
 \end{figure}
-\mbox{\Hypertarget{class_c_u_d_a_1_1_c_u_d_a_exception_aa7a841a01de7ebd8ccab4d52dd50a34f}\label{class_c_u_d_a_1_1_c_u_d_a_exception_aa7a841a01de7ebd8ccab4d52dd50a34f}} 
+\mbox{\Hypertarget{class_c_u_d_a_1_1_c_u_d_a_exception_a33cba537cb439017a0c2db0a3f12c6db}\label{class_c_u_d_a_1_1_c_u_d_a_exception_a33cba537cb439017a0c2db0a3f12c6db}} 
 \index{CUDA::CUDAException@{CUDA::CUDAException}!what@{what}}
 \index{what@{what}!CUDA::CUDAException@{CUDA::CUDAException}}
 \doxysubsubsection{\texorpdfstring{what()}{what()}}
-{\footnotesize\ttfamily virtual const char $\ast$ CUDA\+::\+CUDAException\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+{\footnotesize\ttfamily virtual const char$\ast$ CUDA\+::\+CUDAException\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
 
 
 
@@ -100,10 +100,15 @@ const char$\ast$ \mbox{\hyperlink{class_exception}{Exception}} message
 \end{DoxyReturn}
 
 
-Reimplemented from \mbox{\hyperlink{class_exception_a0b8d17c8edff8888ad3652aaf97e4c0b}{Exception}}.
+Reimplemented from \mbox{\hyperlink{class_exception_aff1ffa577d01f0044ae61baa2c63cb9e}{Exception}}.
 
-Here is the caller graph for this function\+:
-% FIG 2
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{class_c_u_d_a_1_1_c_u_d_a_exception_a33cba537cb439017a0c2db0a3f12c6db_icgraph}
+\end{center}
+\end{figure}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

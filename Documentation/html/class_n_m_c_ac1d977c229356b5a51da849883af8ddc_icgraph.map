@@ -1,0 +1,5 @@
+<map id="NMC::run" name="NMC::run">
+<area shape="rect" id="node1" title="Run the nested Monte Carlo system." alt="" coords="304,13,387,39"/>
+<area shape="rect" id="node2" href="$namespace_c_p_u_simulation.html#ae597092d12422747cef3c885dd38db58" title="Run the simulation on CPU." alt="" coords="108,5,256,47"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function." alt="" coords="5,13,60,39"/>
+</map>

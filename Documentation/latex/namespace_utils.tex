@@ -17,7 +17,11 @@ void \mbox{\hyperlink{namespace_utils_a87f81a17a7978e7c2968490ab7134277}{parse\+
 void \mbox{\hyperlink{namespace_utils_a9b26c6a3f0f0d3f094d034815e687c15}{parse\+\_\+type}} (const std\+::string \&str, std\+::map$<$ \mbox{\hyperlink{pch_8h_a53054d12c7fd5c029fd5baf8caa1d9a1}{XVA}}, double $>$ \&xvas)
 \begin{DoxyCompactList}\small\item\em Parse XVA type. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespace_utils_a56c6508c58c2bf4bc5a4953000f0cc7d}{split\+\_\+string}} (const std\+::string \&str, const std\+::string \&delim, std\+::vector$<$ std\+::string $>$ \&tokens)
-\begin{DoxyCompactList}\small\item\em Split a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Split a string. \end{DoxyCompactList}\item 
+const char $\ast$ \mbox{\hyperlink{namespace_utils_a846878409c8c41d43bb545191a0a988d}{pretty\+\_\+print\+\_\+xva\+\_\+name}} (\mbox{\hyperlink{pch_8h_a53054d12c7fd5c029fd5baf8caa1d9a1}{XVA}} xva)
+\begin{DoxyCompactList}\small\item\em Pretty print XVA name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespace_utils_a88715f24214e0669a3a70dd66135ad90}{print\+\_\+results}} (const std\+::map$<$ \mbox{\hyperlink{pch_8h_a53054d12c7fd5c029fd5baf8caa1d9a1}{XVA}}, \mbox{\hyperlink{pch_8h_a5dd127bb3cb18b011cf5fd80a906e830}{Vector}} $>$ \&results, const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Print results. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -142,6 +146,47 @@ Here is the caller graph for this function\+:\nopagebreak
 \includegraphics[width=256pt]{namespace_utils_a9b26c6a3f0f0d3f094d034815e687c15_icgraph}
 \end{center}
 \end{figure}
+\mbox{\Hypertarget{namespace_utils_a846878409c8c41d43bb545191a0a988d}\label{namespace_utils_a846878409c8c41d43bb545191a0a988d}} 
+\index{Utils@{Utils}!pretty\_print\_xva\_name@{pretty\_print\_xva\_name}}
+\index{pretty\_print\_xva\_name@{pretty\_print\_xva\_name}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{pretty\_print\_xva\_name()}{pretty\_print\_xva\_name()}}
+{\footnotesize\ttfamily const char $\ast$ Utils\+::pretty\+\_\+print\+\_\+xva\+\_\+name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{pch_8h_a53054d12c7fd5c029fd5baf8caa1d9a1}{XVA}}}]{xva }\end{DoxyParamCaption})}
+
+
+
+Pretty print XVA name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xva} & XVA type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const char$\ast$ XVA name 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+% FIG 0
+\mbox{\Hypertarget{namespace_utils_a88715f24214e0669a3a70dd66135ad90}\label{namespace_utils_a88715f24214e0669a3a70dd66135ad90}} 
+\index{Utils@{Utils}!print\_results@{print\_results}}
+\index{print\_results@{print\_results}!Utils@{Utils}}
+\doxysubsubsection{\texorpdfstring{print\_results()}{print\_results()}}
+{\footnotesize\ttfamily void Utils\+::print\+\_\+results (\begin{DoxyParamCaption}\item[{const std\+::map$<$ \mbox{\hyperlink{pch_8h_a53054d12c7fd5c029fd5baf8caa1d9a1}{XVA}}, \mbox{\hyperlink{pch_8h_a5dd127bb3cb18b011cf5fd80a906e830}{Vector}} $>$ \&}]{results,  }\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Print results. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em results} & Results \\
+\hline
+{\em filename} & Filename \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+% FIG 1
+Here is the caller graph for this function\+:
+% FIG 2
 \mbox{\Hypertarget{namespace_utils_a56c6508c58c2bf4bc5a4953000f0cc7d}\label{namespace_utils_a56c6508c58c2bf4bc5a4953000f0cc7d}} 
 \index{Utils@{Utils}!split\_string@{split\_string}}
 \index{split\_string@{split\_string}!Utils@{Utils}}

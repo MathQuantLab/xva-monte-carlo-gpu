@@ -1,17 +1,19 @@
 <map id="main" name="main">
-<area shape="rect" id="node1" title="Main function." alt="" coords="5,225,60,251"/>
+<area shape="rect" id="node1" title="Main function." alt="" coords="5,279,60,306"/>
 <area shape="rect" id="node2" href="$class_c_u_d_a_1_1_c_u_d_a_exception.html#ac8a05e1bbac53efec484d1a107cc6eb4" title="Get the CUDA error." alt="" coords="110,5,281,47"/>
-<area shape="rect" id="node3" href="$namespace_utils.html#ace6934aad7553d4fa9891e34afe23254" title="Application information." alt="" coords="376,153,461,179"/>
+<area shape="rect" id="node3" href="$namespace_utils.html#ace6934aad7553d4fa9891e34afe23254" title="Application information." alt="" coords="376,138,461,165"/>
 <area shape="rect" id="node4" href="$namespace_c_u_d_a_1_1_utils.html#a4d2175570accb1f866c819ad3d984537" title="Check if a GPU is available." alt="" coords="121,123,269,164"/>
 <area shape="rect" id="node5" href="$namespace_utils.html#a87f81a17a7978e7c2968490ab7134277" title="Parse mandatory arguments." alt="" coords="108,188,283,229"/>
 <area shape="rect" id="node6" href="$namespace_utils.html#a57085921573df272b730d8dc0e33b703" title="Parse command line arguments." alt="" coords="120,254,271,281"/>
 <area shape="rect" id="node8" href="$namespace_utils.html#a9b26c6a3f0f0d3f094d034815e687c15" title="Parse XVA type." alt="" coords="129,305,261,331"/>
-<area shape="rect" id="node10" href="$namespace_c_p_u_simulation.html#a632c99c15666e72e49c81f8a8e4e26b5" title="Run the simulation on CPU." alt="" coords="121,388,269,429"/>
-<area shape="rect" id="node15" href="$class_c_u_d_a_1_1_c_u_d_a_exception.html#aa7a841a01de7ebd8ccab4d52dd50a34f" title="Get the exception message." alt="" coords="110,453,281,495"/>
-<area shape="rect" id="node7" href="$namespace_c_u_d_a_1_1_utils.html#a368032f0338fadbd527f5de59fc3bbc4" title="Select a GPU." alt="" coords="331,237,507,263"/>
-<area shape="rect" id="node9" href="$namespace_utils.html#a56c6508c58c2bf4bc5a4953000f0cc7d" title="Split a string." alt="" coords="353,287,485,314"/>
-<area shape="rect" id="node11" href="$class_n_m_c.html#a4f78aec3e5b28b148240c6826404e53e" title="Generate equity paths." alt="" coords="335,339,502,380"/>
-<area shape="rect" id="node12" href="$class_n_m_c.html#af827702fd99f1016dbe7b9db0645a0ce" title="Generate FX rate paths." alt="" coords="333,404,505,445"/>
-<area shape="rect" id="node13" href="$class_n_m_c.html#abfcc036d9d6ecc018f16f974f1cdac5c" title="Generate interrest rate paths." alt="" coords="331,469,507,511"/>
-<area shape="rect" id="node14" href="$class_n_m_c.html#aedbd705fcc7e948ffa5f81e7eadf3abe" title="Run the nested Monte Carlo system." alt="" coords="377,535,460,562"/>
+<area shape="rect" id="node10" href="$namespace_utils.html#a846878409c8c41d43bb545191a0a988d" title="Pretty print XVA name." alt="" coords="555,399,691,440"/>
+<area shape="rect" id="node11" href="$namespace_utils.html#a88715f24214e0669a3a70dd66135ad90" title="Print results." alt="" coords="348,406,489,433"/>
+<area shape="rect" id="node12" href="$namespace_c_p_u_simulation.html#ae597092d12422747cef3c885dd38db58" title="Run the simulation on CPU." alt="" coords="121,491,269,532"/>
+<area shape="rect" id="node17" href="$class_c_u_d_a_1_1_c_u_d_a_exception.html#a33cba537cb439017a0c2db0a3f12c6db" title="Get the exception message." alt="" coords="110,556,281,597"/>
+<area shape="rect" id="node7" href="$namespace_c_u_d_a_1_1_utils.html#a368032f0338fadbd527f5de59fc3bbc4" title="Select a GPU." alt="" coords="331,254,507,281"/>
+<area shape="rect" id="node9" href="$namespace_utils.html#a56c6508c58c2bf4bc5a4953000f0cc7d" title="Split a string." alt="" coords="353,305,485,331"/>
+<area shape="rect" id="node13" href="$class_n_m_c.html#a4f78aec3e5b28b148240c6826404e53e" title="Generate equity paths." alt="" coords="335,457,502,499"/>
+<area shape="rect" id="node14" href="$class_n_m_c.html#af827702fd99f1016dbe7b9db0645a0ce" title="Generate FX rate paths." alt="" coords="333,523,505,564"/>
+<area shape="rect" id="node15" href="$class_n_m_c.html#abfcc036d9d6ecc018f16f974f1cdac5c" title="Generate interrest rate paths." alt="" coords="331,588,507,629"/>
+<area shape="rect" id="node16" href="$class_n_m_c.html#ac1d977c229356b5a51da849883af8ddc" title="Run the nested Monte Carlo system." alt="" coords="377,654,460,681"/>
 </map>
