@@ -50,7 +50,8 @@ __global__ void generate_external_path_interest_rate(double **paths, size_t *m0,
 
     if (idx < *m0)
     {
-        for (size_t i = 0; i < *N; i++)
+        paths[idx][0] = r0;
+        for (size_t i = 1; i < *N; i++)
         {
             double dW = generate_gaussian_sample(0, sqrt(dt), &state);
             paths[idx][i] = paths[idx][i - 1] + k * (theta - paths[idx][i - 1]) * dt + sigma * dW * sqrt(paths[idx][i - 1]);
@@ -81,7 +82,8 @@ __global__ void generate_external_path_fx(double **paths, size_t *m0, size_t *N,
 
     if (idx < *m0)
     {
-        for (size_t i = 0; i < *N; i++)
+        paths[idx][0] = S0;
+        for (size_t i = 1; i < *N; i++)
         {
             double dW = generate_gaussian_sample(0, sqrt(dt), &state);
             paths[idx][i] = paths[idx][i - 1] * exp((mu - 0.5 * sigma * sigma) * dt + sigma * dW);
@@ -104,7 +106,8 @@ __global__ void generate_external_path_equity(double **paths, size_t *m0, size_t
 
     if (idx < *m0)
     {
-        for (size_t i = 0; i < *N; i++)
+        paths[idx][0] = S0;
+        for (size_t i = 1; i < *N; i++)
         {
             double dW = generate_gaussian_sample(0, sqrt(dt), &state);
             paths[idx][i] = paths[idx][i - 1] * exp((mu - 0.5 * sigma * sigma) * dt + sigma * dW);
