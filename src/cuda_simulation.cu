@@ -123,7 +123,7 @@ void CUDA::Simulation::run_simulation(const std::map<XVA, double>& xva,
 {
     double *d_T;
     size_t *d_N, *d_m0, *d_m1;
-    double **d_paths;
+    double **d_paths_interest, **d_paths_fx, **d_paths_equity;
     double **generated_paths = new double*[m0];
 
 
@@ -137,18 +137,18 @@ void CUDA::Simulation::run_simulation(const std::map<XVA, double>& xva,
     cudaMemcpy(d_T, &T, sizeof(double), cudaMemcpyHostToDevice);
     cudaMemcpy(d_N, &nb_points, sizeof(size_t), cudaMemcpyHostToDevice);
 
-    cudaMalloc(&d_paths, m0 * sizeof(double *));
+    cudaMalloc(&d_paths_interest, m0 * sizeof(double *));
 
     for (size_t i = 0; i < m0; i++)
     {
-        cudaMalloc(&d_paths[i], nb_points * sizeof(double));
+        cudaMalloc(&d_paths_interest[i], nb_points * sizeof(double));
     }
 
-    generate_external_path_interest_rate<<<m0, 1>>>(d_paths, d_m0, d_N, d_T);
+    generate_external_path_interest_rate<<<m0, 1>>>(d_paths_interest, d_m0, d_N, d_T);
     for (size_t i = 0; i < m0; i++)
     {
         generated_paths[i] = new double[nb_points];
-        cudaMemcpy(generated_paths[i], d_paths[i], nb_points * sizeof(double), cudaMemcpyDeviceToHost);
+        cudaMemcpy(generated_paths[i], d_paths_interest[i], nb_points * sizeof(double), cudaMemcpyDeviceToHost);
         external_paths[ExternalPaths::Interest].push_back(Vector(nb_points));
         for (size_t j = 0; j < nb_points; j++)
         {
@@ -156,11 +156,17 @@ void CUDA::Simulation::run_simulation(const std::map<XVA, double>& xva,
         }
     }
 
-    generate_external_path_fx<<<m0, 1>>>(d_paths, d_m0, d_N, d_T);
+    cudaMalloc(&d_paths_fx, m0 * sizeof(double *));
+    for (size_t i = 0; i < m0; i++)
+    {
+        cudaMalloc(&d_paths_fx[i], nb_points * sizeof(double));
+    }
+
+    generate_external_path_fx<<<m0, 1>>>(d_paths_fx, d_m0, d_N, d_T);
     for (size_t i = 0; i < m0; i++)
     {
         generated_paths[i] = new double[nb_points];
-        cudaMemcpy(generated_paths[i], d_paths[i], nb_points * sizeof(double), cudaMemcpyDeviceToHost);
+        cudaMemcpy(generated_paths[i], d_paths_fx[i], nb_points * sizeof(double), cudaMemcpyDeviceToHost);
         external_paths[ExternalPaths::FX].push_back(Vector(nb_points));
         for (size_t j = 0; j < nb_points; j++)
         {
@@ -168,11 +174,17 @@ void CUDA::Simulation::run_simulation(const std::map<XVA, double>& xva,
         }
     }
 
-    generate_external_path_equity<<<m0, 1>>>(d_paths, d_m0, d_N, d_T);
+    cudaMalloc(&d_paths_equity, m0 * sizeof(double *));
+    for (size_t i = 0; i < m0; i++)
+    {
+        cudaMalloc(&d_paths_equity[i], nb_points * sizeof(double));
+    }
+
+    generate_external_path_equity<<<m0, 1>>>(d_paths_equity, d_m0, d_N, d_T);
     for (size_t i = 0; i < m0; i++)
     {
         generated_paths[i] = new double[nb_points];
-        cudaMemcpy(generated_paths[i], d_paths[i], nb_points * sizeof(double), cudaMemcpyDeviceToHost);
+        cudaMemcpy(generated_paths[i], d_paths_equity[i], nb_points * sizeof(double), cudaMemcpyDeviceToHost);
         external_paths[ExternalPaths::Equity].push_back(Vector(nb_points));
         for (size_t j = 0; j < nb_points; j++)
         {
@@ -188,10 +200,14 @@ void CUDA::Simulation::run_simulation(const std::map<XVA, double>& xva,
 
     for (size_t i = 0; i < m0; i++)
     {
-        cudaFree(d_paths[i]);
+        cudaFree(d_paths_interest[i]);
+        cudaFree(d_paths_fx[i]);
+        cudaFree(d_paths_equity[i]);
     }
 
-    cudaFree(d_paths);
+    cudaFree(d_paths_interest);
+    cudaFree(d_paths_fx);
+    cudaFree(d_paths_equity);
     cudaFree(d_m0);
     cudaFree(d_m1);
     cudaFree(d_T);
