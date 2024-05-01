@@ -10,3 +10,6 @@
  */
 
 #include "../headers/cuda_simulation.h"
+
+#include <curand_kernel.h>
+
