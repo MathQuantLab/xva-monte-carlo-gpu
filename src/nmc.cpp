@@ -99,29 +99,27 @@ void minimum(const std::vector<T> &a, const T &b, std::vector<T> &c)
 void NMC::run(XVA xva, double factor, const std::map<ExternalPaths, std::vector<Vector>> &external_paths, Vector &final_path) const
 {
     std::cout << "Running NMC for XVA " << Utils::pretty_print_xva_name(xva) << " on thread " << std::this_thread::get_id() << " with factor " << factor << std::endl;
-    final_path.resize(nb_points);
 
     std::map<ExternalPaths, Matrix> internal_paths;
     std::map<ExternalPaths, Vector> mean_internal_paths;
     Vector path(nb_points);
 
-    for (auto const &external_path : external_paths)
+#ifdef DEBUG
+    std::cout << "Internal paths and mean internal paths initialized" << std::endl;
+#endif
+
+    for (auto &external_path : external_paths)
     {
-        internal_paths[external_path.first].resize(m1);
-        for (size_t i = 0; i < m1; i++)
-        {
-            internal_paths[external_path.first][i].resize(nb_points);
-        }
+        generate_internal_paths(external_paths.at(external_path.first),
+                                internal_paths[external_path.first]);
     }
 
-    for (auto &internal_path : internal_paths)
-    {
-        generate_internal_paths(external_paths.at(internal_path.first), internal_path.second);
-    }
+#ifdef DEBUG
+    std::cout << "Internal paths generated" << std::endl;
+#endif
 
     for (auto const &internal_path : internal_paths)
     {
-        mean_internal_paths[internal_path.first].resize(nb_points);
         for (size_t j = 0; j < nb_points; j++)
         {
             double sum = 0;
@@ -152,7 +150,7 @@ void NMC::run(XVA xva, double factor, const std::map<ExternalPaths, std::vector<
         EPE[i] -= factor;
         DPE[i] = factor - DPE[i];
     }
-    
+
     double loss_given_default = 0.4;
     double funding_cost = 0.05;
     double capital_cost = 0.1;
@@ -178,7 +176,7 @@ void NMC::run(XVA xva, double factor, const std::map<ExternalPaths, std::vector<
         {
             final_path[i] = std::max(EPE[i] - DPE[i], 0.0) * funding_cost * exp(-0.03 * i * T / nb_points);
         }
-        
+
         break;
 
     case MVA:
@@ -215,12 +213,11 @@ void NMC::generate_interest_rate_paths(std::vector<Vector> &paths) const
 
     for (size_t i = 0; i < paths.size(); i++)
     {
-        paths[i].resize(nb_points);
-        paths[i][0] = r0;
+        paths[i].push_back(r0);
         for (size_t j = 1; j < nb_points; j++)
         {
             double dW = std::normal_distribution<double>(0.0, std::sqrt(dt))(gen);
-            paths[i][j] = paths[i][j - 1] + k * (theta - paths[i][j - 1]) * dt + sigma * dW * std::sqrt(paths[i][j - 1]);
+            paths[i].push_back(paths[i][j - 1] + k * (theta - paths[i][j - 1]) * dt + sigma * dW * std::sqrt(paths[i][j - 1]));
 
             if (paths[i][j] < 0)
             {
@@ -244,12 +241,11 @@ void NMC::generate_fx_rate_paths(std::vector<Vector> &paths) const
 
     for (size_t i = 0; i < paths.size(); i++)
     {
-        paths[i].resize(nb_points);
-        paths[i][0] = S0;
+        paths[i].push_back(S0);
         for (size_t j = 1; j < nb_points; j++)
         {
             double dW = std::normal_distribution<double>(0.0, std::sqrt(dt))(gen);
-            paths[i][j] = paths[i][j - 1] * std::exp((mu - 0.5 * sigma * sigma) * dt + sigma * dW);
+            paths[i].push_back(paths[i][j - 1] * std::exp((mu - 0.5 * sigma * sigma) * dt + sigma * dW));
         }
     }
 }
@@ -268,12 +264,11 @@ void NMC::generate_equity_paths(std::vector<Vector> &paths) const
 
     for (size_t i = 0; i < paths.size(); i++)
     {
-        paths[i].resize(nb_points);
-        paths[i][0] = S0;
+        paths[i].push_back(S0);
         for (size_t j = 1; j < nb_points; j++)
         {
             double dW = std::normal_distribution<double>(0.0, std::sqrt(dt))(gen);
-            paths[i][j] = paths[i][j - 1] * std::exp((mu - 0.5 * sigma * sigma) * dt + sigma * dW);
+            paths[i].push_back(paths[i][j - 1] * std::exp((mu - 0.5 * sigma * sigma) * dt + sigma * dW));
         }
     }
 }
@@ -282,7 +277,15 @@ void NMC::generate_internal_paths(const Matrix &external_paths, Matrix &paths) c
 {
     std::cout << "Generating internal paths on thread " << std::this_thread::get_id() << std::endl;
 
-    paths[0] = external_paths[0];
+#ifdef DEBUG
+    std::cout << "External paths size:" << external_paths.size() << std::endl;
+    std::cout << "First path size:" << external_paths[0].size() << std::endl;
+#endif
+
+    for (size_t i = 0; i < nb_points; i++)
+    {
+        paths[0].push_back(external_paths[0][i]);
+    }
 
     std::random_device rd;
     std::mt19937 gen(rd());
@@ -297,7 +300,7 @@ void NMC::generate_internal_paths(const Matrix &external_paths, Matrix &paths) c
         for (size_t j = 1; j < nb_points; j++)
         {
             double dW = std::normal_distribution<double>(0.0, std::sqrt(dt))(gen);
-            paths[i][j] = paths[i][j - 1] * exp((mu - 0.5 * sigma * sigma) * dt + sigma * dW);
+            paths[i].push_back(paths[i][j - 1] * exp((mu - 0.5 * sigma * sigma) * dt + sigma * dW));
         }
     }
 }

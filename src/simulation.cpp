@@ -21,16 +21,9 @@ void CPUSimulation::run_simulation(const std::map<XVA, double>& xvas,
 {
     NMC nmc(m0, m1, nb_points, T);
 
-    std::cout << "Running simulation on CPU using at maximum " << std::thread::hardware_concurrency() << " threads" << std::endl;
-
-    for (auto &external_path : external_paths)
-    {
-        external_path.second.resize(m0);
-        for (size_t i = 0; i < external_path.second.size(); i++)
-        {
-            external_path.second[i].resize(nb_points);
-        }
-    }
+    external_paths[ExternalPaths::Interest] = std::vector<Vector>(m0);
+    external_paths[ExternalPaths::FX] = std::vector<Vector>(m0);
+    external_paths[ExternalPaths::Equity] = std::vector<Vector>(m0);
 
     std::thread interest_thread(&NMC::generate_interest_rate_paths, &nmc, std::ref(external_paths[ExternalPaths::Interest]));
     std::thread fx_thread(&NMC::generate_fx_rate_paths, &nmc, std::ref(external_paths[ExternalPaths::FX]));
@@ -39,6 +32,14 @@ void CPUSimulation::run_simulation(const std::map<XVA, double>& xvas,
     interest_thread.join();
     fx_thread.join();
     equity_thread.join();
+
+    #ifdef DEBUG
+        for (auto const &external_path : external_paths)
+        {
+            std::cout << "External path " << external_path.first << std::endl;
+            std::cout << "External path size: " << external_path.second.size() << std::endl;
+        }
+    #endif
 
     std::cout << "Interest, FX and Equity paths generated" << std::endl;
 
