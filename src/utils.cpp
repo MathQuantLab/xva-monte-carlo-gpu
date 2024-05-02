@@ -172,11 +172,11 @@ void Utils::parse_mandatory_arguments(int argc, char *argv[], size_t &m0, size_t
     {
         throw Exception("Invalid number of of internal trajectories");
     }
-    if (sscanf(argv[argc + 3], "%lu", &N) == 0)
+    if (sscanf(argv[argc + 2], "%lu", &N) == 0)
     {
         throw Exception("Invalid number of points");
     }
-    if (sscanf(argv[argc + 4], "%lf", &T) == 0)
+    if (sscanf(argv[argc + 3], "%lf", &T) == 0)
     {
         throw Exception("Invalid horizon");
     }

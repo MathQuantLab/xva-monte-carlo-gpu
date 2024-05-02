@@ -40,6 +40,8 @@ void CPUSimulation::run_simulation(const std::map<XVA, double>& xvas,
     fx_thread.join();
     equity_thread.join();
 
+    std::cout << "Interest, FX and Equity paths generated" << std::endl;
+
     std::thread *threads = new std::thread[xvas.size()];
 
     for (auto const &xva : xvas)
