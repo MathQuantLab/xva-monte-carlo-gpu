@@ -278,14 +278,20 @@ void NMC::generate_internal_paths(const Matrix &external_paths, Matrix &paths) c
     std::cout << "Generating internal paths on thread " << std::this_thread::get_id() << std::endl;
 
 #ifdef DEBUG
-    std::cout << "External paths size:" << external_paths.size() << std::endl;
-    std::cout << "First path size:" << external_paths[0].size() << std::endl;
+    std::cout << "External paths size: " << external_paths.size() << std::endl;
+    std::cout << "First path size: " << external_paths[0].size() << std::endl;
 #endif
+
+    paths.resize(m1);
 
     for (size_t i = 0; i < nb_points; i++)
     {
         paths[0].push_back(external_paths[0][i]);
     }
+
+    #ifdef DEBUG
+        std::cout << "First path generated" << std::endl;
+    #endif
 
     std::random_device rd;
     std::mt19937 gen(rd());
@@ -295,7 +301,7 @@ void NMC::generate_internal_paths(const Matrix &external_paths, Matrix &paths) c
 
     double dt = T / double(nb_points);
 
-    for (size_t i = 1; i < m1; i++)
+    for (size_t i = 0; i < m1; i++)
     {
         for (size_t j = 1; j < nb_points; j++)
         {
