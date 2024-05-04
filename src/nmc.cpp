@@ -131,6 +131,10 @@ void NMC::run(XVA xva, double factor, const std::map<ExternalPaths, std::vector<
         }
     }
 
+#ifdef DEBUG
+    std::cout << "Mean internal paths computed" << std::endl;
+#endif
+
     for (size_t i = 0; i < nb_points; i++)
     {
         double sum = 0;
@@ -303,6 +307,7 @@ void NMC::generate_internal_paths(const Matrix &external_paths, Matrix &paths) c
 
     for (size_t i = 0; i < m1; i++)
     {
+        paths[i].push_back(external_paths[0][0]);
         for (size_t j = 1; j < nb_points; j++)
         {
             double dW = std::normal_distribution<double>(0.0, std::sqrt(dt))(gen);
