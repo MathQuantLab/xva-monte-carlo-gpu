@@ -1,12 +1,12 @@
 CC=nvcc
 
 ifeq ($(RELEASE), TRUE)
-	CFLAGS=-O3 -std=c++17 -I./Include
+	CFLAGS=-O3 -std=c++17
 else
 	ifeq ($(OS), Windows_NT)
-		CFLAGS=-g -G -std=c++17 -I./Include -DDEBUG
+		CFLAGS=-g -G -std=c++17 -DDEBUG
 	else
-		CFLAGS=-g -G -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -I./Include -DDEBUG 
+		CFLAGS=-g -G -std=c++17 -Xcompiler -Wall -Xcompiler -Wextra -DDEBUG 
 	endif
 endif
 
