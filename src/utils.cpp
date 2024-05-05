@@ -201,7 +201,7 @@ const char *Utils::pretty_print_xva_name(XVA xva)
     }
 }
 
-void Utils::print_results(const std::map<XVA, Vector> &results, const std::string &filename)
+void Utils::print_results(const std::map<XVA, Vector> &results, const std::string &filename, double T)
 {
     std::ofstream file(filename);
 
@@ -218,9 +218,11 @@ void Utils::print_results(const std::map<XVA, Vector> &results, const std::strin
 
     file << std::endl;
 
+    double dt = T / results.begin()->second.size();
+
     for (size_t i = 0; i < results.begin()->second.size(); i++)
     {
-        file << i << ",";
+        file << i * dt << ",";
         for (const auto& xva: results)
         {
             file << xva.second[i];
