@@ -181,7 +181,7 @@ void NMC::run(XVA xva, double factor, const std::map<ExternalPaths, std::vector<
     case FVA:
         for (size_t i = 0; i < nb_points; i++)
         {
-            final_path[i] = std::max(EPE[i] - DPE[i], 0.0) * funding_cost * exp(-0.03 * i * T / nb_points);
+            final_path[i] = std::max(EPE[i] - DPE[i], 0.0) * funding_cost * std::exp(-0.03 * i * T / nb_points);
         }
 
         break;
@@ -189,14 +189,14 @@ void NMC::run(XVA xva, double factor, const std::map<ExternalPaths, std::vector<
     case MVA:
         for (size_t i = 0; i < nb_points; i++)
         {
-            final_path[i] = EPE[i] * funding_cost * exp(-0.03 * i * T / nb_points);
+            final_path[i] = EPE[i] * funding_cost * std::exp(-0.03 * i * T / nb_points);
         }
         break;
 
     case KVA:
         for (size_t i = 0; i < nb_points; i++)
         {
-            final_path[i] = EPE[i] * capital_cost * exp(-0.03 * i * T / nb_points);
+            final_path[i] = EPE[i] * capital_cost * std::exp(-0.03 * i * T / nb_points);
         }
         break;
 
