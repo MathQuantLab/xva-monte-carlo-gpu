@@ -93,9 +93,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a846878409c8c41d43bb545191a0a988d"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_utils.html#a846878409c8c41d43bb545191a0a988d">pretty_print_xva_name</a> (<a class="el" href="pch_8h.html#a53054d12c7fd5c029fd5baf8caa1d9a1">XVA</a> xva)</td></tr>
 <tr class="memdesc:a846878409c8c41d43bb545191a0a988d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pretty print XVA name.  <a href="namespace_utils.html#a846878409c8c41d43bb545191a0a988d">More...</a><br /></td></tr>
 <tr class="separator:a846878409c8c41d43bb545191a0a988d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88715f24214e0669a3a70dd66135ad90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_utils.html#a88715f24214e0669a3a70dd66135ad90">print_results</a> (const std::map&lt; <a class="el" href="pch_8h.html#a53054d12c7fd5c029fd5baf8caa1d9a1">XVA</a>, <a class="el" href="pch_8h.html#a5dd127bb3cb18b011cf5fd80a906e830">Vector</a> &gt; &amp;results, const std::string &amp;filename)</td></tr>
-<tr class="memdesc:a88715f24214e0669a3a70dd66135ad90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print results.  <a href="namespace_utils.html#a88715f24214e0669a3a70dd66135ad90">More...</a><br /></td></tr>
-<tr class="separator:a88715f24214e0669a3a70dd66135ad90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75a8661ad18e491aed4fe1d96ec05422"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_utils.html#a75a8661ad18e491aed4fe1d96ec05422">print_results</a> (const std::map&lt; <a class="el" href="pch_8h.html#a53054d12c7fd5c029fd5baf8caa1d9a1">XVA</a>, <a class="el" href="pch_8h.html#a5dd127bb3cb18b011cf5fd80a906e830">Vector</a> &gt; &amp;results, const std::string &amp;filename, double T)</td></tr>
+<tr class="memdesc:a75a8661ad18e491aed4fe1d96ec05422"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print results.  <a href="namespace_utils.html#a75a8661ad18e491aed4fe1d96ec05422">More...</a><br /></td></tr>
+<tr class="separator:a75a8661ad18e491aed4fe1d96ec05422"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Provides utility functions. </p>
@@ -359,16 +359,16 @@ Here is the caller graph for this function:</div>
 <map name="anamespace_utils_a846878409c8c41d43bb545191a0a988d_icgraph" id="anamespace_utils_a846878409c8c41d43bb545191a0a988d_icgraph">
 <area shape="rect" title="Pretty print XVA name." alt="" coords="435,21,571,62"/>
 <area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function." alt="" coords="5,28,60,55"/>
-<area shape="rect" href="namespace_utils.html#a88715f24214e0669a3a70dd66135ad90" title="Print results." alt="" coords="111,28,253,55"/>
+<area shape="rect" href="namespace_utils.html#a75a8661ad18e491aed4fe1d96ec05422" title="Print results." alt="" coords="111,28,253,55"/>
 <area shape="rect" href="class_n_m_c.html#ac1d977c229356b5a51da849883af8ddc" title="Run the nested Monte Carlo system." alt="" coords="304,83,387,109"/>
-<area shape="rect" href="namespace_c_p_u_simulation.html#ae597092d12422747cef3c885dd38db58" title="Run the simulation on CPU." alt="" coords="108,79,256,121"/>
+<area shape="rect" href="namespace_c_p_u_simulation.html#a27804808f009879de20ce439b07987d2" title="Run the simulation on CPU." alt="" coords="108,79,256,121"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a88715f24214e0669a3a70dd66135ad90"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88715f24214e0669a3a70dd66135ad90">&#9670;&nbsp;</a></span>print_results()</h2>
+<a id="a75a8661ad18e491aed4fe1d96ec05422"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75a8661ad18e491aed4fe1d96ec05422">&#9670;&nbsp;</a></span>print_results()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -383,7 +383,13 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>filename</em>&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>T</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -398,14 +404,15 @@ Here is the caller graph for this function:</div>
   <table class="params">
     <tr><td class="paramname">results</td><td>Results </td></tr>
     <tr><td class="paramname">filename</td><td>Filename </td></tr>
+    <tr><td class="paramname">T</td><td>Horizon </td></tr>
   </table>
   </dd>
 </dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespace_utils_a88715f24214e0669a3a70dd66135ad90_cgraph.png" border="0" usemap="#anamespace_utils_a88715f24214e0669a3a70dd66135ad90_cgraph" alt=""/></div>
-<map name="anamespace_utils_a88715f24214e0669a3a70dd66135ad90_cgraph" id="anamespace_utils_a88715f24214e0669a3a70dd66135ad90_cgraph">
+<div class="center"><img src="namespace_utils_a75a8661ad18e491aed4fe1d96ec05422_cgraph.png" border="0" usemap="#anamespace_utils_a75a8661ad18e491aed4fe1d96ec05422_cgraph" alt=""/></div>
+<map name="anamespace_utils_a75a8661ad18e491aed4fe1d96ec05422_cgraph" id="anamespace_utils_a75a8661ad18e491aed4fe1d96ec05422_cgraph">
 <area shape="rect" title="Print results." alt="" coords="5,13,147,39"/>
 <area shape="rect" href="namespace_utils.html#a846878409c8c41d43bb545191a0a988d" title="Pretty print XVA name." alt="" coords="195,5,331,47"/>
 </map>
@@ -413,8 +420,8 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="namespace_utils_a88715f24214e0669a3a70dd66135ad90_icgraph.png" border="0" usemap="#anamespace_utils_a88715f24214e0669a3a70dd66135ad90_icgraph" alt=""/></div>
-<map name="anamespace_utils_a88715f24214e0669a3a70dd66135ad90_icgraph" id="anamespace_utils_a88715f24214e0669a3a70dd66135ad90_icgraph">
+<div class="center"><img src="namespace_utils_a75a8661ad18e491aed4fe1d96ec05422_icgraph.png" border="0" usemap="#anamespace_utils_a75a8661ad18e491aed4fe1d96ec05422_icgraph" alt=""/></div>
+<map name="anamespace_utils_a75a8661ad18e491aed4fe1d96ec05422_icgraph" id="anamespace_utils_a75a8661ad18e491aed4fe1d96ec05422_icgraph">
 <area shape="rect" title="Print results." alt="" coords="108,5,249,32"/>
 <area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Main function." alt="" coords="5,5,60,32"/>
 </map>

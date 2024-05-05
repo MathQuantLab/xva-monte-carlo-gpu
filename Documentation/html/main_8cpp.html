@@ -81,27 +81,29 @@ $(function() {
 <code>#include &quot;<a class="el" href="cuda__utils_8h_source.html">../headers/cuda_utils.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="utils_8h_source.html">../headers/utils.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="simulation_8h_source.html">../headers/simulation.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="cuda__simulation_8h_source.html">../headers/cuda_simulation.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for main.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#asrc_2main_8cpp" alt=""/></div>
 <map name="asrc_2main_8cpp" id="asrc_2main_8cpp">
-<area shape="rect" title="Main file." alt="" coords="271,5,376,32"/>
-<area shape="rect" title=" " alt="" coords="46,80,126,107"/>
-<area shape="rect" title=" " alt="" coords="150,80,214,107"/>
-<area shape="rect" href="cuda__utils_8h.html" title="Holds CUDA utilities." alt="" coords="483,155,651,181"/>
-<area shape="rect" href="utils_8h.html" title="Provides utility functions." alt="" coords="253,229,383,256"/>
-<area shape="rect" href="simulation_8h.html" title="Provides function to run simulation on CPU." alt="" coords="238,80,409,107"/>
-<area shape="rect" href="pch_8h.html" title="Precompiled header." alt="" coords="306,304,431,331"/>
-<area shape="rect" title=" " alt="" coords="5,379,71,405"/>
-<area shape="rect" title=" " alt="" coords="95,379,218,405"/>
-<area shape="rect" title=" " alt="" coords="242,379,301,405"/>
-<area shape="rect" title=" " alt="" coords="325,379,412,405"/>
-<area shape="rect" title=" " alt="" coords="436,379,523,405"/>
-<area shape="rect" title=" " alt="" coords="547,379,609,405"/>
-<area shape="rect" title=" " alt="" coords="634,379,725,405"/>
-<area shape="rect" title=" " alt="" coords="139,304,190,331"/>
-<area shape="rect" href="nmc_8h.html" title="Provides the nested Monte Carlo system." alt="" coords="202,155,333,181"/>
+<area shape="rect" title="Main file." alt="" coords="234,5,339,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,85,107"/>
+<area shape="rect" title=" " alt="" coords="109,80,173,107"/>
+<area shape="rect" href="cuda__utils_8h.html" title="Holds CUDA utilities." alt="" coords="633,155,801,181"/>
+<area shape="rect" href="utils_8h.html" title="Provides utility functions." alt="" coords="197,229,328,256"/>
+<area shape="rect" href="simulation_8h.html" title="Provides function to run simulation on CPU." alt="" coords="264,80,435,107"/>
+<area shape="rect" href="cuda__simulation_8h.html" title="Holds functions to run simulation on GPU." alt="" coords="505,229,714,256"/>
+<area shape="rect" href="pch_8h.html" title="Precompiled header." alt="" coords="440,304,565,331"/>
+<area shape="rect" title=" " alt="" coords="674,379,739,405"/>
+<area shape="rect" title=" " alt="" coords="764,379,887,405"/>
+<area shape="rect" title=" " alt="" coords="911,379,969,405"/>
+<area shape="rect" title=" " alt="" coords="250,379,337,405"/>
+<area shape="rect" title=" " alt="" coords="361,379,447,405"/>
+<area shape="rect" title=" " alt="" coords="471,379,534,405"/>
+<area shape="rect" title=" " alt="" coords="559,379,649,405"/>
+<area shape="rect" title=" " alt="" coords="175,379,225,405"/>
+<area shape="rect" href="nmc_8h.html" title="Provides the nested Monte Carlo system." alt="" coords="299,155,429,181"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -158,7 +160,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.png" border="0" usemap="#amain_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph" alt=""/></div>
 <map name="amain_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph" id="amain_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph">
-<area shape="rect" title="Main function." alt="" coords="5,279,60,306"/>
+<area shape="rect" title="Main function." alt="" coords="5,305,60,331"/>
 <area shape="rect" href="class_c_u_d_a_1_1_c_u_d_a_exception.html#ac8a05e1bbac53efec484d1a107cc6eb4" title="Get the CUDA error." alt="" coords="110,5,281,47"/>
 <area shape="rect" href="namespace_utils.html#ace6934aad7553d4fa9891e34afe23254" title="Application information." alt="" coords="376,138,461,165"/>
 <area shape="rect" href="namespace_c_u_d_a_1_1_utils.html#a4d2175570accb1f866c819ad3d984537" title="Check if a GPU is available." alt="" coords="121,123,269,164"/>
@@ -166,9 +168,10 @@ Here is the call graph for this function:</div>
 <area shape="rect" href="namespace_utils.html#a57085921573df272b730d8dc0e33b703" title="Parse command line arguments." alt="" coords="120,254,271,281"/>
 <area shape="rect" href="namespace_utils.html#a9b26c6a3f0f0d3f094d034815e687c15" title="Parse XVA type." alt="" coords="129,305,261,331"/>
 <area shape="rect" href="namespace_utils.html#a846878409c8c41d43bb545191a0a988d" title="Pretty print XVA name." alt="" coords="555,399,691,440"/>
-<area shape="rect" href="namespace_utils.html#a88715f24214e0669a3a70dd66135ad90" title="Print results." alt="" coords="348,406,489,433"/>
-<area shape="rect" href="namespace_c_p_u_simulation.html#ae597092d12422747cef3c885dd38db58" title="Run the simulation on CPU." alt="" coords="121,491,269,532"/>
-<area shape="rect" href="class_c_u_d_a_1_1_c_u_d_a_exception.html#a33cba537cb439017a0c2db0a3f12c6db" title="Get the exception message." alt="" coords="110,556,281,597"/>
+<area shape="rect" href="namespace_utils.html#a75a8661ad18e491aed4fe1d96ec05422" title="Print results." alt="" coords="348,406,489,433"/>
+<area shape="rect" href="namespace_c_u_d_a_1_1_simulation.html#a238089ffa6861cf588be2acbfff09eda" title="Run the simulation on GPU." alt="" coords="112,457,279,499"/>
+<area shape="rect" href="namespace_c_p_u_simulation.html#a27804808f009879de20ce439b07987d2" title="Run the simulation on CPU." alt="" coords="121,523,269,564"/>
+<area shape="rect" href="class_c_u_d_a_1_1_c_u_d_a_exception.html#a33cba537cb439017a0c2db0a3f12c6db" title="Get the exception message." alt="" coords="110,588,281,629"/>
 <area shape="rect" href="namespace_c_u_d_a_1_1_utils.html#a368032f0338fadbd527f5de59fc3bbc4" title="Select a GPU." alt="" coords="331,254,507,281"/>
 <area shape="rect" href="namespace_utils.html#a56c6508c58c2bf4bc5a4953000f0cc7d" title="Split a string." alt="" coords="353,305,485,331"/>
 <area shape="rect" href="class_n_m_c.html#a4f78aec3e5b28b148240c6826404e53e" title="Generate equity paths." alt="" coords="335,457,502,499"/>

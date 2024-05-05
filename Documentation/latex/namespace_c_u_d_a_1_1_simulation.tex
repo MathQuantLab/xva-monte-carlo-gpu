@@ -5,7 +5,43 @@
 Provides simulation functions on \mbox{\hyperlink{namespace_c_u_d_a}{CUDA}}.  
 
 
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespace_c_u_d_a_1_1_simulation_a238089ffa6861cf588be2acbfff09eda}{run\+\_\+simulation}} (const std\+::map$<$ \mbox{\hyperlink{pch_8h_a53054d12c7fd5c029fd5baf8caa1d9a1}{XVA}}, double $>$ \&xva, size\+\_\+t m0, size\+\_\+t m1, size\+\_\+t nb\+\_\+points, double T, std\+::map$<$ \mbox{\hyperlink{pch_8h_a1388f46797f19b2b6d1fc65184776253}{External\+Paths}}, std\+::vector$<$ \mbox{\hyperlink{pch_8h_a5dd127bb3cb18b011cf5fd80a906e830}{Vector}} $>$$>$ \&external\+\_\+paths, std\+::map$<$ \mbox{\hyperlink{pch_8h_a53054d12c7fd5c029fd5baf8caa1d9a1}{XVA}}, \mbox{\hyperlink{pch_8h_a5dd127bb3cb18b011cf5fd80a906e830}{Vector}} $>$ \&paths)
+\begin{DoxyCompactList}\small\item\em Run the simulation on GPU. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Provides simulation functions on \mbox{\hyperlink{namespace_c_u_d_a}{CUDA}}. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespace_c_u_d_a_1_1_simulation_a238089ffa6861cf588be2acbfff09eda}\label{namespace_c_u_d_a_1_1_simulation_a238089ffa6861cf588be2acbfff09eda}} 
+\index{CUDA::Simulation@{CUDA::Simulation}!run\_simulation@{run\_simulation}}
+\index{run\_simulation@{run\_simulation}!CUDA::Simulation@{CUDA::Simulation}}
+\doxysubsubsection{\texorpdfstring{run\_simulation()}{run\_simulation()}}
+{\footnotesize\ttfamily void CUDA\+::\+Simulation\+::run\+\_\+simulation (\begin{DoxyParamCaption}\item[{const std\+::map$<$ \mbox{\hyperlink{pch_8h_a53054d12c7fd5c029fd5baf8caa1d9a1}{XVA}}, double $>$ \&}]{xva,  }\item[{size\+\_\+t}]{m0,  }\item[{size\+\_\+t}]{m1,  }\item[{size\+\_\+t}]{nb\+\_\+points,  }\item[{double}]{T,  }\item[{std\+::map$<$ \mbox{\hyperlink{pch_8h_a1388f46797f19b2b6d1fc65184776253}{External\+Paths}}, std\+::vector$<$ \mbox{\hyperlink{pch_8h_a5dd127bb3cb18b011cf5fd80a906e830}{Vector}} $>$$>$ \&}]{external\+\_\+paths,  }\item[{std\+::map$<$ \mbox{\hyperlink{pch_8h_a53054d12c7fd5c029fd5baf8caa1d9a1}{XVA}}, \mbox{\hyperlink{pch_8h_a5dd127bb3cb18b011cf5fd80a906e830}{Vector}} $>$ \&}]{paths }\end{DoxyParamCaption})}
+
+
+
+Run the simulation on GPU. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xva} & XVA types \\
+\hline
+{\em m0} & Number of external paths \\
+\hline
+{\em m1} & Number of internal paths \\
+\hline
+{\em nb\+\_\+points} & Number of points \\
+\hline
+{\em T} & Time horizon \\
+\hline
+{\em external\+\_\+paths} & External paths simulated \\
+\hline
+{\em paths} & Paths simulated \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+% FIG 0

@@ -1,5 +1,5 @@
 <map id="headers/pch.h" name="headers/pch.h">
-<area shape="rect" id="node1" title="Precompiled header." alt="" coords="312,5,425,32"/>
+<area shape="rect" id="node1" title="Precompiled header." alt="" coords="367,5,480,32"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,80,71,107"/>
 <area shape="rect" id="node3" title=" " alt="" coords="95,80,218,107"/>
 <area shape="rect" id="node4" title=" " alt="" coords="242,80,301,107"/>
@@ -7,4 +7,5 @@
 <area shape="rect" id="node6" title=" " alt="" coords="436,80,523,107"/>
 <area shape="rect" id="node7" title=" " alt="" coords="547,80,609,107"/>
 <area shape="rect" id="node8" title=" " alt="" coords="634,80,725,107"/>
+<area shape="rect" id="node9" title=" " alt="" coords="749,80,799,107"/>
 </map>
