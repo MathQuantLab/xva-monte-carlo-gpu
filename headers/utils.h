@@ -79,6 +79,7 @@ namespace Utils
      *
      * @param results Results
      * @param filename Filename
+     * @param T Horizon
      */
-    void print_results(const std::map<XVA, Vector> &results, const std::string &filename);
+    void print_results(const std::map<XVA, Vector> &results, const std::string &filename, double T);
 }

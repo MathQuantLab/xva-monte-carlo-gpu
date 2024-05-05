@@ -97,7 +97,7 @@ int main(int argc, char *argv[])
         cout << "Simulation done" << endl;
         cout << "Writing results to file" << endl;
 
-        Utils::print_results(results, "Data/results.csv");
+        Utils::print_results(results, "Data/results.csv", T);
 
         cout << "Results written to file" << endl;
     }

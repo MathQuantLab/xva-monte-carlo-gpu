@@ -120,6 +120,7 @@ void NMC::run(XVA xva, double factor, const std::map<ExternalPaths, std::vector<
 
     for (auto const &internal_path : internal_paths)
     {
+        mean_internal_paths[internal_path.first] = Vector(nb_points);
         for (size_t j = 0; j < nb_points; j++)
         {
             double sum = 0;
@@ -158,6 +159,8 @@ void NMC::run(XVA xva, double factor, const std::map<ExternalPaths, std::vector<
     double loss_given_default = 0.4;
     double funding_cost = 0.05;
     double capital_cost = 0.1;
+
+    final_path.resize(nb_points);
 
     switch (xva)
     {
